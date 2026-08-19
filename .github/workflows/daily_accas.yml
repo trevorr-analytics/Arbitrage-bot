@@ -1,6 +1,9 @@
 name: Daily Auto-Quant Accumulators
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 9 * * 5,6,7'
   workflow_dispatch:
