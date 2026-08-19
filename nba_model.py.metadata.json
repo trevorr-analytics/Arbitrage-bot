@@ -1,0 +1,4 @@
+{
+  "summary": "Created the NBA prediction model utilizing an Elo-based possession and margin-of-victory framework, explicitly designed to drop into the existing accumulator builder.",
+  "updatedAt": "2026-08-19T17:33:32.298408400Z"
+}
