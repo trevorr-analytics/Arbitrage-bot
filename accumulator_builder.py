@@ -11,7 +11,7 @@ from odds_api import fetch_live_odds
 from devig import shin_devig
 
 from nba_model import NBAModel
-from telegram_notifier import send_telegram_message, format_accas_for_telegram
+from telegram_notifier import send_telegram_message
 
 BANKROLL_KES = 5000.0
 MIN_SINGLE_EDGE = 0.01  
