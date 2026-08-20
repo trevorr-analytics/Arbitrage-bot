@@ -1,0 +1,41 @@
+name: Track Closing Line Value (CLV)
+
+on:
+  schedule:
+    # Run every 30 minutes on Saturday and Sunday
+    - cron: '*/30 * * * 0,6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  track_clv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run CLV Tracker
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python clv_tracker.py
+          
+      - name: Commit Tracker Updates
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add acca_tracker.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Closing Lines" && git push)

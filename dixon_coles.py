@@ -40,6 +40,21 @@ def load_league_data(league_name: str, min_seasons: int = 3) -> pd.DataFrame:
     data["FTHG"] = pd.to_numeric(data["FTHG"], errors="coerce")
     data["FTAG"] = pd.to_numeric(data["FTAG"], errors="coerce")
     data = data.dropna(subset=["FTHG", "FTAG"])
+    
+    # Calculate Expected Goals proxy from Shots on Target (if available)
+    if "HST" in data.columns and "AST" in data.columns:
+        data["HST"] = pd.to_numeric(data["HST"], errors="coerce").fillna(data["FTHG"] / 0.33)
+        data["AST"] = pd.to_numeric(data["AST"], errors="coerce").fillna(data["FTAG"] / 0.33)
+        # 1 Shot on Target is roughly 0.33 Expected Goals
+        data["HxG"] = data["HST"] * 0.33
+        data["AxG"] = data["AST"] * 0.33
+        # Blend 70% Actual Goals and 30% xG to smooth out variance
+        data["FTHG_Blended"] = (data["FTHG"] * 0.7) + (data["HxG"] * 0.3)
+        data["FTAG_Blended"] = (data["FTAG"] * 0.7) + (data["AxG"] * 0.3)
+    else:
+        data["FTHG_Blended"] = data["FTHG"]
+        data["FTAG_Blended"] = data["FTAG"]
+        
     data["FTHG"] = data["FTHG"].astype(int)
     data["FTAG"] = data["FTAG"].astype(int)
 
@@ -92,12 +107,29 @@ class DixonColesModel:
         self.teams_ = sorted(set(data["HomeTeam"]) | set(data["AwayTeam"]))
         n_teams = len(self.teams_)
         team_idx = {t: i for i, t in enumerate(self.teams_)}
+        self._team_idx = team_idx
+
+        # Track last match date for fatigue penalty
+        self.last_match_dates_ = {}
+        # Ensure date is parsed properly
+        if not pd.api.types.is_datetime64_any_dtype(data['Date']):
+            data['Date'] = pd.to_datetime(data['Date'], dayfirst=True, errors='coerce')
+            
+        for team in self.teams_:
+            team_games = data[(data["HomeTeam"] == team) | (data["AwayTeam"] == team)]
+            if not team_games.empty:
+                self.last_match_dates_[team] = team_games["Date"].max()
+            else:
+                self.last_match_dates_[team] = pd.Timestamp("2000-01-01")
 
         weights = self._compute_weights(data)
-        home_goals = data["FTHG"].values
-        away_goals = data["FTAG"].values
+        home_goals = data["FTHG_Blended"].values
+        away_goals = data["FTAG_Blended"].values
         home_idx = np.array([team_idx[t] for t in data["HomeTeam"]])
         away_idx = np.array([team_idx[t] for t in data["AwayTeam"]])
+
+        actual_hg = data["FTHG"].values
+        actual_ag = data["FTAG"].values
 
         # Initial params: attack=0, defence=0, home_adv=0.3, rho=-0.1
         x0 = np.zeros(2 * n_teams + 2)
@@ -105,10 +137,9 @@ class DixonColesModel:
         x0[-1] = -0.1  # rho
 
         from scipy.special import gammaln
-        # Precompute log(k!) for all observed goal counts — called once, not per iteration
         log_fact_home = gammaln(home_goals + 1)
         log_fact_away = gammaln(away_goals + 1)
-
+        
         def neg_log_likelihood(params):
             attack = params[:n_teams]
             defence = params[n_teams:2*n_teams]
@@ -123,13 +154,13 @@ class DixonColesModel:
             log_p_home = home_goals * np.log(lam) - lam - log_fact_home
             log_p_away = away_goals * np.log(mu)  - mu  - log_fact_away
 
-
             # Dixon-Coles tau correction (vectorized per case)
             tau = np.ones(len(home_goals))
-            mask_00 = (home_goals == 0) & (away_goals == 0)
-            mask_01 = (home_goals == 0) & (away_goals == 1)
-            mask_10 = (home_goals == 1) & (away_goals == 0)
-            mask_11 = (home_goals == 1) & (away_goals == 1)
+            # Use actual integer goals to apply the low-score correlation fix
+            mask_00 = (actual_hg == 0) & (actual_ag == 0)
+            mask_01 = (actual_hg == 0) & (actual_ag == 1)
+            mask_10 = (actual_hg == 1) & (actual_ag == 0)
+            mask_11 = (actual_hg == 1) & (actual_ag == 1)
             tau[mask_00] = 1.0 - lam[mask_00] * mu[mask_00] * rho
             tau[mask_01] = 1.0 + lam[mask_01] * rho
             tau[mask_10] = 1.0 + mu[mask_10] * rho
@@ -170,6 +201,18 @@ class DixonColesModel:
 
         lam = np.exp(attack[hi] - defence[ai] + home_adv)  # home xG
         mu  = np.exp(attack[ai] - defence[hi])              # away xG
+        
+        # Apply Travel Fatigue Penalty (Short Rest)
+        today = pd.Timestamp.now()
+        h_rest = (today - self.last_match_dates_.get(home_team, today)).days
+        a_rest = (today - self.last_match_dates_.get(away_team, today)).days
+        
+        if 0 < h_rest < 4:
+            lam *= 0.90 # 10% reduction in attack
+            
+        if 0 < a_rest < 4:
+            mu *= 0.90 # 10% reduction in attack
+            
         return lam, mu
 
     def predict(self, home_team: str, away_team: str, max_goals: int = 8) -> dict:

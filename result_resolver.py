@@ -116,6 +116,8 @@ def resolve_and_retrain():
         print(f"Fetching completed scores for {league}...")
         scores_cache[league] = get_scores(league)
         
+    clv_report = []
+    
     # Resolve bets
     updated_count = 0
     for acca in tracker:
@@ -143,6 +145,21 @@ def resolve_and_retrain():
                 result = grade_leg(leg, match_data)
                 leg["status"] = result
                 
+                # CLV Calculation
+                closing = leg.get("closing_odds", 0.0)
+                if closing > 0:
+                    # Implied probability of our bet vs closing line
+                    bet_implied = 1 / leg["odds"]
+                    close_implied = 1 / closing
+                    clv_value = (close_implied - bet_implied) * 100
+                    clv_report.append({
+                        "match": f"{leg['home']} vs {leg['away']}",
+                        "market": leg['market'],
+                        "bet_odds": leg['odds'],
+                        "closing_odds": closing,
+                        "clv_pct": clv_value
+                    })
+                
                 # Extract scores for retraining
                 h_s, a_s = 0, 0
                 for score_obj in match_data.get("scores", []):
@@ -169,6 +186,21 @@ def resolve_and_retrain():
         
     print(f"\n[Resolution Complete] Resolved {updated_count} individual legs.")
     print("Models are now naturally updated with the latest scores. Future accumulators will reflect these mathematical adjustments.")
+    
+    # Send CLV Report via Telegram
+    if clv_report:
+        from telegram_notifier import send_telegram_message
+        avg_clv = sum(x["clv_pct"] for x in clv_report) / len(clv_report)
+        
+        msg = f"<b>📈 WEEKLY CLV REPORT</b>\n\n"
+        msg += f"<b>Average CLV Beaten: {avg_clv:+.2f}%</b>\n\n"
+        
+        for r in clv_report:
+            icon = "✅" if r["clv_pct"] > 0 else "❌"
+            msg += f"{icon} {r['match']} ({r['market']})\n"
+            msg += f"   Bet: {r['bet_odds']:.2f} | Close: {r['closing_odds']:.2f} | CLV: {r['clv_pct']:+.2f}%\n"
+            
+        send_telegram_message(msg)
 
 if __name__ == "__main__":
     resolve_and_retrain()

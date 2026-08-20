@@ -42,8 +42,16 @@ def fuzzy_team(name: str, known: list) -> str:
     return None
 
 def get_all_ev_legs() -> List[Dict]:
+    from weather_api import get_league_weather
+    
     ev_legs = []
     for league in LEAGUES:
+        # Load weather conditions for the league region
+        weather = get_league_weather(league)
+        is_extreme_weather = weather.get("is_extreme", False)
+        if is_extreme_weather:
+            print(f"[{league}] Extreme weather detected (Wind: {weather['wind_speed_kmh']}km/h, Rain: {weather['precipitation_mm']}mm). Applying Under total bump.")
+            
         # Load Data & Model based on sport
         if league == "NBA":
             model = NBAModel()
@@ -77,6 +85,11 @@ def get_all_ev_legs() -> List[Dict]:
                 # Map soccer outputs to uniform keys
                 pred["over_total"] = pred["over_2_5"]
                 pred["under_total"] = pred["under_2_5"]
+                
+                # Apply Weather Metric Adjustment
+                if is_extreme_weather:
+                    pred["under_total"] = min(0.99, pred["under_total"] + 0.03)
+                    pred["over_total"] = max(0.01, pred["over_total"] - 0.03)
             
             # Devig
             if league == "NBA":
