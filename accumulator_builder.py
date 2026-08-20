@@ -169,33 +169,36 @@ def build_accumulators(ev_legs: List[Dict]):
     return valid_accas, search_count
 
 if __name__ == "__main__":
+    from telegram_notifier import format_categorized_accas_for_telegram, send_telegram_message
+    
     print("Scouring live odds for +EV singles across 6 leagues...")
     legs = get_all_ev_legs()
     print(f"\nFound {len(legs)} individual legs with strictly positive edge (>1%).")
     
+    # Categorize Legs
+    soccer_1x2_legs = [leg for leg in legs if leg["league"] != "NBA" and leg["market"] in ["Home Win", "Away Win", "Draw"]]
+    soccer_ou_legs = [leg for leg in legs if leg["league"] != "NBA" and ("Over" in leg["market"] or "Under" in leg["market"])]
+    nba_legs = [leg for leg in legs if leg["league"] == "NBA"]
+    
     print("\nBuilding independent 2-leg and 3-leg accumulators (Target Odds: 1.8 - 2.4)...")
-    accas, search_count = build_accumulators(legs)
+    
+    accas_1x2, c1 = build_accumulators(soccer_1x2_legs)
+    accas_ou, c2 = build_accumulators(soccer_ou_legs)
+    accas_nba, c3 = build_accumulators(nba_legs)
     
     # Sort strictly by combined edge, not raw odds
-    accas.sort(key=lambda x: x["edge"], reverse=True)
+    accas_1x2.sort(key=lambda x: x["edge"], reverse=True)
+    accas_ou.sort(key=lambda x: x["edge"], reverse=True)
+    accas_nba.sort(key=lambda x: x["edge"], reverse=True)
     
-    print(f"Total combinations evaluated: {search_count:,}")
-    print(f"Total mathematically valid +EV accumulators found: {len(accas)}")
+    total_combinations = c1 + c2 + c3
+    print(f"Total combinations evaluated: {total_combinations:,}")
     
-    print("\n" + "="*90)
-    print("  TOP ACCUMULATORS BY COMBINED EDGE")
-    print("  Correlation guard: NO same-game legs permitted.")
-    print("  Staking guard: 1/8th Kelly, Max 1% Bankroll (KES 50)")
-    print("="*90)
+    # Take the top N required
+    top_1x2 = accas_1x2[:5]
+    top_ou = accas_ou[:5]
+    top_nba = accas_nba[:10]
     
-    for i, acca in enumerate(accas[:10]):
-        print(f"\n[Acca #{i+1}]  Combined Odds: {acca['odds']:.2f}")
-        print(f"  Implied Prob: {acca['implied_prob']*100:.1f}%  |  Devigged Prob: {acca['devig_prob']*100:.1f}%  |  Model Prob: {acca['model_prob']*100:.1f}%")
-        print(f"  Combined Edge: +{acca['edge']*100:.2f}%  |  Effective Combined Vig: {acca['vig']*100:.2f}%")
-        print(f"  Suggested Stake: KES {acca['stake']:.0f}")
-        print("  Legs:")
-        for leg in acca['legs']:
-            print(f"    -> [{leg['league']}] {leg['home']} vs {leg['away']} | {leg['market']} @ {leg['odds']:.2f} (Single Edge: +{leg['edge']*100:.1f}%)")
     # Save to Tracker Log for Post-Match Resolution & Retraining
     import json
     import os
@@ -211,7 +214,9 @@ if __name__ == "__main__":
             pass
             
     timestamp = datetime.utcnow().isoformat()
-    for acca in accas[:10]:
+    all_tracked = top_1x2 + top_ou + top_nba
+    
+    for acca in all_tracked:
         acca_record = {
             "timestamp": timestamp,
             "status": "PENDING",
@@ -237,6 +242,6 @@ if __name__ == "__main__":
         json.dump(tracked_data, f, indent=4)
         
     # Send to Telegram
-    if accas:
-        tg_message = format_accas_for_telegram(accas, top_n=10)
+    if all_tracked:
+        tg_message = format_categorized_accas_for_telegram(top_1x2, top_ou, top_nba)
         send_telegram_message(tg_message)

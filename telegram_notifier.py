@@ -33,20 +33,43 @@ def send_telegram_message(message: str) -> bool:
             print(f"Response: {e.response.text}")
         return False
 
-def format_accas_for_telegram(accas: list, top_n: int = 5) -> str:
+def format_categorized_accas_for_telegram(soccer_1x2: list, soccer_ou: list, nba: list) -> str:
     """
-    Formats the top accumulators into a readable HTML message for Telegram.
+    Formats the categorized accumulators into a readable HTML message for Telegram.
     """
-    msg = "<b>🚨 AUTO-QUANT VALUE ACCUMULATORS 🚨</b>\n\n"
+    msg = "<b>🤖 AUTO-QUANT VALUE ACCUMULATORS 🤖</b>\n\n"
     
-    for i, acca in enumerate(accas[:top_n]):
-        msg += f"<b>🏆 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
-        msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
-        
-        for leg in acca['legs']:
-            msg += f"⚽ [{leg['league']}] {leg['home']} vs {leg['away']}\n"
-            msg += f"   └ {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+    if soccer_1x2:
+        msg += "<b>⚽ SOCCER (1X2 MATCH WINNER)</b>\n"
+        for i, acca in enumerate(soccer_1x2[:5]):
+            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
+            msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
+            for leg in acca['legs']:
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+            msg += "\n"
             
-        msg += "\n"
+    if soccer_ou:
+        msg += "<b>⚽ SOCCER (OVER/UNDER GOALS)</b>\n"
+        for i, acca in enumerate(soccer_ou[:5]):
+            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
+            msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
+            for leg in acca['legs']:
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+            msg += "\n"
+            
+    if nba:
+        msg += "<b>🏀 NBA ACCUMULATORS</b>\n"
+        for i, acca in enumerate(nba[:10]):
+            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
+            msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
+            for leg in acca['legs']:
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+            msg += "\n"
+            
+    if not soccer_1x2 and not soccer_ou and not nba:
+        msg += "<i>No +EV accumulators found for today's fixtures.</i>"
         
     return msg
