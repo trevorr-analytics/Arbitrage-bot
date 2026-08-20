@@ -288,5 +288,160 @@
                 "status": "PENDING"
             }
         ]
+    },
+    {
+        "timestamp": "2026-08-20T17:21:45.996641",
+        "status": "PENDING",
+        "combined_odds": 2.226,
+        "combined_edge": 0.344250484910209,
+        "stake": 50.0,
+        "legs": [
+            {
+                "match_id": "SerieA_Atalanta BC_Sassuolo",
+                "league": "SerieA",
+                "home": "Atalanta BC",
+                "away": "Sassuolo",
+                "market": "Home Win",
+                "odds": 1.59,
+                "edge": 0.18392937062937065,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_PSV Eindhoven_Groningen",
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.4,
+                "edge": 0.26151248246844316,
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-20T17:21:45.996641",
+        "status": "PENDING",
+        "combined_odds": 2.1279999999999997,
+        "combined_edge": 0.34369593106272583,
+        "stake": 50.0,
+        "legs": [
+            {
+                "match_id": "EPL_Manchester City_Bournemouth",
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.17609791177985012,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_PSV Eindhoven_Groningen",
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.4,
+                "edge": 0.26151248246844316,
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-20T17:21:45.996641",
+        "status": "PENDING",
+        "combined_odds": 1.8479999999999999,
+        "combined_edge": 0.32667643349359077,
+        "stake": 50.0,
+        "legs": [
+            {
+                "match_id": "Eredivisie_PSV Eindhoven_Groningen",
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.4,
+                "edge": 0.26151248246844316,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_SC Cambuur_Feyenoord",
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.32,
+                "edge": 0.13208604651162792,
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-20T17:21:45.996641",
+        "status": "PENDING",
+        "combined_odds": 2.2915200000000002,
+        "combined_edge": 0.2725972745828093,
+        "stake": 50.0,
+        "legs": [
+            {
+                "match_id": "SerieA_Inter Milan_Monza",
+                "league": "SerieA",
+                "home": "Inter Milan",
+                "away": "Monza",
+                "market": "Home Win",
+                "odds": 1.24,
+                "edge": 0.011212911899615041,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_PSV Eindhoven_Groningen",
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.4,
+                "edge": 0.26151248246844316,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_SC Cambuur_Feyenoord",
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.32,
+                "edge": 0.13208604651162792,
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-20T17:21:45.996641",
+        "status": "PENDING",
+        "combined_odds": 2.142,
+        "combined_edge": 0.2676852300514865,
+        "stake": 50.0,
+        "legs": [
+            {
+                "match_id": "Eredivisie_NEC Nijmegen_Excelsior",
+                "league": "Eredivisie",
+                "home": "NEC Nijmegen",
+                "away": "Excelsior",
+                "market": "Home Win",
+                "odds": 1.53,
+                "edge": 0.10288263636609773,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "Eredivisie_PSV Eindhoven_Groningen",
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.4,
+                "edge": 0.26151248246844316,
+                "status": "PENDING"
+            }
+        ]
     }
 ]
