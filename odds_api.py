@@ -123,7 +123,8 @@ def _parse_odds_data(data):
         fixtures.append((
             home, away, 
             odds["h2h"]["home"], odds["h2h"]["draw"], odds["h2h"]["away"], 
-            odds["totals"]["over"], odds["totals"]["under"], odds["totals"]["point"]
+            odds["totals"]["over"], odds["totals"]["under"], odds["totals"]["point"],
+            event.get("commence_time", "")
         ))
         
     return fixtures

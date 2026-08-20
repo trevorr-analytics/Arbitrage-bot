@@ -33,43 +33,54 @@ def send_telegram_message(message: str) -> bool:
             print(f"Response: {e.response.text}")
         return False
 
-def format_categorized_accas_for_telegram(soccer_1x2: list, soccer_ou: list, nba: list) -> str:
+def get_telegram_messages_by_category(soccer_1x2: list, soccer_ou: list, nba: list) -> list:
     """
-    Formats the categorized accumulators into a readable HTML message for Telegram.
+    Formats the categorized accumulators into a list of readable HTML messages for Telegram.
+    This prevents hitting Telegram's 4096-character limit by splitting categories into separate texts.
     """
-    msg = "<b>🤖 AUTO-QUANT VALUE ACCUMULATORS 🤖</b>\n\n"
+    messages = []
     
+    def _format_date(iso_date):
+        if not iso_date: return "Unknown"
+        return iso_date.replace('T', ' ')[:16]
+
     if soccer_1x2:
-        msg += "<b>⚽ SOCCER (1X2 MATCH WINNER)</b>\n"
+        msg = "<b>⚽ SOCCER (1X2 MATCH WINNER)</b>\n\n"
         for i, acca in enumerate(soccer_1x2[:5]):
             msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                dt_str = _format_date(leg.get('date', ''))
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
                 msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
             msg += "\n"
+        messages.append(msg)
             
     if soccer_ou:
-        msg += "<b>⚽ SOCCER (OVER/UNDER GOALS)</b>\n"
+        msg = "<b>⚽ SOCCER (OVER/UNDER GOALS)</b>\n\n"
         for i, acca in enumerate(soccer_ou[:5]):
             msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                dt_str = _format_date(leg.get('date', ''))
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
                 msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
             msg += "\n"
+        messages.append(msg)
             
     if nba:
-        msg += "<b>🏀 NBA ACCUMULATORS</b>\n"
+        msg = "<b>🏀 NBA ACCUMULATORS</b>\n\n"
         for i, acca in enumerate(nba[:10]):
             msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']}\n"
+                dt_str = _format_date(leg.get('date', ''))
+                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
                 msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
             msg += "\n"
+        messages.append(msg)
             
-    if not soccer_1x2 and not soccer_ou and not nba:
-        msg += "<i>No +EV accumulators found for today's fixtures.</i>"
+    if not messages:
+        messages.append("<i>No +EV accumulators found for today's fixtures.</i>")
         
-    return msg
+    return messages

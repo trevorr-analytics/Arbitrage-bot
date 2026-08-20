@@ -17,8 +17,8 @@ BANKROLL_KES = 5000.0
 MIN_SINGLE_EDGE = 0.01  
 KELLY_FRACTION = 0.125  
 MAX_BET_CAP = 0.01      
-TARGET_MIN_ODDS = 1.8
-TARGET_MAX_ODDS = 2.4
+TARGET_MIN_ODDS = 1.5
+TARGET_MAX_ODDS = 25.0
 
 LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "Ligue1", "Eredivisie", "NBA"]
 
@@ -65,7 +65,7 @@ def get_all_ev_legs() -> List[Dict]:
         fixtures = fetch_live_odds(league)
         for fix in fixtures:
             # Unpack handles dynamic lengths (soccer vs basketball)
-            home, away, o_h, o_d, o_a, o_ov, o_un, point_line = fix[:8]
+            home, away, o_h, o_d, o_a, o_ov, o_un, point_line, commence_time = fix[:9]
             h_match = fuzzy_team(home, known)
             a_match = fuzzy_team(away, known)
             if not (h_match and a_match): continue
@@ -108,6 +108,7 @@ def get_all_ev_legs() -> List[Dict]:
                         ev_legs.append({
                             "match_id": match_id,
                             "league": league,
+                            "date": commence_time,
                             "home": home,
                             "away": away,
                             "market": mkt_name,
@@ -169,7 +170,7 @@ def build_accumulators(ev_legs: List[Dict]):
     return valid_accas, search_count
 
 if __name__ == "__main__":
-    from telegram_notifier import format_categorized_accas_for_telegram, send_telegram_message
+    from telegram_notifier import send_telegram_message
     
     print("Scouring live odds for +EV singles across 6 leagues...")
     legs = get_all_ev_legs()
@@ -243,5 +244,7 @@ if __name__ == "__main__":
         
     # Send to Telegram
     if all_tracked:
-        tg_message = format_categorized_accas_for_telegram(top_1x2, top_ou, top_nba)
-        send_telegram_message(tg_message)
+        from telegram_notifier import get_telegram_messages_by_category, send_telegram_message
+        messages = get_telegram_messages_by_category(top_1x2, top_ou, top_nba)
+        for msg in messages:
+            send_telegram_message(msg)
