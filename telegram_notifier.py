@@ -1,4 +1,4 @@
-import os
+﻿import os
 import requests
 
 def send_telegram_message(message: str) -> bool:
@@ -45,26 +45,26 @@ def get_telegram_messages_by_category(soccer_accas: list, nba: list) -> list:
         return iso_date.replace('T', ' ')[:16]
 
     if soccer_accas:
-        msg = "<b>⚽ TOP SOCCER ACCUMULATORS</b>\n\n"
+        msg = "<b>âš½ TOP SOCCER ACCUMULATORS</b>\n\n"
         for i, acca in enumerate(soccer_accas[:10]):
-            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
+            msg += f"<b>ðŸ”¹ Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
                 dt_str = _format_date(leg.get('date', ''))
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
-                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+                msg += f"   â€¢ [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
+                msg += f"      ðŸ‘‰ {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
             msg += "\n"
         messages.append(msg)
             
     if nba:
-        msg = "<b>🏀 NBA ACCUMULATORS</b>\n\n"
+        msg = "<b>ðŸ€ BASKETBALL ACCUMULATORS</b>\n\n"
         for i, acca in enumerate(nba[:10]):
-            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
+            msg += f"<b>ðŸ”¹ Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
                 dt_str = _format_date(leg.get('date', ''))
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
-                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
+                msg += f"   â€¢ [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
+                msg += f"      ðŸ‘‰ {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
             msg += "\n"
         messages.append(msg)
             
@@ -72,3 +72,4 @@ def get_telegram_messages_by_category(soccer_accas: list, nba: list) -> list:
         messages.append("<i>No +EV accumulators found for today's fixtures.</i>")
         
     return messages
+

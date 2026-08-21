@@ -1,4 +1,4 @@
-import requests
+﻿import requests
 import os
 import json
 import time
@@ -10,7 +10,7 @@ SPORT_KEYS = {
     "SerieA": "soccer_italy_serie_a",
     "Ligue1": "soccer_france_ligue_one",
     "Eredivisie": "soccer_netherlands_eredivisie",
-    "NBA": "basketball_nba"
+    "NBA": "basketball_nba", "EuroLeague": "basketball_euroleague", "NCAAB": "basketball_ncaab", "WNBA": "basketball_wnba"
 }
 
 CACHE_FILE = os.path.join(os.path.dirname(__file__), "odds_cache.json")
@@ -128,3 +128,6 @@ def _parse_odds_data(data):
         ))
         
     return fixtures
+
+
+

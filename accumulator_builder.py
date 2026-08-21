@@ -10,17 +10,17 @@ from dixon_coles import DixonColesModel, load_league_data
 from odds_api import fetch_live_odds
 from devig import shin_devig
 
-from nba_model import NBAModel
+from basketball_model import BasketballModel
 from telegram_notifier import send_telegram_message
 
 BANKROLL_KES = 5000.0
 MIN_SINGLE_EDGE = 0.01  
 KELLY_FRACTION = 0.125  
 MAX_BET_CAP = 0.01      
-TARGET_MIN_ODDS = 1.95
+TARGET_MIN_ODDS = 1.5
 TARGET_MAX_ODDS = 2.05
 
-LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "Ligue1", "Eredivisie", "NBA"]
+LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "Ligue1", "Eredivisie", "NBA", "EuroLeague", "NCAAB", "WNBA"]
 
 def safe_devig(odds_list):
     if any(o <= 1.0 for o in odds_list):
@@ -53,8 +53,8 @@ def get_all_ev_legs() -> List[Dict]:
             print(f"[{league}] Extreme weather detected (Wind: {weather['wind_speed_kmh']}km/h, Rain: {weather['precipitation_mm']}mm). Applying Under total bump.")
             
         # Load Data & Model based on sport
-        if league == "NBA":
-            model = NBAModel()
+        if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
+            model = BasketballModel()
             model.fit() # Stub fit for now, later replaced with full 538 history
             known = model.known_teams()
         else:
@@ -78,8 +78,8 @@ def get_all_ev_legs() -> List[Dict]:
             a_match = fuzzy_team(away, known)
             if not (h_match and a_match): continue
             
-            if league == "NBA":
-                pred = model.predict(h_match, a_match, over_under_line=point_line if point_line > 0 else 225.5)
+            if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
+                pred = model.predict(h_match, a_match, over_under_line=point_line if point_line > 0 else 225.5, league=league)
             else:
                 pred = model.predict(h_match, a_match)
                 # Map soccer outputs to uniform keys
@@ -92,7 +92,7 @@ def get_all_ev_legs() -> List[Dict]:
                     pred["over_total"] = max(0.01, pred["over_total"] - 0.03)
             
             # Devig
-            if league == "NBA":
+            if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
                 # NBA moneylines are usually 2-way
                 dv_h, dv_a = safe_devig([o_h, o_a])[:2]
                 dv_d = 0.0
@@ -103,8 +103,8 @@ def get_all_ev_legs() -> List[Dict]:
             
             match_id = f"{league}_{home}_{away}"
             
-            mkt_str = f"Over {point_line}" if league == "NBA" and point_line > 0 else "Over 2.5"
-            umkt_str = f"Under {point_line}" if league == "NBA" and point_line > 0 else "Under 2.5"
+            mkt_str = f"Over {point_line}" if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"] and point_line > 0 else "Over 2.5"
+            umkt_str = f"Under {point_line}" if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"] and point_line > 0 else "Under 2.5"
             
             markets = [
                 ("Home Win", o_h, dv_h, pred["home_win"]),
@@ -198,17 +198,17 @@ if __name__ == "__main__":
     print(f"\nFound {len(legs)} individual legs with strictly positive edge (>1%).")
     
     # Categorize Legs
-    soccer_legs = [leg for leg in legs if leg["league"] != "NBA"]
-    nba_legs = [leg for leg in legs if leg["league"] == "NBA"]
+    soccer_legs = [leg for leg in legs if leg["league"] not in ["NBA", "EuroLeague", "NCAAB", "WNBA"]]
+    nba_legs = [leg for leg in legs if leg["league"] in ["NBA", "EuroLeague", "NCAAB", "WNBA"]]
     
     print("\nBuilding independent 2-leg and 3-leg accumulators (Target Odds: around 2.0)...")
     
-    accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=2.05)
-    accas_nba, c2 = build_accumulators(nba_legs, max_odds=2.05)
+    accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=3.5)
+    accas_nba, c2 = build_accumulators(nba_legs, max_odds=3.5)
     
     # Sort strictly by combined edge, not raw odds
-    accas_soccer.sort(key=lambda x: x["edge"], reverse=True)
-    accas_nba.sort(key=lambda x: x["edge"], reverse=True)
+    accas_soccer.sort(key=lambda x: abs(x["odds"] - 2.0))
+    accas_nba.sort(key=lambda x: abs(x["odds"] - 2.0))
     
     total_combinations = c1 + c2
     print(f"Total combinations evaluated: {total_combinations:,}")
@@ -265,5 +265,8 @@ if __name__ == "__main__":
         messages = get_telegram_messages_by_category(top_soccer, top_nba)
         for msg in messages:
             send_telegram_message(msg)
+
+
+
 
 
