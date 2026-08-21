@@ -17,7 +17,7 @@ BANKROLL_KES = 5000.0
 MIN_SINGLE_EDGE = 0.01  
 KELLY_FRACTION = 0.125  
 MAX_BET_CAP = 0.01      
-TARGET_MIN_ODDS = 1.5
+TARGET_MIN_ODDS = 1.7
 TARGET_MAX_ODDS = 25.0
 
 LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "Ligue1", "Eredivisie", "NBA"]
@@ -132,7 +132,7 @@ def get_all_ev_legs() -> List[Dict]:
                         })
     return ev_legs
 
-def build_accumulators(ev_legs: List[Dict]):
+def build_accumulators(ev_legs: List[Dict], max_odds: float = 25.0):
     valid_accas = []
     search_count = 0
     
@@ -143,14 +143,22 @@ def build_accumulators(ev_legs: List[Dict]):
             
             # 1. Strict Correlation Check: Reject if multiple legs share the same match.
             # We assume matches across different games are independent.
-            match_ids = [leg["match_id"] for leg in combo]
-            if len(set(match_ids)) != len(combo):
+            combo_matches = set()
+            valid = True
+            for leg in combo:
+                match_id = f"{leg['league']}_{leg['home']}_{leg['away']}"
+                if match_id in combo_matches:
+                    valid = False
+                    break
+                combo_matches.add(match_id)
+                
+            if not valid:
                 continue
                 
             combined_odds = math.prod(leg["odds"] for leg in combo)
             
             # 2. Target Range Check
-            if TARGET_MIN_ODDS <= combined_odds <= TARGET_MAX_ODDS:
+            if TARGET_MIN_ODDS <= combined_odds <= max_odds:
                 combined_devig = math.prod(leg["devig_prob"] for leg in combo)
                 combined_model = math.prod(leg["model_prob"] for leg in combo)
                 
@@ -190,27 +198,23 @@ if __name__ == "__main__":
     print(f"\nFound {len(legs)} individual legs with strictly positive edge (>1%).")
     
     # Categorize Legs
-    soccer_1x2_legs = [leg for leg in legs if leg["league"] != "NBA" and leg["market"] in ["Home Win", "Away Win", "Draw"]]
-    soccer_ou_legs = [leg for leg in legs if leg["league"] != "NBA" and ("Over" in leg["market"] or "Under" in leg["market"])]
+    soccer_legs = [leg for leg in legs if leg["league"] != "NBA"]
     nba_legs = [leg for leg in legs if leg["league"] == "NBA"]
     
-    print("\nBuilding independent 2-leg and 3-leg accumulators (Target Odds: 1.8 - 2.4)...")
+    print("\nBuilding independent 2-leg and 3-leg accumulators (Target Odds: around 2.0)...")
     
-    accas_1x2, c1 = build_accumulators(soccer_1x2_legs)
-    accas_ou, c2 = build_accumulators(soccer_ou_legs)
-    accas_nba, c3 = build_accumulators(nba_legs)
+    accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=2.8)
+    accas_nba, c2 = build_accumulators(nba_legs, max_odds=25.0)
     
     # Sort strictly by combined edge, not raw odds
-    accas_1x2.sort(key=lambda x: x["edge"], reverse=True)
-    accas_ou.sort(key=lambda x: x["edge"], reverse=True)
+    accas_soccer.sort(key=lambda x: x["edge"], reverse=True)
     accas_nba.sort(key=lambda x: x["edge"], reverse=True)
     
-    total_combinations = c1 + c2 + c3
+    total_combinations = c1 + c2
     print(f"Total combinations evaluated: {total_combinations:,}")
     
     # Take the top N required
-    top_1x2 = accas_1x2[:5]
-    top_ou = accas_ou[:5]
+    top_soccer = accas_soccer[:10]
     top_nba = accas_nba[:10]
     
     # Save to Tracker Log for Post-Match Resolution & Retraining
@@ -228,28 +232,28 @@ if __name__ == "__main__":
             pass
             
     timestamp = datetime.utcnow().isoformat()
-    all_tracked = top_1x2 + top_ou + top_nba
+    all_tracked = top_soccer + top_nba
     
     for acca in all_tracked:
         acca_record = {
             "timestamp": timestamp,
             "status": "PENDING",
-            "combined_odds": acca["odds"],
-            "combined_edge": acca["edge"],
+            "odds": acca["odds"],
+            "edge": acca["edge"],
             "stake": acca["stake"],
-            "legs": []
+            "legs": [
+                {
+                    "league": leg["league"],
+                    "home": leg["home"],
+                    "away": leg["away"],
+                    "market": leg["market"],
+                    "odds": leg["odds"],
+                    "edge": leg["edge"],
+                    "date": leg.get("date", ""),
+                    "status": "PENDING"
+                } for leg in acca["legs"]
+            ]
         }
-        for leg in acca["legs"]:
-            acca_record["legs"].append({
-                "match_id": leg["match_id"],
-                "league": leg["league"],
-                "home": leg["home"],
-                "away": leg["away"],
-                "market": leg["market"],
-                "odds": leg["odds"],
-                "edge": leg["edge"],
-                "status": "PENDING"
-            })
         tracked_data.append(acca_record)
         
     with open(tracker_file, "w") as f:
@@ -258,6 +262,6 @@ if __name__ == "__main__":
     # Send to Telegram
     if all_tracked:
         from telegram_notifier import get_telegram_messages_by_category, send_telegram_message
-        messages = get_telegram_messages_by_category(top_1x2, top_ou, top_nba)
+        messages = get_telegram_messages_by_category(top_soccer, top_nba)
         for msg in messages:
             send_telegram_message(msg)

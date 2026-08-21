@@ -33,7 +33,7 @@ def send_telegram_message(message: str) -> bool:
             print(f"Response: {e.response.text}")
         return False
 
-def get_telegram_messages_by_category(soccer_1x2: list, soccer_ou: list, nba: list) -> list:
+def get_telegram_messages_by_category(soccer_accas: list, nba: list) -> list:
     """
     Formats the categorized accumulators into a list of readable HTML messages for Telegram.
     This prevents hitting Telegram's 4096-character limit by splitting categories into separate texts.
@@ -44,21 +44,9 @@ def get_telegram_messages_by_category(soccer_1x2: list, soccer_ou: list, nba: li
         if not iso_date: return "Unknown"
         return iso_date.replace('T', ' ')[:16]
 
-    if soccer_1x2:
-        msg = "<b>⚽ SOCCER (1X2 MATCH WINNER)</b>\n\n"
-        for i, acca in enumerate(soccer_1x2[:5]):
-            msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
-            msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
-            for leg in acca['legs']:
-                dt_str = _format_date(leg.get('date', ''))
-                msg += f"   • [{leg['league']}] {leg['home']} vs {leg['away']} <i>({dt_str})</i>\n"
-                msg += f"      👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>\n"
-            msg += "\n"
-        messages.append(msg)
-            
-    if soccer_ou:
-        msg = "<b>⚽ SOCCER (OVER/UNDER GOALS)</b>\n\n"
-        for i, acca in enumerate(soccer_ou[:5]):
+    if soccer_accas:
+        msg = "<b>⚽ TOP SOCCER ACCUMULATORS</b>\n\n"
+        for i, acca in enumerate(soccer_accas[:10]):
             msg += f"<b>🔹 Acca #{i+1} | Odds: {acca['odds']:.2f}</b>\n"
             msg += f"<i>Edge: +{acca['edge']*100:.2f}% | Stake: KES {acca['stake']:.0f}</i>\n"
             for leg in acca['legs']:
