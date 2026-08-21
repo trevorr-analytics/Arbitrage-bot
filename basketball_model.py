@@ -23,7 +23,9 @@ class BasketballModel:
         # We also need pace and offensive/defensive ratings for Totals (O/U)
         self.team_stats = {} # dict[team -> {"off_rtg": 110, "def_rtg": 110, "pace": 98}]
         
-    def known_teams(self):`n        return []`n    def get_player_elo(self, player_name: str) -> float:
+    def known_teams(self):
+        return []
+    def get_player_elo(self, player_name: str) -> float:
         return self.player_ratings.get(player_name, self.base_elo)
         
     def set_active_roster(self, team: str, roster_minutes: dict):
@@ -92,26 +94,49 @@ class BasketballModel:
             self.player_ratings[p] = current_elo - (shift * weight)
             
     def fit(self, historical_data_path: str = None, league_name: str = "NBA"):
-        """
-        Ingests historical box-score level data to build the player-level Elo graph.
-        Requires a CSV with columns: Date, HomeTeam, AwayTeam, HomeScore, AwayScore, HomePlayer1..N, HomeMins1..N...
-        """
         if not historical_data_path:
             print(f"[BasketballModel] No historical data provided for {league_name}. Using uncalibrated baseline (1500 Elo).")
-            # Create a basic fallback for testing
             return
             
         try:
             df = pd.read_csv(historical_data_path)
-            # Sorting chronologically is critical to prevent future data leakage
-            df["Date"] = pd.to_datetime(df["Date"])
-            df = df.sort_values("Date")
             
-            for idx, row in df.iterrows():
-                # In production, parse JSON or wide-format columns for player minutes
-                # self.update_ratings(...)
-                pass
-            print(f"[BasketballModel] Successfully calibrated player Elos on {len(df)} historical matches.")
+            # EuroLeague API format support
+            if 'Gamecode' in df.columns and 'Minutes' in df.columns and 'Points' in df.columns:
+                print(f"[BasketballModel] Detected EuroLeague format. Calibrating Elo...")
+                
+                # Convert 'MM:SS' to fractional minutes
+                def parse_mins(x):
+                    if pd.isna(x) or not isinstance(x, str) or ':' not in x: return 0.0
+                    m, s = x.split(':')
+                    return float(m) + float(s)/60.0
+                
+                df['Minutes_Float'] = df['Minutes'].apply(parse_mins)
+                df = df.fillna({"Points": 0})
+                
+                # Group by Gamecode
+                games = df.groupby('Gamecode')
+                for game_id, g_df in games:
+                    home_df = g_df[g_df['Home'] == 1]
+                    away_df = g_df[g_df['Home'] == 0]
+                    
+                    if len(home_df) == 0 or len(away_df) == 0: continue
+                    
+                    home_team = home_df['Team'].iloc[0]
+                    away_team = away_df['Team'].iloc[0]
+                    
+                    home_score = home_df['Points'].sum()
+                    away_score = away_df['Points'].sum()
+                    
+                    home_mins = {row['Player']: row['Minutes_Float'] for _, row in home_df.iterrows() if row['Minutes_Float'] > 0}
+                    away_mins = {row['Player']: row['Minutes_Float'] for _, row in away_df.iterrows() if row['Minutes_Float'] > 0}
+                    
+                    self.update_ratings(home_team, away_team, home_score, away_score, home_mins, away_mins)
+                    
+                print(f"[BasketballModel] Successfully calibrated player Elos on {len(games)} historical matches.")
+            else:
+                print("[BasketballModel] Format not recognized.")
+                
         except Exception as e:
             print(f"[BasketballModel] Error loading {historical_data_path}: {e}")
 
@@ -151,4 +176,6 @@ class BasketballModel:
             "over_total": prob_over,
             "under_total": prob_under
         }
+
+
 

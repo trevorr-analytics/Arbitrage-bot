@@ -30,13 +30,6 @@ def save_cache(cache_data):
         json.dump(cache_data, f)
 
 def fetch_live_odds(league: str, api_key: str = None) -> list:
-    if api_key is None:
-        api_key = os.environ.get("ODDS_API_KEY")
-        
-    if not api_key:
-        print("\nERROR: ODDS_API_KEY environment variable is not set.")
-        return []
-
     sport_key = SPORT_KEYS.get(league)
     if not sport_key:
         print(f"League {league} not supported for live odds.")
@@ -44,6 +37,22 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
 
     cache = load_cache()
     current_time = time.time()
+    if sport_key in cache:
+        # If API key is missing, ignore expiry and just return cache
+        if api_key is None and not os.environ.get("ODDS_API_KEY"):
+            print(f"Using offline cache for {league} because API key is missing.")
+            return _parse_odds_data(cache[sport_key]["data"])
+            
+        cached_time = cache[sport_key].get("timestamp", 0)
+        if current_time - cached_time < CACHE_EXPIRY_SECONDS:
+            return _parse_odds_data(cache[sport_key]["data"])
+
+    if api_key is None:
+        api_key = os.environ.get("ODDS_API_KEY")
+        
+    if not api_key:
+        print("\nERROR: ODDS_API_KEY environment variable is not set.")
+        return []
     
     # Check if we have valid cached data
     if sport_key in cache:

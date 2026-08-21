@@ -39,7 +39,7 @@ def fuzzy_team(name: str, known: list) -> str:
     name_tokens = set(name_lower.split())
     for k in known:
         if name_tokens & set(k.lower().split()): return k
-    return None
+    return name if not known else None
 
 def get_all_ev_legs() -> List[Dict]:
     from weather_api import get_league_weather
@@ -55,8 +55,12 @@ def get_all_ev_legs() -> List[Dict]:
         # Load Data & Model based on sport
         if league in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
             model = BasketballModel()
-            model.fit() # Stub fit for now, later replaced with full 538 history
+            if league == "EuroLeague" and os.path.exists("basketball_data/euroleague_2023_boxscore.csv"):
+                model.fit("basketball_data/euroleague_2023_boxscore.csv", league_name=league)
+            else:
+                model.fit() # Stub fit for others
             known = model.known_teams()
+
         else:
             try:
                 data = load_league_data(league)
@@ -206,9 +210,34 @@ if __name__ == "__main__":
     accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=3.5)
     accas_nba, c2 = build_accumulators(nba_legs, max_odds=3.5)
     
-    # Sort strictly by combined edge, not raw odds
-    accas_soccer.sort(key=lambda x: abs(x["odds"] - 2.0))
-    accas_nba.sort(key=lambda x: abs(x["odds"] - 2.0))
+    # Bucket by date (this week vs future) and then sort by odds
+    from datetime import datetime, timedelta
+    now = datetime.utcnow()
+    seven_days = now + timedelta(days=7)
+    
+    def get_max_date(acca):
+        max_d = now
+        for leg in acca["legs"]:
+            try:
+                d = datetime.strptime(leg["date"], "%Y-%m-%dT%H:%M:%SZ")
+                if d > max_d: max_d = d
+            except: pass
+        return max_d
+
+    def sort_and_bucket(accas):
+        this_week = []
+        future = []
+        for a in accas:
+            if get_max_date(a) <= seven_days:
+                this_week.append(a)
+            else:
+                future.append(a)
+        this_week.sort(key=lambda x: abs(x["odds"] - 2.0))
+        future.sort(key=lambda x: abs(x["odds"] - 2.0))
+        return this_week + future
+
+    accas_soccer = sort_and_bucket(accas_soccer)
+    accas_nba = sort_and_bucket(accas_nba)
     
     total_combinations = c1 + c2
     print(f"Total combinations evaluated: {total_combinations:,}")
@@ -220,7 +249,6 @@ if __name__ == "__main__":
     # Save to Tracker Log for Post-Match Resolution & Retraining
     import json
     import os
-    from datetime import datetime
     
     tracker_file = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
     tracked_data = []
@@ -265,8 +293,3 @@ if __name__ == "__main__":
         messages = get_telegram_messages_by_category(top_soccer, top_nba)
         for msg in messages:
             send_telegram_message(msg)
-
-
-
-
-
