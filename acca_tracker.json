@@ -2551,5 +2551,63 @@
                 "status": "PENDING"
             }
         ]
+    },
+    {
+        "timestamp": "2026-08-21T09:23:23.747555",
+        "status": "PENDING",
+        "odds": 2.0196,
+        "edge": 0.16149054274854124,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.53,
+                "edge": 0.14619346708252545,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.32,
+                "edge": 0.06266486486486489,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-21T09:23:23.747555",
+        "status": "PENDING",
+        "odds": 2.0196,
+        "edge": 0.10709181538635454,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "Eredivisie",
+                "home": "NEC Nijmegen",
+                "away": "Excelsior",
+                "market": "Home Win",
+                "odds": 1.53,
+                "edge": 0.08161975570827085,
+                "date": "2026-08-22T18:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.32,
+                "edge": 0.06266486486486489,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
     }
 ]
