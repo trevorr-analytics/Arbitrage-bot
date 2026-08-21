@@ -1,4 +1,4 @@
-"""
+﻿"""
 Dixon-Coles Bivariate Poisson Model
 Derives 1X2, Over/Under 2.5, and BTTS probabilities for any fixture
 given historical results data.
@@ -90,8 +90,11 @@ class DixonColesModel:
     Estimates attack/defence strengths for each team + home advantage + rho correction.
     """
 
-    def __init__(self, half_life_days: float = 90.0):
+    def __init__(self, half_life_days: float = 90.0, use_xg: bool = True, xg_weight: float = 0.5, use_fatigue: bool = False):
         self.half_life_days = half_life_days
+        self.use_xg = use_xg
+        self.xg_weight = xg_weight
+        self.use_fatigue = use_fatigue
         self.params_ = None
         self.teams_ = None
         self.league_name_ = None
@@ -103,8 +106,22 @@ class DixonColesModel:
         return np.exp(-np.log(2) * days_ago / self.half_life_days)
 
     def fit(self, data: pd.DataFrame, league_name: str = ""):
+        # Pre-process xG blending based on toggles
+        if self.use_xg and "HST" in data.columns and "AST" in data.columns:
+            data_fit = data.copy()
+            data_fit["HST"] = pd.to_numeric(data_fit["HST"], errors="coerce").fillna(data_fit["FTHG"] / 0.33)
+            data_fit["AST"] = pd.to_numeric(data_fit["AST"], errors="coerce").fillna(data_fit["FTAG"] / 0.33)
+            hxG = data_fit["HST"] * 0.33
+            axG = data_fit["AST"] * 0.33
+            data_fit["FTHG_Blended"] = (data_fit["FTHG"] * (1 - self.xg_weight)) + (hxG * self.xg_weight)
+            data_fit["FTAG_Blended"] = (data_fit["FTAG"] * (1 - self.xg_weight)) + (axG * self.xg_weight)
+        else:
+            data_fit = data.copy()
+            data_fit["FTHG_Blended"] = data_fit["FTHG"]
+            data_fit["FTAG_Blended"] = data_fit["FTAG"]
+            
         self.league_name_ = league_name
-        self.teams_ = sorted(set(data["HomeTeam"]) | set(data["AwayTeam"]))
+        self.teams_ = sorted(set(data_fit["HomeTeam"]) | set(data_fit["AwayTeam"]))
         n_teams = len(self.teams_)
         team_idx = {t: i for i, t in enumerate(self.teams_)}
         self._team_idx = team_idx
@@ -112,24 +129,24 @@ class DixonColesModel:
         # Track last match date for fatigue penalty
         self.last_match_dates_ = {}
         # Ensure date is parsed properly
-        if not pd.api.types.is_datetime64_any_dtype(data['Date']):
-            data['Date'] = pd.to_datetime(data['Date'], dayfirst=True, errors='coerce')
+        if not pd.api.types.is_datetime64_any_dtype(data_fit['Date']):
+            data_fit['Date'] = pd.to_datetime(data_fit['Date'], dayfirst=True, errors='coerce')
             
         for team in self.teams_:
-            team_games = data[(data["HomeTeam"] == team) | (data["AwayTeam"] == team)]
+            team_games = data_fit[(data_fit["HomeTeam"] == team) | (data_fit["AwayTeam"] == team)]
             if not team_games.empty:
                 self.last_match_dates_[team] = team_games["Date"].max()
             else:
                 self.last_match_dates_[team] = pd.Timestamp("2000-01-01")
 
-        weights = self._compute_weights(data)
-        home_goals = data["FTHG_Blended"].values
-        away_goals = data["FTAG_Blended"].values
-        home_idx = np.array([team_idx[t] for t in data["HomeTeam"]])
-        away_idx = np.array([team_idx[t] for t in data["AwayTeam"]])
+        weights = self._compute_weights(data_fit)
+        home_goals = data_fit["FTHG_Blended"].values
+        away_goals = data_fit["FTAG_Blended"].values
+        home_idx = np.array([team_idx[t] for t in data_fit["HomeTeam"]])
+        away_idx = np.array([team_idx[t] for t in data_fit["AwayTeam"]])
 
-        actual_hg = data["FTHG"].values
-        actual_ag = data["FTAG"].values
+        actual_hg = data_fit["FTHG"].values
+        actual_ag = data_fit["FTAG"].values
 
         # Initial params: attack=0, defence=0, home_adv=0.3, rho=-0.1
         x0 = np.zeros(2 * n_teams + 2)
@@ -187,7 +204,7 @@ class DixonColesModel:
         self._team_idx = team_idx
         return self
 
-    def _get_lam_mu(self, home_team: str, away_team: str):
+    def _get_lam_mu(self, home_team: str, away_team: str, match_date: pd.Timestamp = None):
         """Compute expected goals for home and away teams."""
         n = len(self.teams_)
         attack  = self.params_[:n]
@@ -201,25 +218,14 @@ class DixonColesModel:
 
         lam = np.exp(attack[hi] - defence[ai] + home_adv)  # home xG
         mu  = np.exp(attack[ai] - defence[hi])              # away xG
-        
-        # Apply Travel Fatigue Penalty (Short Rest)
-        today = pd.Timestamp.now()
-        h_rest = (today - self.last_match_dates_.get(home_team, today)).days
-        a_rest = (today - self.last_match_dates_.get(away_team, today)).days
-        
-        if 0 < h_rest < 4:
-            lam *= 0.90 # 10% reduction in attack
-            
-        if 0 < a_rest < 4:
-            mu *= 0.90 # 10% reduction in attack
-            
+                
         return lam, mu
 
-    def predict(self, home_team: str, away_team: str, max_goals: int = 8) -> dict:
+    def predict(self, home_team: str, away_team: str, max_goals: int = 8, match_date: pd.Timestamp = None) -> dict:
         """
-        Returns a dict with probabilities for 1X2, Over/Under 2.5, BTTS.
+        Returns probabilities for 1X2, BTTS, and O/U 2.5
         """
-        lam, mu = self._get_lam_mu(home_team, away_team)
+        lam, mu = self._get_lam_mu(home_team, away_team, match_date)
         rho = self.params_[-1]
 
         # Build scoreline probability matrix
@@ -257,3 +263,4 @@ class DixonColesModel:
 
     def known_teams(self) -> list:
         return list(self.teams_)
+

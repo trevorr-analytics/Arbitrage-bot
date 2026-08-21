@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import math
 import itertools
@@ -17,8 +17,8 @@ BANKROLL_KES = 5000.0
 MIN_SINGLE_EDGE = 0.01  
 KELLY_FRACTION = 0.125  
 MAX_BET_CAP = 0.01      
-TARGET_MIN_ODDS = 1.7
-TARGET_MAX_ODDS = 25.0
+TARGET_MIN_ODDS = 1.95
+TARGET_MAX_ODDS = 2.05
 
 LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "Ligue1", "Eredivisie", "NBA"]
 
@@ -203,8 +203,8 @@ if __name__ == "__main__":
     
     print("\nBuilding independent 2-leg and 3-leg accumulators (Target Odds: around 2.0)...")
     
-    accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=2.8)
-    accas_nba, c2 = build_accumulators(nba_legs, max_odds=25.0)
+    accas_soccer, c1 = build_accumulators(soccer_legs, max_odds=2.05)
+    accas_nba, c2 = build_accumulators(nba_legs, max_odds=2.05)
     
     # Sort strictly by combined edge, not raw odds
     accas_soccer.sort(key=lambda x: x["edge"], reverse=True)
@@ -265,3 +265,5 @@ if __name__ == "__main__":
         messages = get_telegram_messages_by_category(top_soccer, top_nba)
         for msg in messages:
             send_telegram_message(msg)
+
+
