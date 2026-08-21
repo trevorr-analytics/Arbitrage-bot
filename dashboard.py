@@ -1,7 +1,7 @@
 ﻿import streamlit as st
 import json
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timezone
 import os
 
 st.set_page_config(page_title="Quant Betting Dashboard", page_icon="📈", layout="wide")
@@ -29,7 +29,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("📈 AutoQuant Live Dashboard")
-st.write(f"**Last Updated:** {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}")
+st.write(f"**Last Updated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
 
 @st.cache_data(ttl=3600)
 def load_data():
@@ -52,42 +52,47 @@ nba_accas = []
 all_legs = []
 
 for acca in data:
-    is_nba = any(leg["league"] in ["NBA", "EuroLeague", "NCAAB", "WNBA"] for leg in acca["legs"])
+    is_nba = False
+    for leg in acca.get("legs", []):
+        if leg.get("league") in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
+            is_nba = True
+        
+        # deduplicate legs
+        # Check by match signature to avoid referencing issues
+        leg_sig = f"{leg.get('home')}-{leg.get('away')}-{leg.get('market')}"
+        if not any(f"{l.get('home')}-{l.get('away')}-{l.get('market')}" == leg_sig for l in all_legs):
+            all_legs.append(leg)
+
     if is_nba:
         nba_accas.append(acca)
     else:
         soccer_accas.append(acca)
-        
-    for leg in acca["legs"]:
-        # deduplicate legs
-        if leg not in all_legs:
-            all_legs.append(leg)
 
-# Sort strictly by Edge
-soccer_accas = sorted(soccer_accas, key=lambda x: x["edge"], reverse=True)
-nba_accas = sorted(nba_accas, key=lambda x: x["edge"], reverse=True)
-all_legs = sorted(all_legs, key=lambda x: x["edge"], reverse=True)
+# Sort strictly by Edge (using safe .get() to prevent KeyError on old schemas)
+soccer_accas = sorted(soccer_accas, key=lambda x: x.get("edge", 0), reverse=True)
+nba_accas = sorted(nba_accas, key=lambda x: x.get("edge", 0), reverse=True)
+all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
 tab1, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "⚽ Soccer", "🏀 Basketball", "🧠 CLV Learning Log"])
 
 def render_acca(acca, title):
     st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
-    st.subheader(f"{title} | Odds: {acca['odds']:.2f}")
-    st.write(f"**Edge:** <span style='color:#00ffa3;'>+{acca['edge']*100:.2f}%</span> | **Stake:** KES {acca['stake']:.0f}", unsafe_allow_html=True)
+    st.subheader(f"{title} | Odds: {acca.get('odds', 0):.2f}")
+    st.write(f"**Edge:** <span style='color:#00ffa3;'>+{acca.get('edge', 0)*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}", unsafe_allow_html=True)
     
-    for leg in acca['legs']:
+    for leg in acca.get('legs', []):
         date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
         st.markdown(f"""
         <div class="leg-row">
-            <b>[{leg['league']}]</b> {leg['home']} vs {leg['away']} <i>({date_str})</i><br>
-            👉 {leg['market']} @ {leg['odds']:.2f} <i>(+{leg['edge']*100:.1f}%)</i>
+            <b>[{leg.get('league', 'Unknown')}]</b> {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i><br>
+            👉 {leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f} <i>(+{leg.get('edge', 0)*100:.1f}%)</i>
         </div>
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
 with tab1:
     st.header("🏆 The 3 Best Accumulators")
-    top_3_overall = sorted(data, key=lambda x: x["edge"], reverse=True)[:3]
+    top_3_overall = sorted(data, key=lambda x: x.get("edge", 0), reverse=True)[:3]
     for i, acca in enumerate(top_3_overall):
         render_acca(acca, f"Ultimate Acca #{i+1}")
         
@@ -95,9 +100,9 @@ with tab1:
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
         date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
-        st.write(f"**[{leg['league']}]** {leg['home']} vs {leg['away']} <i>({date_str})</i>", unsafe_allow_html=True)
-        st.write(f"👉 **{leg['market']} @ {leg['odds']:.2f}**")
-        st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg['edge']*100:.2f}%</span>", unsafe_allow_html=True)
+        st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
+        st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
+        st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
 with tab2:
