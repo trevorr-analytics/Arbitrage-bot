@@ -4305,5 +4305,295 @@
                 "status": "PENDING"
             }
         ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 2.964,
+        "edge": 0.1364348797779228,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Everton",
+                "away": "Crystal Palace",
+                "market": "Under 2.5",
+                "odds": 1.95,
+                "edge": 0.08538387909319889,
+                "date": "2026-08-22T14:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 3.1616,
+        "edge": 0.1992903320469468,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Fulham",
+                "away": "Chelsea",
+                "market": "Over 2.5",
+                "odds": 2.08,
+                "edge": 0.1599857142857143,
+                "date": "2026-08-24T19:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 3.2072,
+        "edge": 0.14837380421412544,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Brentford",
+                "away": "Tottenham Hotspur",
+                "market": "Over 2.5",
+                "odds": 2.11,
+                "edge": 0.09807556561085973,
+                "date": "2026-08-22T16:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 3.2528,
+        "edge": 0.1283866505599024,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Nottingham Forest",
+                "away": "Leeds United",
+                "market": "Over 2.5",
+                "odds": 2.14,
+                "edge": 0.08246583541147129,
+                "date": "2026-08-22T14:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 3.4504,
+        "edge": 0.1351532146177531,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Brighton and Hove Albion",
+                "away": "Aston Villa",
+                "market": "Over 2.5",
+                "odds": 2.27,
+                "edge": 0.08757466076923082,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 3.4959999999999996,
+        "edge": 0.13859917575934422,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Bundesliga",
+                "home": "Bayern Munich",
+                "away": "VfB Stuttgart",
+                "market": "Over 2.5",
+                "odds": 2.3,
+                "edge": 0.066679365079365,
+                "date": "2026-08-28T18:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 2.584,
+        "edge": 0.21373759350026322,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Tottenham Hotspur",
+                "away": "Newcastle United",
+                "market": "Over 2.5",
+                "odds": 1.7,
+                "edge": 0.17079207920792072,
+                "date": "2026-08-29T16:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 2.6752000000000002,
+        "edge": 0.14597319133974168,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Chelsea",
+                "away": "Brighton and Hove Albion",
+                "market": "Over 2.5",
+                "odds": 1.76,
+                "edge": 0.0887,
+                "date": "2026-08-30T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 2.736,
+        "edge": 0.12438638157831639,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.52,
+                "edge": 0.13491832382096725,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Aston Villa",
+                "away": "Arsenal",
+                "market": "Away Win",
+                "odds": 1.8,
+                "edge": 0.06370172480647984,
+                "date": "2026-08-31T19:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-22T09:14:52.521310",
+        "status": "PENDING",
+        "odds": 2.992,
+        "edge": 0.16216856435643562,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Tottenham Hotspur",
+                "away": "Newcastle United",
+                "market": "Over 2.5",
+                "odds": 1.7,
+                "edge": 0.17079207920792072,
+                "date": "2026-08-29T16:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EPL",
+                "home": "Chelsea",
+                "away": "Brighton and Hove Albion",
+                "market": "Over 2.5",
+                "odds": 1.76,
+                "edge": 0.0887,
+                "date": "2026-08-30T13:00:00Z",
+                "status": "PENDING"
+            }
+        ]
     }
 ]
