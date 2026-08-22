@@ -25,7 +25,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -54,7 +55,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -73,7 +75,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -83,7 +86,8 @@
                 "market": "Away Win",
                 "odds": 1.33,
                 "edge": 0.1352968912360224,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -112,7 +116,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -141,7 +146,8 @@
                 "market": "Away Win",
                 "odds": 1.33,
                 "edge": 0.1352968912360224,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -171,7 +177,8 @@
                 "market": "Away Win",
                 "odds": 1.33,
                 "edge": 0.1352968912360224,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -200,7 +207,8 @@
                 "market": "Away Win",
                 "odds": 1.33,
                 "edge": 0.1352968912360224,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -259,7 +267,8 @@
                 "market": "Away Win",
                 "odds": 1.33,
                 "edge": 0.1352968912360224,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -278,7 +287,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "NBA_Denver Nuggets_Houston Rockets",
@@ -317,7 +327,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -347,7 +358,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -366,7 +378,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -376,7 +389,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.13208604651162792,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -405,7 +419,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -415,7 +430,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.13208604651162792,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -444,7 +460,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -474,7 +491,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -534,7 +552,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -544,7 +563,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.13208604651162792,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -574,7 +594,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.13208604651162792,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -615,7 +636,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -644,7 +666,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -683,7 +706,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -723,7 +747,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -762,7 +787,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -791,7 +817,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -1181,7 +1208,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.2501124824684432,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -1241,7 +1269,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.09468604651162793,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -1271,7 +1300,8 @@
                 "market": "Home Win",
                 "odds": 1.4,
                 "edge": 0.2501124824684432,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -1281,7 +1311,8 @@
                 "market": "Away Win",
                 "odds": 1.32,
                 "edge": 0.09468604651162793,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -1341,7 +1372,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -1381,7 +1413,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -1411,7 +1444,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -1450,7 +1484,8 @@
                 "market": "Over 2.5",
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             }
         ]
     },
@@ -1869,7 +1904,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -1899,7 +1935,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -1929,7 +1966,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -1939,7 +1977,8 @@
                 "odds": 1.32,
                 "edge": 0.09169378743274803,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -1968,7 +2007,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -1987,7 +2027,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -1997,7 +2038,8 @@
                 "odds": 1.32,
                 "edge": 0.09169378743274803,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2016,7 +2058,8 @@
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.85
             },
             {
                 "league": "Eredivisie",
@@ -2026,7 +2069,8 @@
                 "odds": 1.32,
                 "edge": 0.09169378743274803,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2055,7 +2099,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -2065,7 +2110,8 @@
                 "odds": 1.32,
                 "edge": 0.09169378743274803,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2094,7 +2140,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2123,7 +2170,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2152,7 +2200,8 @@
                 "odds": 1.37,
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2542,7 +2591,8 @@
                 "odds": 1.31,
                 "edge": 0.0626047391436998,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2571,7 +2621,8 @@
                 "odds": 1.31,
                 "edge": 0.0626047391436998,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2601,7 +2652,8 @@
                 "odds": 1.31,
                 "edge": 0.028504739143699775,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2630,7 +2682,8 @@
                 "odds": 1.31,
                 "edge": 0.028504739143699775,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2659,7 +2712,8 @@
                 "odds": 1.31,
                 "edge": 0.028504739143699775,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -2689,7 +2743,8 @@
                 "odds": 1.37,
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2718,7 +2773,8 @@
                 "odds": 1.37,
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2747,7 +2803,8 @@
                 "odds": 1.37,
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -2766,7 +2823,8 @@
                 "odds": 1.37,
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -2776,7 +2834,8 @@
                 "odds": 1.31,
                 "edge": 0.028504739143699775,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3185,7 +3244,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3214,7 +3274,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3243,7 +3304,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3273,7 +3335,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3302,7 +3365,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3331,7 +3395,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3350,7 +3415,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -3360,7 +3426,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3776,7 +3843,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3805,7 +3873,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3834,7 +3903,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
@@ -3864,7 +3934,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3893,7 +3964,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3922,7 +3994,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             }
         ]
     },
@@ -3941,7 +4014,8 @@
                 "odds": 1.37,
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.36
             },
             {
                 "league": "Eredivisie",
@@ -3951,7 +4025,8 @@
                 "odds": 1.31,
                 "edge": 0.02920473914369981,
                 "date": "2026-08-23T14:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "closing_odds": 1.31
             }
         ]
     },
