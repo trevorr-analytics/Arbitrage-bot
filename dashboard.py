@@ -9,26 +9,70 @@ st.set_page_config(page_title="Quant Betting Dashboard", page_icon="📈", layou
 # Custom CSS for a mobile-friendly dark theme
 st.markdown("""
     <style>
-    .main {background-color: #0e1117;}
-    h1, h2, h3 {color: #00ffa3;}
+    /* Athena-inspired theme */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stApp, .main {background-color: #0d1110;}
+    .stApp > header {background-color: transparent;}
+    h1, h2, h3 {color: #ffffff; font-weight: 800; letter-spacing: -0.02em;}
+    h1 {font-size: 3.5rem !important; line-height: 1.1 !important;}
+    .grass {color: #2f8f56;}
+    .eyebrow {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        color: #8c9b93;
+        font-weight: 600;
+        margin-bottom: -15px;
+        display: block;
+    }
     .acca-card {
-        background-color: #1a1c24;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-left: 4px solid #00ffa3;
+        background-color: #141a18;
+        border: 1px solid #1f2924;
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .acca-card:hover {
+        border-color: #2f8f56;
+        transform: translateY(-2px);
+    }
+    .acca-card h4 {
+        color: #ffffff;
+        margin-top: 0;
+        border-bottom: 1px solid #1f2924;
+        padding-bottom: 12px;
+        font-size: 1.25rem;
     }
     .leg-row {
-        font-size: 0.9em;
-        color: #d1d5db;
-        border-bottom: 1px solid #374151;
-        padding-bottom: 5px;
-        margin-bottom: 5px;
+        font-size: 0.95em;
+        color: #a4b3ac;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #1f2924;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .leg-row:last-child {
+        border-bottom: none;
+    }
+    .leg-row b {
+        color: #eef4ef;
+    }
+    .edge-text {
+        color: #2f8f56;
+        font-weight: 700;
     }
     </style>
 """, unsafe_allow_html=True)
 
-st.title("📈 AutoQuant Live Dashboard")
+st.markdown('<span class="eyebrow">model vs market &middot; calibration in public</span>', unsafe_allow_html=True)
+st.markdown('<h1>AutoQuant &middot; <span class="grass">Sports</span></h1>', unsafe_allow_html=True)
+st.write("every day, a new game, and a new machine learning prediction by AutoQuant.")
 st.write(f"**Last Updated:** {(datetime.now(timezone.utc) + timedelta(hours=3)).strftime('%Y-%m-%d %H:%M EAT')}")
 
 @st.cache_data(ttl=60)
@@ -107,7 +151,7 @@ tab1, tab_safe, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "🛡️ Safe Play
 def render_acca(acca, title):
     st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
     st.subheader(f"{title} | Odds: {acca.get('odds', 0):.2f}")
-    st.write(f"**Edge:** <span style='color:#00ffa3;'>+{acca.get('edge', 0)*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}", unsafe_allow_html=True)
+    st.write(f"**Edge:** <span class='edge-text'>+{acca.get('edge', 0)*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}", unsafe_allow_html=True)
     
     for leg in acca.get('legs', []):
         dt = parse_date(leg.get('date', ''))
@@ -133,7 +177,7 @@ with tab1:
         date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
         st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
         st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
-        st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
+        st.write(f"**Edge:** <span class='edge-text'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
 
@@ -160,7 +204,7 @@ with tab_safe:
                     <b>Date & Time:</b> {date_str} <br>
                     <b>Market:</b> {leg.get('market')} <br>
                     <b>Offered Odds:</b> {leg.get('odds', 0):.2f} <br>
-                    <b>True Probability:</b> <span style="color:#00ffa3;">{prob_pct:.1f}%</span> <br>
+                    <b>True Probability:</b> <span class='edge-text'>{prob_pct:.1f}%</span> <br>
                     <b>Edge:</b> +{edge_pct:.1f}%
                 </div>
             </div>
