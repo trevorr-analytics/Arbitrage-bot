@@ -4719,5 +4719,625 @@
                 "status": "PENDING"
             }
         ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 1.98915,
+        "edge": 0.20426826311100305,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "Eredivisie",
+                "home": "NEC Nijmegen",
+                "away": "Excelsior",
+                "market": "Home Win",
+                "odds": 1.49,
+                "edge": 0.054890707138012584,
+                "model_prob": 0.6879,
+                "date": "2026-08-22T18:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.335,
+                "edge": 0.24127825594563979,
+                "model_prob": 0.9389,
+                "date": "2026-08-23T12:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.01585,
+        "edge": 0.21707215506155048,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "SerieA",
+                "home": "Atalanta BC",
+                "away": "Sassuolo",
+                "market": "Home Win",
+                "odds": 1.51,
+                "edge": 0.07089250167102135,
+                "model_prob": 0.6947,
+                "date": "2026-08-23T18:45:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.335,
+                "edge": 0.24127825594563979,
+                "model_prob": 0.9389,
+                "date": "2026-08-23T12:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.02055,
+        "edge": 0.11954722251519062,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "SerieA",
+                "home": "Inter Milan",
+                "away": "Monza",
+                "market": "Over 2.5",
+                "odds": 1.61,
+                "edge": 0.11798174807197936,
+                "model_prob": 0.7041,
+                "date": "2026-08-22T16:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 1.9703499999999998,
+        "edge": 0.1195605729616317,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "Bundesliga",
+                "home": "Bayern Munich",
+                "away": "VfB Stuttgart",
+                "market": "Over 2.5",
+                "odds": 1.57,
+                "edge": 0.11814562334217504,
+                "model_prob": 0.7017,
+                "date": "2026-08-28T18:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.0331,
+        "edge": 0.11643360103735506,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Fulham",
+                "away": "Chelsea",
+                "market": "Over 2.5",
+                "odds": 1.62,
+                "edge": 0.11430465116279065,
+                "model_prob": 0.6957,
+                "date": "2026-08-24T19:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 1.9624499999999998,
+        "edge": 0.2937637105797021,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Manchester City",
+                "away": "Bournemouth",
+                "market": "Home Win",
+                "odds": 1.47,
+                "edge": 0.14655080906148865,
+                "model_prob": 0.7938,
+                "date": "2026-08-23T13:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.335,
+                "edge": 0.24127825594563979,
+                "model_prob": 0.9389,
+                "date": "2026-08-23T12:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.0519249999999998,
+        "edge": 0.06469135745993204,
+        "stake": 2.6807167355383155,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Brentford",
+                "away": "Tottenham Hotspur",
+                "market": "Over 2.5",
+                "odds": 1.6349999999999998,
+                "edge": 0.04927142785714289,
+                "model_prob": 0.6207,
+                "date": "2026-08-22T16:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.0826000000000002,
+        "edge": 0.1618560833392424,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "Ligue1",
+                "home": "RC Lens",
+                "away": "Auxerre",
+                "market": "Home Win",
+                "odds": 1.56,
+                "edge": 0.015988155143751737,
+                "model_prob": 0.6246,
+                "date": "2026-08-22T15:15:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "PSV Eindhoven",
+                "away": "Groningen",
+                "market": "Home Win",
+                "odds": 1.335,
+                "edge": 0.24127825594563979,
+                "model_prob": 0.9389,
+                "date": "2026-08-23T12:30:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.089575,
+        "edge": 0.06294880206089298,
+        "stake": 9.095671168230641,
+        "legs": [
+            {
+                "league": "SerieA",
+                "home": "Bologna",
+                "away": "Lazio",
+                "market": "Under 2.5",
+                "odds": 1.665,
+                "edge": 0.04718913324708918,
+                "model_prob": 0.6164,
+                "date": "2026-08-24T16:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.0958499999999995,
+        "edge": 0.13872025624891243,
+        "stake": 50.0,
+        "legs": [
+            {
+                "league": "EPL",
+                "home": "Hull City",
+                "away": "Manchester United",
+                "market": "Over 2.5",
+                "odds": 1.67,
+                "edge": 0.14349583333333327,
+                "model_prob": 0.7086,
+                "date": "2026-08-22T11:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "Eredivisie",
+                "home": "SC Cambuur",
+                "away": "Feyenoord",
+                "market": "Away Win",
+                "odds": 1.255,
+                "edge": 0.045204218984250755,
+                "model_prob": 0.7887,
+                "date": "2026-08-23T14:45:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.8674000000000004,
+        "edge": 0.04402758597591383,
+        "stake": 2.1768068133701193,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "San Antonio Spurs",
+                "away": "Oklahoma City Thunder",
+                "market": "Home Win",
+                "odds": 1.77,
+                "edge": 0.061962251651971,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-21T01:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.8755,
+        "edge": 0.045519665199285575,
+        "stake": 3.1148966834712106,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Philadelphia 76ers",
+                "away": "New York Knicks",
+                "market": "Home Win",
+                "odds": 1.775,
+                "edge": 0.06454069866943812,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-30T23:40:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.8899999999999997,
+        "edge": 0.045614572332945025,
+        "stake": 4.774112885684828,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Orlando Magic",
+                "away": "Atlanta Hawks",
+                "market": "Home Win",
+                "odds": 1.7,
+                "edge": 0.039834651636963314,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-21T23:10:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "EuroLeague",
+                "home": "Olympiacos Piraeus",
+                "away": "Panathinaikos Athens",
+                "market": "Home Win",
+                "odds": 1.7,
+                "edge": 0.039834651636963314,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-08-27T19:00:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.9160000000000004,
+        "edge": 0.04645118065616233,
+        "stake": 7.68637117049329,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Detroit Pistons",
+                "away": "Boston Celtics",
+                "market": "Home Win",
+                "odds": 1.8,
+                "edge": 0.0661504411106476,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-20T19:00:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.9160000000000004,
+        "edge": 0.04645118065616233,
+        "stake": 7.68637117049329,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Miami Heat",
+                "away": "Minnesota Timberwolves",
+                "market": "Home Win",
+                "odds": 1.8,
+                "edge": 0.0661504411106476,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-21T23:40:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.9484000000000004,
+        "edge": 0.04660980828831157,
+        "stake": 11.20671623327701,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Cleveland Cavaliers",
+                "away": "Philadelphia 76ers",
+                "market": "Home Win",
+                "odds": 1.82,
+                "edge": 0.06642456391766505,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-07T00:40:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.9558999999999997,
+        "edge": 0.05866861158405934,
+        "stake": 12.004987222039059,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "San Antonio Spurs",
+                "away": "Oklahoma City Thunder",
+                "market": "Home Win",
+                "odds": 1.77,
+                "edge": 0.061962251651971,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-21T01:30:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Boston Celtics",
+                "away": "New York Knicks",
+                "market": "Home Win",
+                "odds": 1.67,
+                "edge": 0.04139096176712742,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-23T23:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.96425,
+        "edge": 0.06008952996734096,
+        "stake": 12.88655745489194,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Boston Celtics",
+                "away": "New York Knicks",
+                "market": "Home Win",
+                "odds": 1.67,
+                "edge": 0.04139096176712742,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-23T23:10:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Philadelphia 76ers",
+                "away": "New York Knicks",
+                "market": "Home Win",
+                "odds": 1.775,
+                "edge": 0.06454069866943812,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-30T23:40:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 2.9889,
+        "edge": 0.05781129429115345,
+        "stake": 15.44585667541439,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Golden State Warriors",
+                "away": "Los Angeles Lakers",
+                "market": "Home Win",
+                "odds": 1.845,
+                "edge": 0.08578173860572214,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-10-31T02:10:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-23T10:13:59.379240",
+        "status": "PENDING",
+        "odds": 3.0051,
+        "edge": 0.056697475178886514,
+        "stake": 17.09356327108753,
+        "legs": [
+            {
+                "league": "NBA",
+                "home": "Denver Nuggets",
+                "away": "Houston Rockets",
+                "market": "Home Win",
+                "odds": 1.62,
+                "edge": 0.01379262850370766,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-11-21T03:10:00Z",
+                "status": "PENDING"
+            },
+            {
+                "league": "NBA",
+                "home": "Los Angeles Lakers",
+                "away": "Philadelphia 76ers",
+                "market": "Home Win",
+                "odds": 1.855,
+                "edge": 0.08385695906115298,
+                "model_prob": 0.5924662305843318,
+                "date": "2026-12-25T22:00:00Z",
+                "status": "PENDING"
+            }
+        ]
     }
 ]
