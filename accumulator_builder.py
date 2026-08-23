@@ -293,3 +293,4 @@ if __name__ == "__main__":
         messages = get_telegram_messages_by_category(top_soccer, top_nba)
         for msg in messages:
             send_telegram_message(msg)
+
