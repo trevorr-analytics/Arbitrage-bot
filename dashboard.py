@@ -91,12 +91,14 @@ now = datetime.now(timezone.utc)
 end_of_week = now + timedelta(days=7)
 
 def parse_date(date_str):
+    if not date_str:
+        return None
     try:
         if date_str.endswith("Z"):
             return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
         return datetime.fromisoformat(date_str).replace(tzinfo=timezone.utc)
     except Exception:
-        return now
+        return None
 
 if data:
     valid_accas = []
@@ -106,7 +108,7 @@ if data:
     for acca in reversed(data):
         for leg in acca.get("legs", []):
             dt = parse_date(leg.get("date", ""))
-            if now <= dt <= end_of_week:
+            if dt is None or (now <= dt <= end_of_week):
                 leg_sig = f"{leg.get('home')}-{leg.get('away')}-{leg.get('market')}"
                 if not any(f"{l.get('home')}-{l.get('away')}-{l.get('market')}" == leg_sig for l in raw_all_legs):
                     raw_all_legs.append(leg)
@@ -116,10 +118,11 @@ if data:
         out_of_week = False
         for leg in acca.get("legs", []):
             dt = parse_date(leg.get("date", ""))
-            if dt < now:
-                has_past_leg = True
-            elif dt > end_of_week:
-                out_of_week = True
+            if dt is not None:
+                if dt < now:
+                    has_past_leg = True
+                elif dt > end_of_week:
+                    out_of_week = True
         
         if not has_past_leg and not out_of_week:
             valid_accas.append(acca)
@@ -178,7 +181,7 @@ def render_acca(acca, title):
     
     for leg in acca.get('legs', []):
         dt = parse_date(leg.get('date', ''))
-        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
+        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
         st.markdown(f"""
         <div class="leg-row">
             <b>[{leg.get('league', 'Unknown')}]</b> {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i><br>
@@ -197,7 +200,7 @@ with tab1:
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
         dt = parse_date(leg.get('date', ''))
-        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
+        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
         st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
         st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
         st.write(f"**Edge:** <span class='edge-text'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
@@ -217,7 +220,7 @@ with tab_safe:
     else:
         for i, leg in enumerate(safe_legs):
             dt = parse_date(leg.get('date', ''))
-            date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
+            date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
             edge_pct = leg.get('edge', 0) * 100
             prob_pct = leg.get('model_prob', 0) * 100
             st.markdown(f'''
