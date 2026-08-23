@@ -150,16 +150,31 @@ for acca in data: # We already reversed earlier if we needed, but data is now ju
         soccer_accas.append(acca)
 
 # Sort strictly by Edge (using safe .get() to prevent KeyError on old schemas)
-soccer_accas = sorted(soccer_accas, key=lambda x: x.get("edge", 0), reverse=True)
-nba_accas = sorted(nba_accas, key=lambda x: x.get("edge", 0), reverse=True)
+soccer_accas = sorted(soccer_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
+nba_accas = sorted(nba_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
 tab1, tab_safe, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "🛡️ Safe Plays", "⚽ Soccer", "🏀 Basketball", "🧠 CLV Learning Log"])
 
 def render_acca(acca, title):
+    combined_odds = acca.get('combined_odds', acca.get('odds', 0))
+    combined_edge = acca.get('combined_edge', acca.get('edge', 0))
+    
+    # Calculate combined probability
+    combined_prob = 1.0
+    has_prob = True
+    for leg in acca.get('legs', []):
+        p = leg.get('model_prob', 0)
+        if p == 0:
+            has_prob = False
+            break
+        combined_prob *= p
+        
+    prob_str = f" | **Win Prob:** {combined_prob*100:.1f}%" if has_prob else ""
+    
     st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
-    st.subheader(f"{title} | Odds: {acca.get('odds', 0):.2f}")
-    st.write(f"**Edge:** <span class='edge-text'>+{acca.get('edge', 0)*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}", unsafe_allow_html=True)
+    st.subheader(f"{title} | Odds: {combined_odds:.2f}")
+    st.write(f"**Edge:** <span class='edge-text'>+{combined_edge*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}{prob_str}", unsafe_allow_html=True)
     
     for leg in acca.get('legs', []):
         dt = parse_date(leg.get('date', ''))
@@ -174,7 +189,7 @@ def render_acca(acca, title):
 
 with tab1:
     st.header("🏆 The 3 Best Accumulators")
-    top_3_overall = sorted(data, key=lambda x: x.get("edge", 0), reverse=True)[:3]
+    top_3_overall = sorted(data, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)[:3]
     for i, acca in enumerate(top_3_overall):
         render_acca(acca, f"Ultimate Acca #{i+1}")
         
