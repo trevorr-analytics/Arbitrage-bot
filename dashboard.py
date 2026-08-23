@@ -29,7 +29,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("📈 AutoQuant Live Dashboard")
-st.write(f"**Last Updated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+st.write(f"**Last Updated:** {(datetime.now(timezone.utc) + timedelta(hours=3)).strftime('%Y-%m-%d %H:%M EAT')}")
 
 @st.cache_data(ttl=60)
 def load_data():
@@ -111,7 +111,7 @@ def render_acca(acca, title):
     
     for leg in acca.get('legs', []):
         dt = parse_date(leg.get('date', ''))
-        date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
+        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
         st.markdown(f"""
         <div class="leg-row">
             <b>[{leg.get('league', 'Unknown')}]</b> {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i><br>
@@ -130,7 +130,7 @@ with tab1:
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
         dt = parse_date(leg.get('date', ''))
-        date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
+        date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
         st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
         st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
         st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
@@ -150,7 +150,7 @@ with tab_safe:
     else:
         for i, leg in enumerate(safe_legs):
             dt = parse_date(leg.get('date', ''))
-            date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
+            date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT")
             edge_pct = leg.get('edge', 0) * 100
             prob_pct = leg.get('model_prob', 0) * 100
             st.markdown(f'''
