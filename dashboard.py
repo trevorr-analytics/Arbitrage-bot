@@ -73,7 +73,7 @@ soccer_accas = sorted(soccer_accas, key=lambda x: x.get("edge", 0), reverse=True
 nba_accas = sorted(nba_accas, key=lambda x: x.get("edge", 0), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
-tab1, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "⚽ Soccer", "🏀 Basketball", "🧠 CLV Learning Log"])
+tab1, tab_safe, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "🛡️ Safe Plays", "⚽ Soccer", "🏀 Basketball", "🧠 CLV Learning Log"])
 
 def render_acca(acca, title):
     st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
@@ -104,6 +104,34 @@ with tab1:
         st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
         st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
+
+
+with tab_safe:
+    st.header("🛡️ Safe & Steady Plays (>65% Win Probability)")
+    st.write("These are the mathematically safest single bets across all sports, prioritizing high likelihood of hitting with a positive mathematical edge.")
+    
+    # Filter and sort by model_prob instead of edge
+    safe_legs = [leg for leg in all_legs if leg.get('model_prob', 0) >= 0.65 and leg.get('edge', 0) > 0]
+    safe_legs = sorted(safe_legs, key=lambda x: x.get('model_prob', 0), reverse=True)
+    
+    if not safe_legs:
+        st.info("No plays with >65% probability and +EV found today.")
+    else:
+        for i, leg in enumerate(safe_legs):
+            date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
+            edge_pct = leg.get('edge', 0) * 100
+            prob_pct = leg.get('model_prob', 0) * 100
+            st.markdown(f'''
+            <div class="acca-card">
+                <h4>#{i+1} [{leg.get('league')}] {leg.get('home')} vs {leg.get('away')}</h4>
+                <div class="leg-row" style="border:none;">
+                    <b>Market:</b> {leg.get('market')} <br>
+                    <b>Offered Odds:</b> {leg.get('odds', 0):.2f} <br>
+                    <b>True Probability:</b> <span style="color:#00ffa3;">{prob_pct:.1f}%</span> <br>
+                    <b>Edge:</b> +{edge_pct:.1f}%
+                </div>
+            </div>
+            ''', unsafe_allow_html=True)
 
 with tab2:
     st.header("⚽ All Soccer Accumulators")
