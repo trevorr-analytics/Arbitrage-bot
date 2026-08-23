@@ -1,7 +1,7 @@
 ﻿import streamlit as st
 import json
 import pandas as pd
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import os
 
 st.set_page_config(page_title="Quant Betting Dashboard", page_icon="📈", layout="wide")
@@ -42,6 +42,35 @@ def load_data():
 
 data = load_data()
 
+
+now = datetime.now(timezone.utc)
+end_of_week = now + timedelta(days=7)
+
+def parse_date(date_str):
+    try:
+        if date_str.endswith("Z"):
+            return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        return datetime.fromisoformat(date_str).replace(tzinfo=timezone.utc)
+    except Exception:
+        return now
+
+if data:
+    valid_accas = []
+    for acca in data:
+        has_past_leg = False
+        out_of_week = False
+        for leg in acca.get("legs", []):
+            dt = parse_date(leg.get("date", ""))
+            if dt < now:
+                has_past_leg = True
+            elif dt > end_of_week:
+                out_of_week = True
+        # Keep only if no past leg. If it's next week, we allow it but deprioritize later or exclude?
+        # The user said "priorities given for games playing this week", let's strictly show this week to avoid confusion.
+        if not has_past_leg and not out_of_week:
+            valid_accas.append(acca)
+    data = valid_accas
+
 if not data:
     st.warning("No accumulators found. The daily bot may not have run yet.")
     st.stop()
@@ -81,7 +110,8 @@ def render_acca(acca, title):
     st.write(f"**Edge:** <span style='color:#00ffa3;'>+{acca.get('edge', 0)*100:.2f}%</span> | **Stake:** KES {acca.get('stake', 0):.0f}", unsafe_allow_html=True)
     
     for leg in acca.get('legs', []):
-        date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
+        dt = parse_date(leg.get('date', ''))
+        date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
         st.markdown(f"""
         <div class="leg-row">
             <b>[{leg.get('league', 'Unknown')}]</b> {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i><br>
@@ -99,7 +129,8 @@ with tab1:
     st.header("🎯 The 3 Best +EV Singles")
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
-        date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
+        dt = parse_date(leg.get('date', ''))
+        date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
         st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
         st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
         st.write(f"**Edge:** <span style='color:#00ffa3;'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
@@ -118,13 +149,15 @@ with tab_safe:
         st.info("No plays with >65% probability and +EV found today.")
     else:
         for i, leg in enumerate(safe_legs):
-            date_str = leg.get('date', 'Unknown')[:16].replace('T', ' ')
+            dt = parse_date(leg.get('date', ''))
+            date_str = dt.strftime("%A, %b %d @ %H:%M UTC")
             edge_pct = leg.get('edge', 0) * 100
             prob_pct = leg.get('model_prob', 0) * 100
             st.markdown(f'''
             <div class="acca-card">
                 <h4>#{i+1} [{leg.get('league')}] {leg.get('home')} vs {leg.get('away')}</h4>
                 <div class="leg-row" style="border:none;">
+                    <b>Date & Time:</b> {date_str} <br>
                     <b>Market:</b> {leg.get('market')} <br>
                     <b>Offered Odds:</b> {leg.get('odds', 0):.2f} <br>
                     <b>True Probability:</b> <span style="color:#00ffa3;">{prob_pct:.1f}%</span> <br>
