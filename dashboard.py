@@ -51,7 +51,7 @@ soccer_accas = []
 nba_accas = []
 all_legs = []
 
-for acca in data:
+for acca in reversed(data):
     is_nba = False
     for leg in acca.get("legs", []):
         if leg.get("league") in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
