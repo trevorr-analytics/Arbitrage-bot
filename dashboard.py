@@ -31,7 +31,7 @@ st.markdown("""
 st.title("📈 AutoQuant Live Dashboard")
 st.write(f"**Last Updated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=60)
 def load_data():
     try:
         path = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
