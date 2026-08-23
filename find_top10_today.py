@@ -32,14 +32,22 @@ cache_path = r"C:\Users\hp\Desktop\AutoQuant_Betting_Bot\odds_cache.json"
 with open(cache_path, "r", encoding="utf-8") as f:
     cache = json.load(f)
 
+import difflib
+
 def fuzzy_team(name, known_teams):
-    name_lower = name.lower()
     for k in known_teams:
-        if k.lower() == name_lower: return k
-    name_tokens = set(name_lower.split())
-    for k in known_teams:
-        if name_tokens & set(k.lower().split()): return k
-    return None
+        if k.lower() == name.lower(): return k
+    matches = difflib.get_close_matches(name, known_teams, n=1, cutoff=0.55)
+    if matches:
+        return matches[0]
+    generic = {"fc", "real", "united", "city", "athletic", "club", "de", "cf", "and", "hove", "albion"}
+    name_clean = " ".join([w for w in name.lower().split() if w not in generic])
+    if len(name_clean) > 3:
+        for k in known_teams:
+            k_clean = " ".join([w for w in k.lower().split() if w not in generic])
+            if name_clean in k_clean or (len(k_clean)>3 and k_clean in name_clean):
+                return k
+    return name if not known_teams else None
 
 edges = []
 
