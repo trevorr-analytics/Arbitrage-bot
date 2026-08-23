@@ -1,7 +1,8 @@
-﻿import requests
+﻿import json
 import os
-import json
 import time
+import requests
+import statistics
 
 SPORT_KEYS = {
     "EPL": "soccer_epl",
@@ -10,11 +11,14 @@ SPORT_KEYS = {
     "SerieA": "soccer_italy_serie_a",
     "Ligue1": "soccer_france_ligue_one",
     "Eredivisie": "soccer_netherlands_eredivisie",
-    "NBA": "basketball_nba", "EuroLeague": "basketball_euroleague", "NCAAB": "basketball_ncaab", "WNBA": "basketball_wnba"
+    "NBA": "basketball_nba",
+    "EuroLeague": "basketball_euroleague",
+    "NCAAB": "basketball_ncaab",
+    "WNBA": "basketball_wnba"
 }
 
 CACHE_FILE = os.path.join(os.path.dirname(__file__), "odds_cache.json")
-CACHE_EXPIRY_SECONDS = 12 * 3600  # 12 hours
+CACHE_EXPIRY_SECONDS = 3600 * 12 # 12 hours to save credits
 
 def load_cache():
     if os.path.exists(CACHE_FILE):
@@ -37,8 +41,8 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
 
     cache = load_cache()
     current_time = time.time()
+    
     if sport_key in cache:
-        # If API key is missing, ignore expiry and just return cache
         if api_key is None and not os.environ.get("ODDS_API_KEY"):
             print(f"Using offline cache for {league} because API key is missing.")
             return _parse_odds_data(cache[sport_key]["data"])
@@ -54,19 +58,11 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
         print("\nERROR: ODDS_API_KEY environment variable is not set.")
         return []
     
-    # Check if we have valid cached data
-    if sport_key in cache:
-        cached_time = cache[sport_key].get("timestamp", 0)
-        if current_time - cached_time < CACHE_EXPIRY_SECONDS:
-            data = cache[sport_key].get("data", [])
-            print(f"[OddsAPI] Loaded odds for {league} from local CACHE (saves API credits).")
-            return _parse_odds_data(data)
-
     print(f"[OddsAPI] Fetching LIVE odds for {league} from API...", end=" ", flush=True)
     url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
     params = {
         "apiKey": api_key,
-        "regions": "eu,uk,us", # added US for basketball
+        "regions": "eu,uk,us",
         "markets": "h2h,totals", 
         "oddsFormat": "decimal"
     }
@@ -80,7 +76,6 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
         data = response.json()
         print(f"OK ({len(data)} matches found)")
         
-        # Save to cache
         cache[sport_key] = {
             "timestamp": current_time,
             "data": data
@@ -99,44 +94,47 @@ def _parse_odds_data(data):
         home = event["home_team"]
         away = event["away_team"]
         
-        odds = {
-            "h2h": {"home": 0, "draw": 0, "away": 0},
-            "totals": {"over": 0, "under": 0, "point": 0.0}
-        }
+        # Collect all odds from all bookies to find the median (market average)
+        home_odds, draw_odds, away_odds = [], [], []
+        over_odds, under_odds, points = [], [], []
         
         for bookie in event.get("bookmakers", []):
             for market in bookie.get("markets", []):
                 if market["key"] == "h2h":
                     for outcome in market["outcomes"]:
                         if outcome["name"] == home:
-                            odds["h2h"]["home"] = max(odds["h2h"]["home"], outcome["price"])
+                            home_odds.append(outcome["price"])
                         elif outcome["name"] == away:
-                            odds["h2h"]["away"] = max(odds["h2h"]["away"], outcome["price"])
+                            away_odds.append(outcome["price"])
                         elif outcome["name"] == "Draw":
-                            odds["h2h"]["draw"] = max(odds["h2h"]["draw"], outcome["price"])
+                            draw_odds.append(outcome["price"])
                 elif market["key"] == "totals":
                     for outcome in market["outcomes"]:
-                        # Look for primary point spread/totals.
                         if outcome["name"] == "Over":
-                            odds["totals"]["over"] = max(odds["totals"]["over"], outcome["price"])
+                            over_odds.append(outcome["price"])
                             if "point" in outcome:
-                                odds["totals"]["point"] = outcome["point"]
+                                points.append(outcome["point"])
                         elif outcome["name"] == "Under":
-                            odds["totals"]["under"] = max(odds["totals"]["under"], outcome["price"])
+                            under_odds.append(outcome["price"])
                             if "point" in outcome:
-                                odds["totals"]["point"] = outcome["point"]
+                                points.append(outcome["point"])
         
-        if odds["h2h"]["home"] == 0:
+        if not home_odds or not away_odds:
             continue
             
+        # Use MEDIAN to prevent a single glitched bookmaker from ruining the accumulator
+        h_med = statistics.median(home_odds) if home_odds else 0.0
+        d_med = statistics.median(draw_odds) if draw_odds else 0.0
+        a_med = statistics.median(away_odds) if away_odds else 0.0
+        ov_med = statistics.median(over_odds) if over_odds else 0.0
+        un_med = statistics.median(under_odds) if under_odds else 0.0
+        pt_med = statistics.median(points) if points else 0.0
+        
         fixtures.append((
             home, away, 
-            odds["h2h"]["home"], odds["h2h"]["draw"], odds["h2h"]["away"], 
-            odds["totals"]["over"], odds["totals"]["under"], odds["totals"]["point"],
+            h_med, d_med, a_med, 
+            ov_med, un_med, pt_med,
             event.get("commence_time", "")
         ))
         
     return fixtures
-
-
-
