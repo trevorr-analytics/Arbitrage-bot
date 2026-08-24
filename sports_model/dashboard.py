@@ -157,7 +157,7 @@ soccer_accas = sorted(soccer_accas, key=lambda x: x.get("combined_edge", x.get("
 nba_accas = sorted(nba_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
-tab1, tab_safe, tab2, tab3, tab4 = st.tabs(["🔥 Top Picks", "🛡️ Safe Plays", "⚽ Soccer", "🏀 Basketball", "🧠 CLV Learning Log"])
+tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["🔥 Top Picks", "🛡️ Safe Plays", "⚽ Soccer", "🏀 Basketball", "📈 CLV Learning Log", "🦄 Dreamer Parlay"])
 
 def render_acca(acca, title):
     combined_odds = acca.get('combined_odds', acca.get('odds', 0))
@@ -253,7 +253,7 @@ with tab4:
     clv_path = os.path.join(os.path.dirname(__file__), "clv_history.csv")
     if os.path.exists(clv_path):
         df = pd.read_csv(clv_path)
-        st.dataframe(df, use_container_width=True)
+        st.dataframe(df, width='stretch')
     else:
         st.write("No historical CLV data available yet. Waiting for Monday resolution cycle.")
 
