@@ -5339,5 +5339,87 @@
                 "status": "PENDING"
             }
         ]
+    },
+    {
+        "timestamp": "2026-08-24T06:29:25.675636Z",
+        "status": "PENDING",
+        "combined_odds": 694.1931010559999,
+        "combined_edge": 0.43686684495980377,
+        "stake": 100.0,
+        "is_dreamer": true,
+        "legs": [
+            {
+                "match_id": "EPL_Hull City_Manchester United",
+                "league": "EPL",
+                "home": "Hull City",
+                "away": "Manchester United",
+                "market": "Home Win",
+                "odds": 10.0,
+                "edge": 0.6927520982822353,
+                "status": "PENDING",
+                "closing_odds": 1.01
+            },
+            {
+                "match_id": "Ligue1_Troyes_Paris FC",
+                "league": "Ligue1",
+                "home": "Troyes",
+                "away": "Paris FC",
+                "market": "Away Win",
+                "odds": 2.4,
+                "edge": 0.435210497237569,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "NBA_Miami Heat_Minnesota Timberwolves",
+                "league": "NBA",
+                "home": "Miami Heat",
+                "away": "Minnesota Timberwolves",
+                "market": "Under 243.5",
+                "odds": 1.96,
+                "edge": 0.3979576849251809,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
+                "league": "NBA",
+                "home": "New Orleans Pelicans",
+                "away": "Indiana Pacers",
+                "market": "Under 243.5",
+                "odds": 1.96,
+                "edge": 0.3929071798746758,
+                "status": "PENDING"
+            },
+            {
+                "league": "WNBA",
+                "home": "Chicago Sky",
+                "away": "Golden State Valkyries",
+                "market": "Over 162.5",
+                "odds": 1.97,
+                "edge": 0.38845133604701054,
+                "date": "2026-08-21T23:30:00Z",
+                "status": "PENDING",
+                "closing_odds": 1.93
+            },
+            {
+                "match_id": "NBA_Miami Heat_Indiana Pacers",
+                "league": "NBA",
+                "home": "Miami Heat",
+                "away": "Indiana Pacers",
+                "market": "Under 241.5",
+                "odds": 1.95,
+                "edge": 0.3806301612702183,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
+                "league": "NBA",
+                "home": "Memphis Grizzlies",
+                "away": "Utah Jazz",
+                "market": "Under 241.5",
+                "odds": 1.96,
+                "edge": 0.37015895708173674,
+                "status": "PENDING"
+            }
+        ]
     }
 ]
