@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(__file__)
-TRACKER_FILE = os.path.join(BASE_DIR, "acca_tracker.json")
+TRACKER_FILE = os.path.join(BASE_DIR, os.path.join(os.path.dirname(__file__), "acca_tracker.json"))
 HISTORY_FILE = os.path.join(BASE_DIR, "clv_history.csv")
 REPORT_FILE = os.path.join(BASE_DIR, "clv_report.md")
 

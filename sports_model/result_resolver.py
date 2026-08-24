@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 from odds_api import SPORT_KEYS
 
-TRACKER_FILE = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
+TRACKER_FILE = os.path.join(os.path.dirname(__file__), os.path.join(os.path.dirname(__file__), "acca_tracker.json"))
 BASE_DIR = os.path.dirname(__file__)
 
 def get_scores(league: str) -> list:

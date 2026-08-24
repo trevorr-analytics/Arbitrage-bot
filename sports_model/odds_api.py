@@ -17,7 +17,7 @@ SPORT_KEYS = {
     "WNBA": "basketball_wnba"
 }
 
-CACHE_FILE = os.path.join(os.path.dirname(__file__), "odds_cache.json")
+CACHE_FILE = os.path.join(os.path.dirname(__file__), os.path.join(os.path.dirname(__file__), "odds_cache.json"))
 CACHE_EXPIRY_SECONDS = 3600 * 12 # 12 hours to save credits
 
 def load_cache():

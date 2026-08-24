@@ -1,0 +1,88 @@
+﻿import pandas as pd
+import numpy as np
+from itertools import combinations
+import math
+
+# Load Data
+df = pd.read_csv("backtest/Eredivisie_grid_results.csv")
+df = df[df["Model"] == "Weight_70_30"]
+
+# Map actual results
+# Usually in AutoQuant: 0=Home, 1=Draw, 2=Away (or similar). Let's verify by checking the model logic or we can just rely on 'Actual'.
+# Actually, standard is 0=Home, 1=Draw, 2=Away. Let's assume this.
+# Find EV legs
+legs = []
+for idx, row in df.iterrows():
+    # Home EV
+    if pd.notna(row["PSH"]) and row["P_H"] > (1 / row["PSH"]):
+        legs.append({
+            "date": row["MatchDate"],
+            "match": f"{row['HomeTeam']} vs {row['AwayTeam']}",
+            "bet": 0,
+            "odds": row["PSH"],
+            "prob": row["P_H"],
+            "edge": row["P_H"] - (1/row["PSH"]),
+            "actual": row["Actual"]
+        })
+    # Away EV
+    if pd.notna(row["PSA"]) and row["P_A"] > (1 / row["PSA"]):
+        legs.append({
+            "date": row["MatchDate"],
+            "match": f"{row['HomeTeam']} vs {row['AwayTeam']}",
+            "bet": 2,
+            "odds": row["PSA"],
+            "prob": row["P_A"],
+            "edge": row["P_A"] - (1/row["PSA"]),
+            "actual": row["Actual"]
+        })
+
+df_legs = pd.DataFrame(legs)
+# Group by date and build accas
+all_accas = []
+
+for date, group in df_legs.groupby("date"):
+    daily_legs = group.to_dict('records')
+    if len(daily_legs) < 2: continue
+    
+    # 2-leg accas
+    for combo in combinations(daily_legs, 2):
+        # Prevent same match
+        if combo[0]["match"] == combo[1]["match"]: continue
+        
+        odds = combo[0]["odds"] * combo[1]["odds"]
+        if 1.5 <= odds <= 3.5:
+            edge = (combo[0]["prob"] * combo[1]["prob"]) - (1/odds)
+            if edge > 0:
+                all_accas.append({
+                    "date": date,
+                    "odds": odds,
+                    "edge": edge,
+                    "won": (combo[0]["actual"] == combo[0]["bet"]) and (combo[1]["actual"] == combo[1]["bet"])
+                })
+
+df_accas = pd.DataFrame(all_accas)
+
+# Sort per day by closest to 2.0 and take top 10 (like the bot)
+filtered_accas = []
+for date, group in df_accas.groupby("date"):
+    group["dist"] = abs(group["odds"] - 2.0)
+    top10 = group.sort_values("dist").head(10)
+    filtered_accas.extend(top10.to_dict('records'))
+
+df_final = pd.DataFrame(filtered_accas)
+
+if len(df_final) == 0:
+    print("No accumulators formed.")
+else:
+    total_staked = len(df_final)
+    total_returned = df_final[df_final["won"]]["odds"].sum()
+    roi = ((total_returned - total_staked) / total_staked) * 100
+    
+    print(f"--- ACCUMULATOR BACKTEST RESULTS (70/30 Model) ---")
+    print(f"Total Accumulators Placed: {total_staked}")
+    print(f"Winning Accumulators: {df_final['won'].sum()}")
+    print(f"Win Rate: {(df_final['won'].sum() / total_staked)*100:.2f}%")
+    print(f"Total Staked (1 unit/bet): {total_staked:.2f}")
+    print(f"Total Returned: {total_returned:.2f}")
+    print(f"Net Profit: {total_returned - total_staked:.2f} units")
+    print(f"ROI: {roi:.2f}%")

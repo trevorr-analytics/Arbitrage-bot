@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import time
 from odds_api import SPORT_KEYS
 
-TRACKER_FILE = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
+TRACKER_FILE = os.path.join(os.path.dirname(__file__), os.path.join(os.path.dirname(__file__), "acca_tracker.json"))
 
 def track_closing_lines():
     if not os.path.exists(TRACKER_FILE):

@@ -8,7 +8,10 @@ from typing import List, Dict
 sys.path.insert(0, os.path.dirname(__file__))
 from dixon_coles import DixonColesModel, load_league_data
 from odds_api import fetch_live_odds
-from devig import shin_devig
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.devig import shin_devig
 
 from basketball_model import BasketballModel
 from telegram_notifier import send_telegram_message
@@ -256,7 +259,7 @@ if __name__ == "__main__":
     import json
     import os
     
-    tracker_file = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
+    tracker_file = os.path.join(os.path.dirname(__file__), os.path.join(os.path.dirname(__file__), "acca_tracker.json"))
     tracked_data = []
     if os.path.exists(tracker_file):
         try:
