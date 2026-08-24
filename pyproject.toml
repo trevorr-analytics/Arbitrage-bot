@@ -1,0 +1,17 @@
+[project]
+name = "autoquant-betting-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "trevorr-analytics", email = "runtychimp002@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+autoquant-betting-bot = "autoquant_betting_bot:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
