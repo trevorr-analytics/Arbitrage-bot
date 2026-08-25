@@ -50,7 +50,7 @@ if data:
             dt = parse_date(leg.get("date", ""))
             if dt is None:
                 dt = parse_date(acca.get("timestamp", ""))
-            if dt is None or (now <= dt <= end_of_week):
+            if dt is None or (now <= dt <= end_of_week) or (not leg.get('date') and dt + timedelta(hours=24) >= now):
                 leg_sig = f"{leg.get('home')}-{leg.get('away')}-{leg.get('market')}"
                 if not any(f"{l.get('home')}-{l.get('away')}-{l.get('market')}" == leg_sig for l in raw_all_legs):
                     raw_all_legs.append(leg)
@@ -62,7 +62,9 @@ if data:
             if dt is None:
                 dt = parse_date(acca.get("timestamp", ""))
             if dt is not None:
-                if dt < now:
+                if dt < now and leg.get('date'):
+                    has_past_leg = True
+                elif dt + timedelta(hours=24) < now and not leg.get('date'):
                     has_past_leg = True
                 elif dt > end_of_week:
                     out_of_week = True
