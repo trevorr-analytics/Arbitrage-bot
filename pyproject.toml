@@ -7,7 +7,9 @@ authors = [
     { name = "trevorr-analytics", email = "runtychimp002@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pybaseball>=2.2.7",
+]
 
 [project.scripts]
 autoquant-betting-bot = "autoquant_betting_bot:main"

@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass, field
@@ -78,16 +78,44 @@ def simulate_match(
     n_sims: int = 50_000,
     dixon_coles_rho: float | None = None,
     seed: int | None = None,
+    distribution: str = 'poisson',
+    overdispersion: float | None = None,
+    resolve_ties: bool = False,
 ) -> SimulationResult:
     rng = np.random.default_rng(seed)
 
-    home_goals = rng.poisson(lam=home_xg, size=n_sims)
-    away_goals = rng.poisson(lam=away_xg, size=n_sims)
+    if distribution == 'poisson':
+        home_goals = rng.poisson(lam=home_xg, size=n_sims)
+        away_goals = rng.poisson(lam=away_xg, size=n_sims)
+    elif distribution == 'negative_binomial':
+        if overdispersion is None:
+            raise ValueError("overdispersion parameter required for negative_binomial distribution")
+        p_home = overdispersion / (overdispersion + home_xg)
+        p_away = overdispersion / (overdispersion + away_xg)
+        home_goals = rng.negative_binomial(n=overdispersion, p=p_home, size=n_sims)
+        away_goals = rng.negative_binomial(n=overdispersion, p=p_away, size=n_sims)
+    else:
+        raise ValueError(f"Unknown distribution: {distribution}")
 
     if dixon_coles_rho is not None:
         home_goals, away_goals = _apply_dixon_coles_adjustment(
             home_goals, away_goals, home_xg, away_xg, dixon_coles_rho, rng
         )
+
+    if resolve_ties:
+        ties = home_goals == away_goals
+        while np.any(ties):
+            num_ties = np.sum(ties)
+            if distribution == 'poisson':
+                new_home = rng.poisson(lam=home_xg, size=num_ties)
+                new_away = rng.poisson(lam=away_xg, size=num_ties)
+            elif distribution == 'negative_binomial':
+                new_home = rng.negative_binomial(n=overdispersion, p=p_home, size=num_ties)
+                new_away = rng.negative_binomial(n=overdispersion, p=p_away, size=num_ties)
+            
+            home_goals[ties] = new_home
+            away_goals[ties] = new_away
+            ties = home_goals == away_goals
 
     return SimulationResult(
         home_xg=home_xg,

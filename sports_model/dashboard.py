@@ -78,24 +78,31 @@ if not data:
 
 soccer_accas = []
 nba_accas = []
+mlb_accas = []
 all_legs = raw_all_legs
 
 for acca in data:
     is_nba = False
+    is_mlb = False
     for leg in acca.get("legs", []):
         if leg.get("league") in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
             is_nba = True
+        if leg.get("league") == "MLB":
+            is_mlb = True
 
-    if is_nba:
+    if is_mlb:
+        mlb_accas.append(acca)
+    elif is_nba:
         nba_accas.append(acca)
     else:
         soccer_accas.append(acca)
 
 soccer_accas = sorted(soccer_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 nba_accas = sorted(nba_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
+mlb_accas = sorted(mlb_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
-tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["🔥 Top Picks", "🎯 Safe Plays", "⚽ Soccer", "🏀 Basketball", "📈 CLV Learning Log", "🤑 Dreamer Parlay"])
+tab1, tab_safe, tab2, tab3, tab_mlb, tab4, tab_dream = st.tabs(["🔥 Top Picks", "🎯 Safe Plays", "⚽ Soccer", "🏀 Basketball", "⚾ Baseball", "📈 CLV Learning Log", "🤑 Dreamer Parlay"])
 
 def render_leg_details(leg, date_str):
     league = leg.get('league', 'Unknown')
@@ -200,6 +207,14 @@ with tab3:
     st.header("🏀 All Basketball Accumulators")
     for i, acca in enumerate(nba_accas):
         render_acca(acca, f"Basketball Acca #{i+1}")
+
+with tab_mlb:
+    st.header("⚾ All Baseball Accumulators")
+    if mlb_accas:
+        for i, acca in enumerate(mlb_accas):
+            render_acca(acca, f"MLB Acca #{i+1}")
+    else:
+        st.info("No MLB accumulators found yet. The MLB scanner runs alongside the daily bot when games are scheduled.")
 
 with tab4:
     st.header("📈 CLV Resolution & Self-Learning Log")
