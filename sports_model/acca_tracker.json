@@ -8242,123 +8242,6 @@
         ]
     },
     {
-        "timestamp": "2026-08-24T06:29:25.675636Z",
-        "status": "PENDING",
-        "combined_odds": 694.1931010559999,
-        "combined_edge": 0.43686684495980377,
-        "stake": 100.0,
-        "is_dreamer": true,
-        "legs": [
-            {
-                "match_id": "EPL_Hull City_Manchester United",
-                "league": "EPL",
-                "home": "Hull City",
-                "away": "Manchester United",
-                "market": "Home Win",
-                "odds": 10.0,
-                "edge": 0.6927520982822353,
-                "status": "PENDING",
-                "closing_odds": 1.01
-            },
-            {
-                "match_id": "Ligue1_Troyes_Paris FC",
-                "league": "Ligue1",
-                "home": "Troyes",
-                "away": "Paris FC",
-                "market": "Away Win",
-                "odds": 2.4,
-                "edge": 0.435210497237569,
-                "status": "PENDING"
-            },
-            {
-                "match_id": "NBA_Miami Heat_Minnesota Timberwolves",
-                "league": "NBA",
-                "home": "Miami Heat",
-                "away": "Minnesota Timberwolves",
-                "market": "Under 243.5",
-                "odds": 1.96,
-                "edge": 0.3979576849251809,
-                "status": "PENDING",
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.10204231507481909,
-                    "under": 0.8979576849251809,
-                    "line": 243.5
-                }
-            },
-            {
-                "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
-                "league": "NBA",
-                "home": "New Orleans Pelicans",
-                "away": "Indiana Pacers",
-                "market": "Under 243.5",
-                "odds": 1.96,
-                "edge": 0.3929071798746758,
-                "status": "PENDING",
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.10204231507481909,
-                    "under": 0.8979576849251809,
-                    "line": 243.5
-                }
-            },
-            {
-                "league": "WNBA",
-                "home": "Chicago Sky",
-                "away": "Golden State Valkyries",
-                "market": "Over 162.5",
-                "odds": 1.97,
-                "edge": 0.38845133604701054,
-                "date": "2026-08-21T23:30:00Z",
-                "status": "PENDING",
-                "closing_odds": 1.93,
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.8884513360470105,
-                    "under": 0.11154866395298946,
-                    "line": 162.5
-                }
-            },
-            {
-                "match_id": "NBA_Miami Heat_Indiana Pacers",
-                "league": "NBA",
-                "home": "Miami Heat",
-                "away": "Indiana Pacers",
-                "market": "Under 241.5",
-                "odds": 1.95,
-                "edge": 0.3806301612702183,
-                "status": "PENDING",
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.12984104291826326,
-                    "under": 0.8701589570817367,
-                    "line": 241.5
-                }
-            },
-            {
-                "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
-                "league": "NBA",
-                "home": "Memphis Grizzlies",
-                "away": "Utah Jazz",
-                "market": "Under 241.5",
-                "odds": 1.96,
-                "edge": 0.37015895708173674,
-                "status": "PENDING",
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.12984104291826326,
-                    "under": 0.8701589570817367,
-                    "line": 241.5
-                }
-            }
-        ]
-    },
-    {
         "timestamp": "2026-08-25T08:15:37.939330",
         "status": "PENDING",
         "odds": 1.9992,
@@ -9176,6 +9059,122 @@
                     "over": 0.36639048452987144,
                     "under": 0.6336095154701286,
                     "line": 230.5
+                }
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-08-25T08:39:08.510063+00:00",
+        "status": "PENDING",
+        "combined_odds": 673.0501639679999,
+        "combined_edge": 0.4295898646995407,
+        "stake": 100.0,
+        "is_dreamer": true,
+        "legs": [
+            {
+                "match_id": "EPL_Hull City_Manchester United",
+                "league": "EPL",
+                "home": "Hull City",
+                "away": "Manchester United",
+                "market": "Home Win",
+                "odds": 10.0,
+                "edge": 0.6927520982822353,
+                "status": "PENDING",
+                "closing_odds": 1.01
+            },
+            {
+                "match_id": "Ligue1_Troyes_Paris FC",
+                "league": "Ligue1",
+                "home": "Troyes",
+                "away": "Paris FC",
+                "market": "Away Win",
+                "odds": 2.4,
+                "edge": 0.435210497237569,
+                "status": "PENDING"
+            },
+            {
+                "match_id": "NBA_Miami Heat_Minnesota Timberwolves",
+                "league": "NBA",
+                "home": "Miami Heat",
+                "away": "Minnesota Timberwolves",
+                "market": "Under 243.5",
+                "odds": 1.96,
+                "edge": 0.3979576849251809,
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
+            },
+            {
+                "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
+                "league": "NBA",
+                "home": "New Orleans Pelicans",
+                "away": "Indiana Pacers",
+                "market": "Under 243.5",
+                "odds": 1.96,
+                "edge": 0.3929071798746758,
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
+            },
+            {
+                "match_id": "NBA_Miami Heat_Indiana Pacers",
+                "league": "NBA",
+                "home": "Miami Heat",
+                "away": "Indiana Pacers",
+                "market": "Under 241.5",
+                "odds": 1.95,
+                "edge": 0.3806301612702183,
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
+            },
+            {
+                "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
+                "league": "NBA",
+                "home": "Memphis Grizzlies",
+                "away": "Utah Jazz",
+                "market": "Under 241.5",
+                "odds": 1.96,
+                "edge": 0.37015895708173674,
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
+            },
+            {
+                "match_id": "NBA_Philadelphia 76ers_Miami Heat",
+                "league": "NBA",
+                "home": "Philadelphia 76ers",
+                "away": "Miami Heat",
+                "market": "Under 239.5",
+                "odds": 1.91,
+                "edge": 0.3375124742251687,
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
                 }
             }
         ]

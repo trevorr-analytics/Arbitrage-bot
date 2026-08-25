@@ -1,17 +1,29 @@
 ﻿import json
-from datetime import datetime
+from datetime import datetime, timezone
+import dateutil.parser
 
-path = r"C:\Users\hp\Desktop\AutoQuant_Betting_Bot\acca_tracker.json"
+path = r"C:\Users\hp\Desktop\AutoQuant_Betting_Bot\sports_model\acca_tracker.json"
 with open(path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 unique_legs = {}
+now = datetime.now(timezone.utc)
+
 for acca in data:
     for leg in acca.get("legs", []):
-        if leg.get("status") == "PENDING" and leg.get("edge", 0) > 0:
-            sig = f"{leg.get('home')}_{leg.get('away')}_{leg.get('market')}"
-            if sig not in unique_legs:
-                unique_legs[sig] = leg
+        if leg.get('status') == 'PENDING' and leg.get('edge', 0) > 0:
+            dt_str = leg.get('date', '')
+            try:
+                dt = dateutil.parser.isoparse(dt_str) if dt_str else None
+                if dt and dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+            except: 
+                dt = None
+                
+            if dt is None or dt > now:
+                sig = f"{leg.get('home')}_{leg.get('away')}_{leg.get('market')}"
+                if sig not in unique_legs:
+                    unique_legs[sig] = leg
 
 all_legs = list(unique_legs.values())
 sorted_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
@@ -20,7 +32,6 @@ dreamer_legs = []
 current_odds = 1.0
 
 for leg in sorted_legs:
-    # Ensure we don't have multiple markets from the same match
     match_sig = f"{leg.get('home')}_{leg.get('away')}"
     if not any(f"{l.get('home')}_{l.get('away')}" == match_sig for l in dreamer_legs):
         dreamer_legs.append(leg)
@@ -30,7 +41,7 @@ for leg in sorted_legs:
 
 if current_odds >= 500.0:
     dreamer_acca = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "status": "PENDING",
         "combined_odds": current_odds,
         "combined_edge": sum(l.get("edge", 0) for l in dreamer_legs) / len(dreamer_legs) if dreamer_legs else 0,
