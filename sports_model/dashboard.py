@@ -1,9 +1,8 @@
-﻿import sys
-import os
+﻿import os
+import sys
 
 # Insert paths to allow importing from core/ and sports_model/
 sys.path.insert(0, os.path.dirname(__file__))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'core')))
 
 import json
 from datetime import datetime, timedelta, timezone
@@ -17,69 +16,6 @@ css_path = os.path.join(os.path.dirname(__file__), "style.css")
 if os.path.exists(css_path):
     with open(css_path, "r") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-# ----------------- SIMULATION HELPERS -----------------
-@st.cache_resource
-def get_soccer_model(league):
-    from dixon_coles import DixonColesModel, load_league_data
-    model = DixonColesModel()
-    try:
-        data = load_league_data(league, min_seasons=2)
-        model.fit(data)
-        return model
-    except Exception as e:
-        print(f"Failed to load soccer model for {league}: {e}")
-        return None
-
-@st.cache_resource
-def get_basketball_model(league):
-    from basketball_model import BasketballModel
-    model = BasketballModel()
-    try:
-        model.fit(None, league_name=league)
-        return model
-    except Exception as e:
-        print(f"Failed to load bb model for {league}: {e}")
-        return None
-
-@st.cache_data
-def get_soccer_sim_data(league, home, away):
-    model = get_soccer_model(league)
-    if not model: return None
-    try:
-        home_xg, away_xg = model._get_lam_mu(home, away)
-        rho = model.params_[-1] if model.params_ is not None else None
-        from simulation import simulate_match
-        res = simulate_match(home_xg, away_xg, n_sims=10000, dixon_coles_rho=rho, seed=42)
-        table = res.scoreline_table(max_goals=5)
-        top_scores = sorted(table.items(), key=lambda kv: kv[1], reverse=True)[:3]
-        return {
-            "win_prob": res.home_win_pct,
-            "draw_prob": res.draw_pct,
-            "loss_prob": res.away_win_pct,
-            "top_scores": top_scores,
-            "ov15": res.over_under(1.5)["over_1.5"],
-            "ov25": res.over_under(2.5)["over_2.5"],
-            "btts_yes": res.btts()["btts_yes"]
-        }
-    except Exception:
-        return None
-
-@st.cache_data
-def get_basketball_sim_data(league, home, away, line):
-    model = get_basketball_model(league)
-    if not model: return None
-    try:
-        res = model.predict(home, away, over_under_line=line, league=league)
-        return {
-            "win_prob": res["home_win"],
-            "loss_prob": res["away_win"],
-            "over": res["over_total"],
-            "under": res["under_total"],
-            "line": line
-        }
-    except Exception:
-        return None
 
 # ----------------- DATA LOADING -----------------
 @st.cache_data(ttl=60)
@@ -174,27 +110,23 @@ def render_leg_details(leg, date_str):
 🎯 {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
 """
     
-    if league not in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
-        sim = get_soccer_sim_data(league, home, away)
-        if sim:
-            scores_str = ", ".join([f"{h}-{a} ({p*100:.1f}%)" for (h,a), p in sim['top_scores']])
-            html += f"""
+    # Render cached MC stats if they exist in the JSON leg dict! (Safe injection for future runs)
+    if "mc_stats" in leg:
+        mc = leg["mc_stats"]
+        scores_str = ", ".join([f"{h}-{a} ({p*100:.1f}%)" for (h,a), p in mc.get("top_scores", [])])
+        html += f"""
 <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
-    <b>MC Sim:</b> W: {sim['win_prob']*100:.1f}% | D: {sim['draw_prob']*100:.1f}% | L: {sim['loss_prob']*100:.1f}% <br>
+    <b>MC Sim:</b> W: {mc.get('win_prob',0)*100:.1f}% | D: {mc.get('draw_prob',0)*100:.1f}% | L: {mc.get('loss_prob',0)*100:.1f}% <br>
     <b>Most Likely Scores:</b> {scores_str} <br>
-    <b>Totals:</b> O1.5: {sim['ov15']*100:.1f}% | O2.5: {sim['ov25']*100:.1f}% | BTTS: {sim['btts_yes']*100:.1f}%
+    <b>Totals:</b> O1.5: {mc.get('ov15',0)*100:.1f}% | O2.5: {mc.get('ov25',0)*100:.1f}% | BTTS: {mc.get('btts_yes',0)*100:.1f}%
 </div>
 """
-    else:
-        import re
-        line_match = re.search(r"(\d+\.?\d*)", market)
-        line = float(line_match.group(1)) if line_match else 225.5
-        sim = get_basketball_sim_data(league, home, away, line)
-        if sim:
-            html += f"""
+    elif "bb_stats" in leg:
+        bb = leg["bb_stats"]
+        html += f"""
 <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
-    <b>Model:</b> {home} Win: {sim['win_prob']*100:.1f}% | {away} Win: {sim['loss_prob']*100:.1f}% <br>
-    <b>Totals (Line {sim['line']}):</b> Over: {sim['over']*100:.1f}% | Under: {sim['under']*100:.1f}%
+    <b>Model:</b> {home} Win: {bb.get('win_prob',0)*100:.1f}% | {away} Win: {bb.get('loss_prob',0)*100:.1f}% <br>
+    <b>Totals (Line {bb.get('line',0)}):</b> Over: {bb.get('over',0)*100:.1f}% | Under: {bb.get('under',0)*100:.1f}%
 </div>
 """
             
