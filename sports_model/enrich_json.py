@@ -1,15 +1,15 @@
-﻿import os
+import os
 import json
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'sports_model'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'core'))
+sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'core'))
 
 from dixon_coles import DixonColesModel, load_league_data
 from simulation import simulate_match
 from basketball_model import BasketballModel
 
-tracker_path = os.path.join(os.path.dirname(__file__), 'sports_model', 'acca_tracker.json')
+tracker_path = os.path.join(os.path.dirname(__file__), 'acca_tracker.json')
 
 with open(tracker_path, 'r') as f:
     data = json.load(f)

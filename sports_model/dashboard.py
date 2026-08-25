@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 
 # Insert paths to allow importing from core/ and sports_model/

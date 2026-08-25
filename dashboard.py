@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 
 # Ensure sports_model is in the path
