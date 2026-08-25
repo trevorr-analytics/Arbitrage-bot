@@ -165,22 +165,22 @@ def render_leg_details(leg, date_str):
     edge = leg.get('edge', 0) * 100
 
     html = f"""
-    <div class="leg-row">
-        <b>[{league}]</b> {home} vs {away} <i>({date_str})</i><br>
-        🎯 {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
-    """
+<div class="leg-row">
+<b>[{league}]</b> {home} vs {away} <i>({date_str})</i><br>
+🎯 {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
+"""
     
     if league not in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
         sim = get_soccer_sim_data(league, home, away)
         if sim:
             scores_str = ", ".join([f"{h}-{a} ({p*100:.1f}%)" for (h,a), p in sim['top_scores']])
             html += f"""
-            <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
-                <b>MC Sim:</b> W: {sim['win_prob']*100:.1f}% | D: {sim['draw_prob']*100:.1f}% | L: {sim['loss_prob']*100:.1f}% <br>
-                <b>Most Likely Scores:</b> {scores_str} <br>
-                <b>Totals:</b> O1.5: {sim['ov15']*100:.1f}% | O2.5: {sim['ov25']*100:.1f}% | BTTS: {sim['btts_yes']*100:.1f}%
-            </div>
-            """
+<div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
+    <b>MC Sim:</b> W: {sim['win_prob']*100:.1f}% | D: {sim['draw_prob']*100:.1f}% | L: {sim['loss_prob']*100:.1f}% <br>
+    <b>Most Likely Scores:</b> {scores_str} <br>
+    <b>Totals:</b> O1.5: {sim['ov15']*100:.1f}% | O2.5: {sim['ov25']*100:.1f}% | BTTS: {sim['btts_yes']*100:.1f}%
+</div>
+"""
     else:
         import re
         line_match = re.search(r"(\d+\.?\d*)", market)
@@ -188,11 +188,11 @@ def render_leg_details(leg, date_str):
         sim = get_basketball_sim_data(league, home, away, line)
         if sim:
             html += f"""
-            <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
-                <b>Model:</b> {home} Win: {sim['win_prob']*100:.1f}% | {away} Win: {sim['loss_prob']*100:.1f}% <br>
-                <b>Totals (Line {sim['line']}):</b> Over: {sim['over']*100:.1f}% | Under: {sim['under']*100:.1f}%
-            </div>
-            """
+<div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
+    <b>Model:</b> {home} Win: {sim['win_prob']*100:.1f}% | {away} Win: {sim['loss_prob']*100:.1f}% <br>
+    <b>Totals (Line {sim['line']}):</b> Over: {sim['over']*100:.1f}% | Under: {sim['under']*100:.1f}%
+</div>
+"""
             
     html += "</div>"
     st.markdown(html, unsafe_allow_html=True)
