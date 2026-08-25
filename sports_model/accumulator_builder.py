@@ -296,6 +296,9 @@ if __name__ == "__main__":
         
     with open(tracker_file, "w") as f:
         json.dump(tracked_data, f, indent=4)
+
+    import subprocess
+    subprocess.run(['python', os.path.join(BASE_DIR, 'sports_model', 'enrich_json.py')])
         
     # Send to Telegram
     if all_tracked:
