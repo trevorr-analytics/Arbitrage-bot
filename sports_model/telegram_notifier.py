@@ -34,10 +34,10 @@ def send_telegram_message(message: str) -> bool:
         return False
 
 def get_telegram_messages_by_category(soccer_accas: list, nba: list, mlb: list = None) -> list:
-    \"\"\"
+    """
     Formats the categorized accumulators into a list of readable HTML messages for Telegram.
     This prevents hitting Telegram's 4096-character limit by splitting categories into separate texts.
-    \"\"\"
+    """
     messages = []
     
     def _format_date(iso_date):
