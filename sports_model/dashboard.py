@@ -1,80 +1,87 @@
-﻿import streamlit as st
-import json
-import pandas as pd
-from datetime import datetime, timezone, timedelta
+﻿import sys
 import os
 
-st.set_page_config(page_title="Quant Betting Dashboard", page_icon="📈", layout="wide")
+# Insert paths to allow importing from core/ and sports_model/
+sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'core')))
 
-# Custom CSS for a mobile-friendly dark theme
-st.markdown("""
-    <style>
-    /* Athena-inspired theme */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    .stApp, .main {background-color: #0d1110;}
-    .stApp > header {background-color: transparent;}
-    h1, h2, h3 {color: #ffffff; font-weight: 800; letter-spacing: -0.02em;}
-    h1 {font-size: 3.5rem !important; line-height: 1.1 !important;}
-    .grass {color: #2f8f56;}
-    .eyebrow {
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        letter-spacing: 0.1em;
-        color: #8c9b93;
-        font-weight: 600;
-        margin-bottom: -15px;
-        display: block;
-    }
-    .acca-card {
-        background-color: #141a18;
-        border: 1px solid #1f2924;
-        border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .acca-card:hover {
-        border-color: #2f8f56;
-        transform: translateY(-2px);
-    }
-    .acca-card h4 {
-        color: #ffffff;
-        margin-top: 0;
-        border-bottom: 1px solid #1f2924;
-        padding-bottom: 12px;
-        font-size: 1.25rem;
-    }
-    .leg-row {
-        font-size: 0.95em;
-        color: #a4b3ac;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #1f2924;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-    .leg-row:last-child {
-        border-bottom: none;
-    }
-    .leg-row b {
-        color: #eef4ef;
-    }
-    .edge-text {
-        color: #2f8f56;
-        font-weight: 700;
-    }
-    </style>
-""", unsafe_allow_html=True)
+import json
+from datetime import datetime, timedelta, timezone
+import pandas as pd
+import streamlit as st
 
-st.markdown('<span class="eyebrow">model vs market &middot; calibration in public</span>', unsafe_allow_html=True)
-st.markdown('<h1>AutoQuant &middot; <span class="grass">Sports</span></h1>', unsafe_allow_html=True)
-st.write("every day, a new game, and a new machine learning prediction by AutoQuant.")
-st.write(f"**Last Updated:** {(datetime.now(timezone.utc) + timedelta(hours=3)).strftime('%Y-%m-%d %H:%M EAT')}")
+st.set_page_config(page_title="AutoQuant Betting Dashboard", layout="wide", initial_sidebar_state="collapsed")
 
+# Load CSS
+css_path = os.path.join(os.path.dirname(__file__), "style.css")
+if os.path.exists(css_path):
+    with open(css_path, "r") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# ----------------- SIMULATION HELPERS -----------------
+@st.cache_resource
+def get_soccer_model(league):
+    from dixon_coles import DixonColesModel, load_league_data
+    model = DixonColesModel()
+    try:
+        data = load_league_data(league, min_seasons=2)
+        model.fit(data)
+        return model
+    except Exception as e:
+        print(f"Failed to load soccer model for {league}: {e}")
+        return None
+
+@st.cache_resource
+def get_basketball_model(league):
+    from basketball_model import BasketballModel
+    model = BasketballModel()
+    try:
+        model.fit(None, league_name=league)
+        return model
+    except Exception as e:
+        print(f"Failed to load bb model for {league}: {e}")
+        return None
+
+@st.cache_data
+def get_soccer_sim_data(league, home, away):
+    model = get_soccer_model(league)
+    if not model: return None
+    try:
+        home_xg, away_xg = model._get_lam_mu(home, away)
+        rho = model.params_[-1] if model.params_ is not None else None
+        from simulation import simulate_match
+        res = simulate_match(home_xg, away_xg, n_sims=10000, dixon_coles_rho=rho, seed=42)
+        table = res.scoreline_table(max_goals=5)
+        top_scores = sorted(table.items(), key=lambda kv: kv[1], reverse=True)[:3]
+        return {
+            "win_prob": res.home_win_pct,
+            "draw_prob": res.draw_pct,
+            "loss_prob": res.away_win_pct,
+            "top_scores": top_scores,
+            "ov15": res.over_under(1.5)["over_1.5"],
+            "ov25": res.over_under(2.5)["over_2.5"],
+            "btts_yes": res.btts()["btts_yes"]
+        }
+    except Exception:
+        return None
+
+@st.cache_data
+def get_basketball_sim_data(league, home, away, line):
+    model = get_basketball_model(league)
+    if not model: return None
+    try:
+        res = model.predict(home, away, over_under_line=line, league=league)
+        return {
+            "win_prob": res["home_win"],
+            "loss_prob": res["away_win"],
+            "over": res["over_total"],
+            "under": res["under_total"],
+            "line": line
+        }
+    except Exception:
+        return None
+
+# ----------------- DATA LOADING -----------------
 @st.cache_data(ttl=60)
 def load_data():
     try:
@@ -85,7 +92,6 @@ def load_data():
         return []
 
 data = load_data()
-
 
 now = datetime.now(timezone.utc)
 end_of_week = now + timedelta(days=7)
@@ -103,8 +109,6 @@ def parse_date(date_str):
 if data:
     valid_accas = []
     raw_all_legs = []
-    
-    # First, collect all unique future legs regardless of acca validity
     for acca in reversed(data):
         for leg in acca.get("legs", []):
             dt = parse_date(leg.get("date", ""))
@@ -113,7 +117,6 @@ if data:
                 if not any(f"{l.get('home')}-{l.get('away')}-{l.get('market')}" == leg_sig for l in raw_all_legs):
                     raw_all_legs.append(leg)
                     
-        # Now validate the acca itself (must not contain past games)
         has_past_leg = False
         out_of_week = False
         for leg in acca.get("legs", []):
@@ -126,22 +129,17 @@ if data:
         
         if not has_past_leg and not out_of_week:
             valid_accas.append(acca)
-            
-    # Overwrite data with only valid future accas (so the Acca tabs don't show past games)
     data = valid_accas
 
 if not data:
     st.warning("No accumulators found. The daily bot may not have run yet.")
     st.stop()
 
-# Classify data
 soccer_accas = []
 nba_accas = []
-all_legs = []
-
 all_legs = raw_all_legs
 
-for acca in data: # We already reversed earlier if we needed, but data is now just valid_accas
+for acca in data:
     is_nba = False
     for leg in acca.get("legs", []):
         if leg.get("league") in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
@@ -152,18 +150,57 @@ for acca in data: # We already reversed earlier if we needed, but data is now ju
     else:
         soccer_accas.append(acca)
 
-# Sort strictly by Edge (using safe .get() to prevent KeyError on old schemas)
 soccer_accas = sorted(soccer_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 nba_accas = sorted(nba_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
-tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["🔥 Top Picks", "🛡️ Safe Plays", "⚽ Soccer", "🏀 Basketball", "📈 CLV Learning Log", "🦄 Dreamer Parlay"])
+tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["🔥 Top Picks", "🎯 Safe Plays", "⚽ Soccer", "🏀 Basketball", "📈 CLV Learning Log", "🤑 Dreamer Parlay"])
+
+def render_leg_details(leg, date_str):
+    league = leg.get('league', 'Unknown')
+    home = leg.get('home', 'Unknown')
+    away = leg.get('away', 'Unknown')
+    market = leg.get('market', 'Unknown')
+    odds = leg.get('odds', 0)
+    edge = leg.get('edge', 0) * 100
+
+    html = f"""
+    <div class="leg-row">
+        <b>[{league}]</b> {home} vs {away} <i>({date_str})</i><br>
+        🎯 {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
+    """
+    
+    if league not in ["NBA", "EuroLeague", "NCAAB", "WNBA"]:
+        sim = get_soccer_sim_data(league, home, away)
+        if sim:
+            scores_str = ", ".join([f"{h}-{a} ({p*100:.1f}%)" for (h,a), p in sim['top_scores']])
+            html += f"""
+            <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
+                <b>MC Sim:</b> W: {sim['win_prob']*100:.1f}% | D: {sim['draw_prob']*100:.1f}% | L: {sim['loss_prob']*100:.1f}% <br>
+                <b>Most Likely Scores:</b> {scores_str} <br>
+                <b>Totals:</b> O1.5: {sim['ov15']*100:.1f}% | O2.5: {sim['ov25']*100:.1f}% | BTTS: {sim['btts_yes']*100:.1f}%
+            </div>
+            """
+    else:
+        import re
+        line_match = re.search(r"(\d+\.?\d*)", market)
+        line = float(line_match.group(1)) if line_match else 225.5
+        sim = get_basketball_sim_data(league, home, away, line)
+        if sim:
+            html += f"""
+            <div style="font-size:0.85em; color:#a0a0a0; padding: 5px 0px 0px 15px; border-left: 2px solid #333; margin-top:5px;">
+                <b>Model:</b> {home} Win: {sim['win_prob']*100:.1f}% | {away} Win: {sim['loss_prob']*100:.1f}% <br>
+                <b>Totals (Line {sim['line']}):</b> Over: {sim['over']*100:.1f}% | Under: {sim['under']*100:.1f}%
+            </div>
+            """
+            
+    html += "</div>"
+    st.markdown(html, unsafe_allow_html=True)
 
 def render_acca(acca, title):
     combined_odds = acca.get('combined_odds', acca.get('odds', 0))
     combined_edge = acca.get('combined_edge', acca.get('edge', 0))
     
-    # Calculate combined probability
     combined_prob = 1.0
     has_prob = True
     for leg in acca.get('legs', []):
@@ -182,36 +219,28 @@ def render_acca(acca, title):
     for leg in acca.get('legs', []):
         dt = parse_date(leg.get('date', ''))
         date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
-        st.markdown(f"""
-        <div class="leg-row">
-            <b>[{leg.get('league', 'Unknown')}]</b> {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i><br>
-            👉 {leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f} <i>(+{leg.get('edge', 0)*100:.1f}%)</i>
-        </div>
-        """, unsafe_allow_html=True)
+        render_leg_details(leg, date_str)
+        
     st.markdown('</div>', unsafe_allow_html=True)
 
 with tab1:
-    st.header("🏆 The 3 Best Accumulators")
+    st.header("🔥 The 3 Best Accumulators")
     top_3_overall = sorted(data, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)[:3]
     for i, acca in enumerate(top_3_overall):
         render_acca(acca, f"Ultimate Acca #{i+1}")
         
-    st.header("🎯 The 3 Best +EV Singles")
+    st.header("🔥 The 3 Best +EV Singles")
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
         dt = parse_date(leg.get('date', ''))
         date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
-        st.write(f"**[{leg.get('league', 'Unknown')}]** {leg.get('home', 'Unknown')} vs {leg.get('away', 'Unknown')} <i>({date_str})</i>", unsafe_allow_html=True)
-        st.write(f"👉 **{leg.get('market', 'Unknown')} @ {leg.get('odds', 0):.2f}**")
-        st.write(f"**Edge:** <span class='edge-text'>+{leg.get('edge', 0)*100:.2f}%</span>", unsafe_allow_html=True)
+        render_leg_details(leg, date_str)
         st.markdown('</div>', unsafe_allow_html=True)
 
-
 with tab_safe:
-    st.header("🛡️ Safe & Steady Plays (>65% Win Probability)")
+    st.header("🎯 Safe & Steady Plays (>65% Win Probability)")
     st.write("These are the mathematically safest single bets across all sports, prioritizing high likelihood of hitting with a positive mathematical edge.")
     
-    # Filter and sort by model_prob instead of edge
     safe_legs = [leg for leg in all_legs if leg.get('model_prob', 0) >= 0.65 and leg.get('edge', 0) > 0]
     safe_legs = sorted(safe_legs, key=lambda x: x.get('model_prob', 0), reverse=True)
     
@@ -219,22 +248,11 @@ with tab_safe:
         st.info("No plays with >65% probability and +EV found today.")
     else:
         for i, leg in enumerate(safe_legs):
+            st.markdown(f'<div class="acca-card"><h4>#{i+1} [{leg.get("league")}] {leg.get("home")} vs {leg.get("away")}</h4>', unsafe_allow_html=True)
             dt = parse_date(leg.get('date', ''))
             date_str = (dt + timedelta(hours=3)).strftime("%A, %b %d @ %H:%M EAT") if dt else "Time TBD" 
-            edge_pct = leg.get('edge', 0) * 100
-            prob_pct = leg.get('model_prob', 0) * 100
-            st.markdown(f'''
-            <div class="acca-card">
-                <h4>#{i+1} [{leg.get('league')}] {leg.get('home')} vs {leg.get('away')}</h4>
-                <div class="leg-row" style="border:none;">
-                    <b>Date & Time:</b> {date_str} <br>
-                    <b>Market:</b> {leg.get('market')} <br>
-                    <b>Offered Odds:</b> {leg.get('odds', 0):.2f} <br>
-                    <b>True Probability:</b> <span class='edge-text'>{prob_pct:.1f}%</span> <br>
-                    <b>Edge:</b> +{edge_pct:.1f}%
-                </div>
-            </div>
-            ''', unsafe_allow_html=True)
+            render_leg_details(leg, date_str)
+            st.markdown('</div>', unsafe_allow_html=True)
 
 with tab2:
     st.header("⚽ All Soccer Accumulators")
@@ -247,9 +265,8 @@ with tab3:
         render_acca(acca, f"Basketball Acca #{i+1}")
 
 with tab4:
-    st.header("🧠 CLV Resolution & Self-Learning Log")
+    st.header("📈 CLV Resolution & Self-Learning Log")
     st.info("The automated self-learning system resolves matches every Monday morning. The results and CLV deltas are logged here for the AI to analyze.")
-    
     clv_path = os.path.join(os.path.dirname(__file__), "clv_history.csv")
     if os.path.exists(clv_path):
         df = pd.read_csv(clv_path)
@@ -258,9 +275,8 @@ with tab4:
         st.write("No historical CLV data available yet. Waiting for Monday resolution cycle.")
 
 with tab_dream:
-    st.header("🦄 The Dreamer Parlay (500+ Odds)")
+    st.header("🤑 The Dreamer Parlay (500+ Odds)")
     st.write("A mathematically optimized mega-parlay purely for fun. High risk, astronomical reward.")
-    
     dreamer_accas = [a for a in data if a.get("is_dreamer")]
     if dreamer_accas:
         render_acca(dreamer_accas[-1], "Mega Dreamer")
