@@ -1,9 +1,10 @@
 ﻿import os
 import sys
 
-# Add the sports_model directory to the path so we can import from it
+# Ensure sports_model is in the path
 sports_model_path = os.path.join(os.path.dirname(__file__), "sports_model")
 sys.path.insert(0, sports_model_path)
 
-# Importing the module will execute all its Streamlit commands
-import dashboard
+file_path = os.path.join(sports_model_path, "dashboard.py")
+with open(file_path, "r", encoding="utf-8") as f:
+    exec(f.read(), globals())
