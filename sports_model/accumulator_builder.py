@@ -248,12 +248,33 @@ if __name__ == "__main__":
     accas_soccer = sort_and_bucket(accas_soccer)
     accas_nba = sort_and_bucket(accas_nba)
     
-    total_combinations = c1 + c2
-    print(f"Total combinations evaluated: {total_combinations:,}")
+    # === MLB Pipeline (Independent) ===
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from mlb_model.mlb_model import MLBModel
+    from mlb_model.scanner import scan_mlb_edges
+    
+    print("\nStarting MLB Pipeline...")
+    mlb_model = MLBModel()
+    mlb_model.fit(seasons=[2024]) # Use current season for model state
+    
+    # API keys for OddsAPI rotation
+    api_keys = [
+        "017cbc1f3724942ba358b77a4b1095fe",
+        "2dd91edd9c74fda2e0df435129777d4c",
+        "0ecab0bb21f55f88ce50c67b38478c0d",
+    ]
+    mlb_legs = scan_mlb_edges(mlb_model, api_keys)
+    accas_mlb, c3 = build_accumulators(mlb_legs, max_odds=3.5)
+    accas_mlb = sort_and_bucket(accas_mlb)
+    
+    total_combinations = c1 + c2 + c3
+    print(f"Total combinations evaluated (all sports): {total_combinations:,}")
     
     # Take the top N required
     top_soccer = accas_soccer[:10]
     top_nba = accas_nba[:10]
+    top_mlb = accas_mlb[:10]
     
     # Save to Tracker Log for Post-Match Resolution & Retraining
     import json
@@ -269,7 +290,7 @@ if __name__ == "__main__":
             pass
             
     timestamp = datetime.utcnow().isoformat()
-    all_tracked = top_soccer + top_nba
+    all_tracked = top_soccer + top_nba + top_mlb
     
     for acca in all_tracked:
         acca_record = {
@@ -298,11 +319,12 @@ if __name__ == "__main__":
         json.dump(tracked_data, f, indent=4)
 
     import subprocess
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     subprocess.run(['python', os.path.join(BASE_DIR, 'sports_model', 'enrich_json.py')])
         
     # Send to Telegram
     if all_tracked:
         from telegram_notifier import get_telegram_messages_by_category, send_telegram_message
-        messages = get_telegram_messages_by_category(top_soccer, top_nba)
+        messages = get_telegram_messages_by_category(top_soccer, top_nba, top_mlb)
         for msg in messages:
             send_telegram_message(msg)
