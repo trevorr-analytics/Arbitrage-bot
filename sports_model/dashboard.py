@@ -212,12 +212,12 @@ with tab4:
         st.write("No historical CLV data available yet. Waiting for Monday resolution cycle.")
 
 with tab_dream:
-    st.header("🤑 The Dreamer Parlay (500+ Odds)")
+    st.header("🤑 The Dreamer Parlay (100+ Odds)")
     st.write("A mathematically optimized mega-parlay purely for fun. High risk, astronomical reward.")
     dreamer_accas = [a for a in data if a.get("is_dreamer")]
     if dreamer_accas:
         render_acca(dreamer_accas[-1], "Mega Dreamer")
     else:
-        st.info("Not enough positive-EV legs found this week to build a 500+ odds parlay.")
+        st.info("Not enough positive-EV legs found this week to build a 100+ odds parlay.")
 
 
