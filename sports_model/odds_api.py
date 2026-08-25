@@ -19,12 +19,14 @@ SPORT_KEYS = {
 
 # Key Rotation Pool
 API_KEYS_POOL = [
-    "017cbc1f3724942ba358b77a4b1095fe",  # Original key (Quota exhausted)
-    "2dd91edd9c74fda2e0df435129777d4c"   # Fallback key (August 2026)
+    "017cbc1f3724942ba358b77a4b1095fe",  # Original key
+    "2dd91edd9c74fda2e0df435129777d4c",  # First Fallback key
+    "0ecab0bb21f55f88ce50c67b38478c0d"   # Second Fallback key (August 2026)
 ]
 
 CACHE_FILE = os.path.join(os.path.dirname(__file__), "odds_cache.json")
-CACHE_EXPIRY_SECONDS = 3600 * 12 # 12 hours to save credits
+# INCREASED CACHE TO 12 HOURS - This guarantees we only hit the API twice a day per league, maximizing the 500/mo limit
+CACHE_EXPIRY_SECONDS = 3600 * 12 
 
 def load_cache():
     if os.path.exists(CACHE_FILE):
@@ -48,20 +50,16 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
     cache = load_cache()
     current_time = time.time()
     
-    # Check environment variable first for explicit overrides
     env_key = os.environ.get("ODDS_API_KEY")
     
-    # Build rotation pool
     rotation_keys = []
     if api_key:
         rotation_keys.append(api_key)
     
-    # Always try the keys provided by the user in code
     for k in API_KEYS_POOL:
         if k not in rotation_keys:
             rotation_keys.append(k)
             
-    # Add environment key at the end if it's uniquely different
     if env_key and env_key not in rotation_keys:
         rotation_keys.append(env_key)
     
@@ -71,7 +69,6 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
             return _parse_odds_data(cache[sport_key]["data"])
             
         cached_time = cache[sport_key].get("timestamp", 0)
-        # If cache is very fresh, just use it
         if current_time - cached_time < CACHE_EXPIRY_SECONDS:
             return _parse_odds_data(cache[sport_key]["data"])
 
@@ -82,9 +79,13 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
     for key in rotation_keys:
         print(f"[OddsAPI] Fetching LIVE odds for {league} from API (Key ending in ...{key[-4:]})...", end=" ", flush=True)
         url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
+        
+        # COST OPTIMIZATION: 
+        # Reduced regions from 'eu,uk,us' (cost +2) to just 'eu' (cost +0) which includes Pinnacle, Betfair, Betclic, etc.
+        # Total cost per request drops from 4 credits to 2 credits (base 1 + totals market 1).
         params = {
             "apiKey": key,
-            "regions": "eu,uk,us",
+            "regions": "eu",
             "markets": "h2h,totals", 
             "oddsFormat": "decimal"
         }
@@ -104,7 +105,7 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
                 
             elif response.status_code == 401 and "OUT_OF_USAGE_CREDITS" in response.text:
                 print(f"FAILED. Quota reached for key ending in ...{key[-4:]}. Rotating to next key if available...")
-                continue # Try the next key in the pool
+                continue
                 
             else:
                 print(f"FAILED. HTTP {response.status_code}: {response.text}")
