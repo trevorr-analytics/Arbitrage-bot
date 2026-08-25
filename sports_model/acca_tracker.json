@@ -26,7 +26,38 @@
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -56,7 +87,38 @@
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -76,7 +138,38 @@
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -117,7 +210,38 @@
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -197,7 +321,38 @@
                 "market": "Away Win",
                 "odds": 1.76,
                 "edge": 0.1633329558226142,
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.151,
+                    "draw_prob": 0.279,
+                    "loss_prob": 0.57,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1342
+                        ],
+                        [
+                            [
+                                0,
+                                2
+                            ],
+                            0.1324
+                        ],
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.1268
+                        ]
+                    ],
+                    "ov15": 0.9166,
+                    "ov25": 0.6178,
+                    "btts_yes": 0.6154
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -288,7 +443,38 @@
                 "odds": 1.4,
                 "edge": 0.26666560116236837,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "NBA_Denver Nuggets_Houston Rockets",
@@ -298,7 +484,14 @@
                 "market": "Home Win",
                 "odds": 1.7,
                 "edge": 0.01640638021026697,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -328,7 +521,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -359,7 +583,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -379,7 +634,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -420,7 +706,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -461,7 +778,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -492,7 +840,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -553,7 +932,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -637,7 +1047,38 @@
                 "odds": 1.4,
                 "edge": 0.26151248246844316,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -667,7 +1108,38 @@
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -707,7 +1179,38 @@
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -748,7 +1251,38 @@
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -788,7 +1322,38 @@
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -818,7 +1383,38 @@
                 "odds": 1.86,
                 "edge": 0.26871683036633665,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -837,7 +1433,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -847,7 +1450,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -857,7 +1467,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -876,7 +1493,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -886,7 +1510,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -896,7 +1527,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -915,7 +1553,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -925,7 +1570,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -935,7 +1587,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -954,7 +1613,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -964,7 +1630,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -974,7 +1647,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -993,7 +1673,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1003,7 +1690,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             }
         ]
     },
@@ -1022,7 +1716,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1032,7 +1733,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Philadelphia 76ers_Miami Heat",
@@ -1042,7 +1750,14 @@
                 "market": "Under 239.5",
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -1061,7 +1776,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1071,7 +1793,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1090,7 +1819,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1100,7 +1836,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Los Angeles Lakers_Portland Trail Blazers",
@@ -1110,7 +1853,14 @@
                 "market": "Under 238.5",
                 "odds": 1.91,
                 "edge": 0.31934115992675893,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.18065884007324107,
+                    "under": 0.8193411599267589,
+                    "line": 238.5
+                }
             }
         ]
     },
@@ -1129,7 +1879,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1139,7 +1896,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1158,7 +1922,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1168,7 +1939,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Philadelphia 76ers_Miami Heat",
@@ -1178,7 +1956,14 @@
                 "market": "Under 239.5",
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -1209,7 +1994,38 @@
                 "odds": 1.4,
                 "edge": 0.2501124824684432,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1301,7 +2117,38 @@
                 "odds": 1.4,
                 "edge": 0.2501124824684432,
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "match_id": "Eredivisie_SC Cambuur_Feyenoord",
@@ -1373,7 +2220,38 @@
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1414,7 +2292,38 @@
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1445,7 +2354,38 @@
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1485,7 +2425,38 @@
                 "odds": 1.86,
                 "edge": 0.2360168303663367,
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1534,7 +2505,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1544,7 +2522,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1554,7 +2539,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1573,7 +2565,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1583,7 +2582,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -1593,7 +2599,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1612,7 +2625,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -1622,7 +2642,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1632,7 +2659,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1651,7 +2685,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -1661,7 +2702,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1671,7 +2719,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1690,7 +2745,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1700,7 +2762,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             }
         ]
     },
@@ -1719,7 +2788,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1729,7 +2805,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Philadelphia 76ers_Miami Heat",
@@ -1739,7 +2822,14 @@
                 "market": "Under 239.5",
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -1758,7 +2848,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1768,7 +2865,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1787,7 +2891,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -1797,7 +2908,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Los Angeles Lakers_Portland Trail Blazers",
@@ -1807,7 +2925,14 @@
                 "market": "Under 238.5",
                 "odds": 1.91,
                 "edge": 0.31934115992675893,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.18065884007324107,
+                    "under": 0.8193411599267589,
+                    "line": 238.5
+                }
             }
         ]
     },
@@ -1826,7 +2951,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1836,7 +2968,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -1855,7 +2994,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -1865,7 +3011,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Philadelphia 76ers_Miami Heat",
@@ -1875,7 +3028,14 @@
                 "market": "Under 239.5",
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -1905,7 +3065,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1936,7 +3127,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -1967,7 +3189,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2008,7 +3261,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2028,7 +3312,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2059,7 +3374,38 @@
                 "edge": 0.2360168303663367,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.85
+                "closing_odds": 1.85,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2100,7 +3446,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2141,7 +3518,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2171,7 +3579,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2190,7 +3629,38 @@
                 "odds": 1.76,
                 "edge": 0.10541818181818174,
                 "date": "2026-08-23T13:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.151,
+                    "draw_prob": 0.279,
+                    "loss_prob": 0.57,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1342
+                        ],
+                        [
+                            [
+                                0,
+                                2
+                            ],
+                            0.1324
+                        ],
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.1268
+                        ]
+                    ],
+                    "ov15": 0.9166,
+                    "ov25": 0.6178,
+                    "btts_yes": 0.6154
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2201,7 +3671,38 @@
                 "edge": 0.24572173851689827,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2220,7 +3721,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2230,7 +3738,14 @@
                 "odds": 1.96,
                 "edge": 0.37960217825751397,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
             },
             {
                 "league": "NBA",
@@ -2240,7 +3755,14 @@
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2259,7 +3781,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2269,7 +3798,14 @@
                 "odds": 1.96,
                 "edge": 0.37960217825751397,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
             },
             {
                 "league": "NBA",
@@ -2279,7 +3815,14 @@
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2298,7 +3841,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2308,7 +3858,14 @@
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "league": "NBA",
@@ -2318,7 +3875,14 @@
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2337,7 +3901,14 @@
                 "odds": 1.96,
                 "edge": 0.37960217825751397,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
             },
             {
                 "league": "NBA",
@@ -2347,7 +3918,14 @@
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "league": "NBA",
@@ -2357,7 +3935,14 @@
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2376,7 +3961,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2386,7 +3978,14 @@
                 "odds": 1.96,
                 "edge": 0.37960217825751397,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
             }
         ]
     },
@@ -2405,7 +4004,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2415,7 +4021,14 @@
                 "odds": 1.96,
                 "edge": 0.37960217825751397,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
             },
             {
                 "league": "NBA",
@@ -2425,7 +4038,14 @@
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
                 "date": "2026-11-25T22:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -2444,7 +4064,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2454,7 +4081,14 @@
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2473,7 +4107,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2483,7 +4124,14 @@
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "league": "NBA",
@@ -2493,7 +4141,14 @@
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
                 "date": "2026-11-25T22:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -2512,7 +4167,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2522,7 +4184,14 @@
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -2541,7 +4210,14 @@
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "NBA",
@@ -2551,7 +4227,14 @@
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
                 "date": "2026-10-22T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "league": "NBA",
@@ -2561,7 +4244,14 @@
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
                 "date": "2026-11-25T22:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.16248752577483128,
+                    "under": 0.8375124742251687,
+                    "line": 239.5
+                }
             }
         ]
     },
@@ -2744,7 +4434,38 @@
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2774,7 +4495,38 @@
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2804,7 +4556,38 @@
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -2824,7 +4607,38 @@
                 "edge": 0.2192217385168982,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -2943,7 +4757,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -2953,7 +4774,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -2972,7 +4800,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -2982,7 +4817,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3001,7 +4843,14 @@
                 "odds": 1.77,
                 "edge": 0.04515165257921672,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3011,7 +4860,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3030,7 +4886,14 @@
                 "odds": 1.77,
                 "edge": 0.04515165257921672,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3040,7 +4903,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3059,7 +4929,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "EuroLeague",
@@ -3069,7 +4946,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3088,7 +4972,14 @@
                 "odds": 1.8,
                 "edge": 0.059998698116799254,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3098,7 +4989,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3117,7 +5015,14 @@
                 "odds": 1.8,
                 "edge": 0.059998698116799254,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3127,7 +5032,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3146,7 +5058,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3156,7 +5075,14 @@
                 "odds": 1.82,
                 "edge": 0.06642456391766505,
                 "date": "2026-11-07T00:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3175,7 +5101,14 @@
                 "odds": 1.82,
                 "edge": 0.06642456391766505,
                 "date": "2026-11-07T00:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3185,7 +5118,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3204,7 +5144,14 @@
                 "odds": 1.77,
                 "edge": 0.04515165257921672,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "EuroLeague",
@@ -3214,7 +5161,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3336,7 +5290,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -3366,7 +5351,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -3396,7 +5412,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -3416,7 +5463,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -3535,7 +5613,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3546,7 +5631,14 @@
                 "edge": 0.2975747531892171,
                 "date": "2026-08-22T23:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.95
+                "closing_odds": 1.95,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.1935193943934801,
+                    "under": 0.8064806056065199,
+                    "line": 187.5
+                }
             }
         ]
     },
@@ -3565,7 +5657,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3576,7 +5675,14 @@
                 "edge": 0.2359938028368157,
                 "date": "2026-08-23T01:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.95
+                "closing_odds": 1.95,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.7372857925008984,
+                    "under": 0.26271420749910157,
+                    "line": 169.5
+                }
             }
         ]
     },
@@ -3595,7 +5701,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3606,7 +5719,14 @@
                 "edge": 0.020602851052159976,
                 "date": "2026-08-23T02:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.93
+                "closing_odds": 1.93,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.52060285105216,
+                    "under": 0.47939714894784,
+                    "line": 176.5
+                }
             }
         ]
     },
@@ -3625,7 +5745,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3636,7 +5763,14 @@
                 "edge": 0.33500522678026534,
                 "date": "2026-08-21T23:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.91
+                "closing_odds": 1.91,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.8535237452987839,
+                    "under": 0.14647625470121606,
+                    "line": 164.5
+                }
             }
         ]
     },
@@ -3655,7 +5789,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3666,7 +5807,14 @@
                 "edge": 0.16680727304824483,
                 "date": "2026-08-22T02:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.89
+                "closing_odds": 1.89,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.29747844123746936,
+                    "under": 0.7025215587625306,
+                    "line": 183.5
+                }
             }
         ]
     },
@@ -3685,7 +5833,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3696,7 +5851,14 @@
                 "edge": 0.38845133604701054,
                 "date": "2026-08-21T23:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.93
+                "closing_odds": 1.93,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.8884513360470105,
+                    "under": 0.11154866395298946,
+                    "line": 162.5
+                }
             }
         ]
     },
@@ -3715,7 +5877,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -3726,7 +5895,14 @@
                 "edge": 0.12081674604824921,
                 "date": "2026-08-22T23:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.7
+                "closing_odds": 1.7,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3745,7 +5921,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3755,7 +5938,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3774,7 +5964,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3784,7 +5981,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3803,7 +6007,14 @@
                 "odds": 1.77,
                 "edge": 0.04515165257921672,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -3813,7 +6024,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -3935,7 +6153,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -3965,7 +6214,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -3995,7 +6275,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -4015,7 +6326,38 @@
                 "edge": 0.21872173851689825,
                 "date": "2026-08-23T12:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.36
+                "closing_odds": 1.36,
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             },
             {
                 "league": "Eredivisie",
@@ -4134,7 +6476,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4145,7 +6494,14 @@
                 "edge": 0.2975747531892171,
                 "date": "2026-08-22T23:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.95
+                "closing_odds": 1.95,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.1935193943934801,
+                    "under": 0.8064806056065199,
+                    "line": 187.5
+                }
             }
         ]
     },
@@ -4164,7 +6520,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4175,7 +6538,14 @@
                 "edge": 0.2359938028368157,
                 "date": "2026-08-23T01:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.95
+                "closing_odds": 1.95,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.7372857925008984,
+                    "under": 0.26271420749910157,
+                    "line": 169.5
+                }
             }
         ]
     },
@@ -4194,7 +6564,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4205,7 +6582,14 @@
                 "edge": 0.020602851052159976,
                 "date": "2026-08-23T02:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.93
+                "closing_odds": 1.93,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.52060285105216,
+                    "under": 0.47939714894784,
+                    "line": 176.5
+                }
             }
         ]
     },
@@ -4224,7 +6608,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4235,7 +6626,14 @@
                 "edge": 0.31780945958449813,
                 "date": "2026-08-21T23:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.91
+                "closing_odds": 1.91,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.8535237452987839,
+                    "under": 0.14647625470121606,
+                    "line": 164.5
+                }
             }
         ]
     },
@@ -4254,7 +6652,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4265,7 +6670,14 @@
                 "edge": 0.13109298733395913,
                 "date": "2026-08-22T02:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.89
+                "closing_odds": 1.89,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.29747844123746936,
+                    "under": 0.7025215587625306,
+                    "line": 183.5
+                }
             }
         ]
     },
@@ -4284,7 +6696,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4295,7 +6714,14 @@
                 "edge": 0.38845133604701054,
                 "date": "2026-08-21T23:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.93
+                "closing_odds": 1.93,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.8884513360470105,
+                    "under": 0.11154866395298946,
+                    "line": 162.5
+                }
             }
         ]
     },
@@ -4314,7 +6740,14 @@
                 "odds": 1.7,
                 "edge": 0.039834651636963314,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             },
             {
                 "league": "WNBA",
@@ -4325,7 +6758,14 @@
                 "edge": 0.12081674604824921,
                 "date": "2026-08-22T23:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.7
+                "closing_odds": 1.7,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -4344,7 +6784,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -4354,7 +6801,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -4373,7 +6827,14 @@
                 "odds": 1.74,
                 "edge": 0.029652160232573,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -4383,7 +6844,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -4402,7 +6870,14 @@
                 "odds": 1.77,
                 "edge": 0.04515165257921672,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -4412,7 +6887,14 @@
                 "odds": 1.65,
                 "edge": 0.010187749571673566,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -4432,7 +6914,38 @@
                 "edge": 0.08538387909319889,
                 "date": "2026-08-22T14:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.88
+                "closing_odds": 1.88,
+                "mc_stats": {
+                    "win_prob": 0.2986,
+                    "draw_prob": 0.3298,
+                    "loss_prob": 0.3716,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1502
+                        ],
+                        [
+                            [
+                                0,
+                                0
+                            ],
+                            0.1204
+                        ],
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.0932
+                        ]
+                    ],
+                    "ov15": 0.7566,
+                    "ov25": 0.4652,
+                    "btts_yes": 0.5368
+                }
             },
             {
                 "league": "EPL",
@@ -4474,7 +6987,38 @@
                 "edge": 0.1599857142857143,
                 "date": "2026-08-24T19:00:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.86
+                "closing_odds": 1.86,
+                "mc_stats": {
+                    "win_prob": 0.3538,
+                    "draw_prob": 0.2356,
+                    "loss_prob": 0.4106,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.0982
+                        ],
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.09
+                        ],
+                        [
+                            [
+                                2,
+                                1
+                            ],
+                            0.0814
+                        ]
+                    ],
+                    "ov15": 0.9544,
+                    "ov25": 0.7668,
+                    "btts_yes": 0.7542
+                }
             }
         ]
     },
@@ -4687,7 +7231,38 @@
                 "odds": 1.8,
                 "edge": 0.06370172480647984,
                 "date": "2026-08-31T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.1254,
+                    "draw_prob": 0.2474,
+                    "loss_prob": 0.6272,
+                    "top_scores": [
+                        [
+                            [
+                                0,
+                                2
+                            ],
+                            0.1334
+                        ],
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1214
+                        ],
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.1084
+                        ]
+                    ],
+                    "ov15": 0.8516,
+                    "ov25": 0.5716,
+                    "btts_yes": 0.5508
+                }
             }
         ]
     },
@@ -4747,7 +7322,38 @@
                 "edge": 0.24127825594563979,
                 "model_prob": 0.9389,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -4778,7 +7384,38 @@
                 "edge": 0.24127825594563979,
                 "model_prob": 0.9389,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -4860,7 +7497,38 @@
                 "edge": 0.11430465116279065,
                 "model_prob": 0.6957,
                 "date": "2026-08-24T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.3538,
+                    "draw_prob": 0.2356,
+                    "loss_prob": 0.4106,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                2
+                            ],
+                            0.0982
+                        ],
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.09
+                        ],
+                        [
+                            [
+                                2,
+                                1
+                            ],
+                            0.0814
+                        ]
+                    ],
+                    "ov15": 0.9544,
+                    "ov25": 0.7668,
+                    "btts_yes": 0.7542
+                }
             },
             {
                 "league": "Eredivisie",
@@ -4902,7 +7570,38 @@
                 "edge": 0.24127825594563979,
                 "model_prob": 0.9389,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -4964,7 +7663,38 @@
                 "edge": 0.24127825594563979,
                 "model_prob": 0.9389,
                 "date": "2026-08-23T12:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.9484,
+                    "draw_prob": 0.044,
+                    "loss_prob": 0.0076,
+                    "top_scores": [
+                        [
+                            [
+                                4,
+                                0
+                            ],
+                            0.1372
+                        ],
+                        [
+                            [
+                                3,
+                                0
+                            ],
+                            0.1276
+                        ],
+                        [
+                            [
+                                5,
+                                0
+                            ],
+                            0.0954
+                        ]
+                    ],
+                    "ov15": 0.9398,
+                    "ov25": 0.8242,
+                    "btts_yes": 0.336
+                }
             }
         ]
     },
@@ -4984,7 +7714,38 @@
                 "edge": 0.04718913324708918,
                 "model_prob": 0.6164,
                 "date": "2026-08-24T16:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.4248,
+                    "draw_prob": 0.328,
+                    "loss_prob": 0.2472,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1542
+                        ],
+                        [
+                            [
+                                0,
+                                0
+                            ],
+                            0.1218
+                        ],
+                        [
+                            [
+                                2,
+                                0
+                            ],
+                            0.0976
+                        ]
+                    ],
+                    "ov15": 0.7412,
+                    "ov25": 0.43,
+                    "btts_yes": 0.4984
+                }
             },
             {
                 "league": "Eredivisie",
@@ -5046,7 +7807,14 @@
                 "edge": 0.061962251651971,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-21T01:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5057,7 +7825,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5077,7 +7852,14 @@
                 "edge": 0.06454069866943812,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5088,7 +7870,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5108,7 +7897,14 @@
                 "edge": 0.039834651636963314,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-21T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "EuroLeague",
@@ -5119,7 +7915,14 @@
                 "edge": 0.039834651636963314,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-08-27T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 2.7691350185987673e-05,
+                    "under": 0.999972308649814,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5139,7 +7942,14 @@
                 "edge": 0.0661504411106476,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-20T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5150,7 +7960,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5170,7 +7987,14 @@
                 "edge": 0.0661504411106476,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-21T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5181,7 +8005,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5201,7 +8032,14 @@
                 "edge": 0.06642456391766505,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-07T00:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5212,7 +8050,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5232,7 +8077,14 @@
                 "edge": 0.061962251651971,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-21T01:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5243,7 +8095,14 @@
                 "edge": 0.04139096176712742,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5263,7 +8122,14 @@
                 "edge": 0.04139096176712742,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-23T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5274,7 +8140,14 @@
                 "edge": 0.06454069866943812,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5294,7 +8167,14 @@
                 "edge": 0.08578173860572214,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-31T02:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5305,7 +8185,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5325,7 +8212,14 @@
                 "edge": 0.01379262850370766,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5336,7 +8230,14 @@
                 "edge": 0.08385695906115298,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-12-25T22:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5377,7 +8278,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
@@ -5387,7 +8295,14 @@
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3929071798746758,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.10204231507481909,
+                    "under": 0.8979576849251809,
+                    "line": 243.5
+                }
             },
             {
                 "league": "WNBA",
@@ -5398,7 +8313,14 @@
                 "edge": 0.38845133604701054,
                 "date": "2026-08-21T23:30:00Z",
                 "status": "PENDING",
-                "closing_odds": 1.93
+                "closing_odds": 1.93,
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.8884513360470105,
+                    "under": 0.11154866395298946,
+                    "line": 162.5
+                }
             },
             {
                 "match_id": "NBA_Miami Heat_Indiana Pacers",
@@ -5408,7 +8330,14 @@
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
@@ -5418,7 +8347,14 @@
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             }
         ]
     },
@@ -5511,7 +8447,38 @@
                 "edge": 0.05718441558441556,
                 "model_prob": 0.6416,
                 "date": "2026-08-30T18:45:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.4574,
+                    "draw_prob": 0.3208,
+                    "loss_prob": 0.2218,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1434
+                        ],
+                        [
+                            [
+                                0,
+                                0
+                            ],
+                            0.1334
+                        ],
+                        [
+                            [
+                                2,
+                                0
+                            ],
+                            0.1074
+                        ]
+                    ],
+                    "ov15": 0.7106,
+                    "ov25": 0.4076,
+                    "btts_yes": 0.4684
+                }
             }
         ]
     },
@@ -5604,7 +8571,38 @@
                 "edge": 0.029503092783505158,
                 "model_prob": 0.6094,
                 "date": "2026-08-29T16:30:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "mc_stats": {
+                    "win_prob": 0.3526,
+                    "draw_prob": 0.3326,
+                    "loss_prob": 0.3148,
+                    "top_scores": [
+                        [
+                            [
+                                1,
+                                1
+                            ],
+                            0.1548
+                        ],
+                        [
+                            [
+                                0,
+                                0
+                            ],
+                            0.1198
+                        ],
+                        [
+                            [
+                                2,
+                                1
+                            ],
+                            0.0852
+                        ]
+                    ],
+                    "ov15": 0.7458,
+                    "ov25": 0.4404,
+                    "btts_yes": 0.5198
+                }
             }
         ]
     },
@@ -5748,7 +8746,14 @@
                 "edge": 0.0661504411106476,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-10-20T19:00:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -5759,7 +8764,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5779,7 +8791,14 @@
                 "edge": 0.25759004776821226,
                 "model_prob": 0.7575900477682123,
                 "date": "2026-10-30T23:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.24240995223178774,
+                    "under": 0.7575900477682123,
+                    "line": 235.5
+                }
             },
             {
                 "league": "NBA",
@@ -5790,7 +8809,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5810,7 +8836,14 @@
                 "edge": 0.18590844349171254,
                 "model_prob": 0.6859084434917125,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.31409155650828746,
+                    "under": 0.6859084434917125,
+                    "line": 232.5
+                }
             },
             {
                 "league": "NBA",
@@ -5821,7 +8854,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5841,7 +8881,14 @@
                 "edge": 0.1601443588518352,
                 "model_prob": 0.6601443588518352,
                 "date": "2026-10-30T23:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.3398556411481648,
+                    "under": 0.6601443588518352,
+                    "line": 231.5
+                }
             },
             {
                 "league": "NBA",
@@ -5852,7 +8899,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5872,7 +8926,14 @@
                 "edge": 0.37015895708173674,
                 "model_prob": 0.8701589570817367,
                 "date": "2026-10-31T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.12984104291826326,
+                    "under": 0.8701589570817367,
+                    "line": 241.5
+                }
             },
             {
                 "league": "NBA",
@@ -5883,7 +8944,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5903,7 +8971,14 @@
                 "edge": 0.2107969054711959,
                 "model_prob": 0.7107969054711959,
                 "date": "2026-10-31T02:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.2892030945288041,
+                    "under": 0.7107969054711959,
+                    "line": 233.5
+                }
             },
             {
                 "league": "NBA",
@@ -5914,7 +8989,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5934,7 +9016,14 @@
                 "edge": 0.25759004776821226,
                 "model_prob": 0.7575900477682123,
                 "date": "2026-10-31T02:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.24240995223178774,
+                    "under": 0.7575900477682123,
+                    "line": 235.5
+                }
             },
             {
                 "league": "NBA",
@@ -5945,7 +9034,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5965,7 +9061,14 @@
                 "edge": 0.2107969054711959,
                 "model_prob": 0.7107969054711959,
                 "date": "2026-11-14T00:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.2892030945288041,
+                    "under": 0.7107969054711959,
+                    "line": 233.5
+                }
             },
             {
                 "league": "NBA",
@@ -5976,7 +9079,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -5996,7 +9106,14 @@
                 "edge": 0.23471720180504363,
                 "model_prob": 0.7347172018050436,
                 "date": "2026-11-14T02:40:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.26528279819495637,
+                    "under": 0.7347172018050436,
+                    "line": 234.5
+                }
             },
             {
                 "league": "NBA",
@@ -6007,7 +9124,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             }
         ]
     },
@@ -6027,7 +9151,14 @@
                 "edge": 0.017599920423904014,
                 "model_prob": 0.5924662305843318,
                 "date": "2026-11-21T03:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.5062688349736029,
+                    "under": 0.49373116502639713,
+                    "line": 225.5
+                }
             },
             {
                 "league": "NBA",
@@ -6038,7 +9169,14 @@
                 "edge": 0.13360951547012856,
                 "model_prob": 0.6336095154701286,
                 "date": "2026-11-25T01:10:00Z",
-                "status": "PENDING"
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.36639048452987144,
+                    "under": 0.6336095154701286,
+                    "line": 230.5
+                }
             }
         ]
     }
