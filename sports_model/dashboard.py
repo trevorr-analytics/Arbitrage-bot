@@ -112,6 +112,8 @@ if data:
     for acca in reversed(data):
         for leg in acca.get("legs", []):
             dt = parse_date(leg.get("date", ""))
+            if dt is None:
+                dt = parse_date(acca.get("timestamp", ""))
             if dt is None or (now <= dt <= end_of_week):
                 leg_sig = f"{leg.get('home')}-{leg.get('away')}-{leg.get('market')}"
                 if not any(f"{l.get('home')}-{l.get('away')}-{l.get('market')}" == leg_sig for l in raw_all_legs):
@@ -121,6 +123,8 @@ if data:
         out_of_week = False
         for leg in acca.get("legs", []):
             dt = parse_date(leg.get("date", ""))
+            if dt is None:
+                dt = parse_date(acca.get("timestamp", ""))
             if dt is not None:
                 if dt < now:
                     has_past_leg = True
