@@ -1,4 +1,4 @@
-import json
+﻿import json
 from datetime import datetime, timezone
 import dateutil.parser
 
@@ -20,7 +20,7 @@ for acca in data:
             except: 
                 dt = None
                 
-            if dt is None or dt > now:
+            if dt is not None and dt > now:
                 sig = f"{leg.get('home')}_{leg.get('away')}_{leg.get('market')}"
                 if sig not in unique_legs:
                     unique_legs[sig] = leg
@@ -56,3 +56,4 @@ if current_odds >= 500.0:
     print(f"Appended Dreamer Parlay with odds {current_odds:.2f} using {len(dreamer_legs)} legs.")
 else:
     print(f"Could only reach odds {current_odds:.2f}, not enough legs for 500.")
+

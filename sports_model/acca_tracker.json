@@ -9064,42 +9064,21 @@
         ]
     },
     {
-        "timestamp": "2026-08-25T08:39:08.510063+00:00",
+        "timestamp": "2026-08-25T08:59:40.525469+00:00",
         "status": "PENDING",
-        "combined_odds": 673.0501639679999,
-        "combined_edge": 0.4295898646995407,
+        "combined_odds": 575.5613748607516,
+        "combined_edge": 0.3037352564043679,
         "stake": 100.0,
         "is_dreamer": true,
         "legs": [
             {
-                "match_id": "EPL_Hull City_Manchester United",
-                "league": "EPL",
-                "home": "Hull City",
-                "away": "Manchester United",
-                "market": "Home Win",
-                "odds": 10.0,
-                "edge": 0.6927520982822353,
-                "status": "PENDING",
-                "closing_odds": 1.01
-            },
-            {
-                "match_id": "Ligue1_Troyes_Paris FC",
-                "league": "Ligue1",
-                "home": "Troyes",
-                "away": "Paris FC",
-                "market": "Away Win",
-                "odds": 2.4,
-                "edge": 0.435210497237569,
-                "status": "PENDING"
-            },
-            {
-                "match_id": "NBA_Miami Heat_Minnesota Timberwolves",
                 "league": "NBA",
                 "home": "Miami Heat",
                 "away": "Minnesota Timberwolves",
                 "market": "Under 243.5",
                 "odds": 1.96,
                 "edge": 0.3979576849251809,
+                "date": "2026-10-21T23:40:00Z",
                 "status": "PENDING",
                 "bb_stats": {
                     "win_prob": 0.5924662305843318,
@@ -9110,30 +9089,13 @@
                 }
             },
             {
-                "match_id": "NBA_New Orleans Pelicans_Indiana Pacers",
-                "league": "NBA",
-                "home": "New Orleans Pelicans",
-                "away": "Indiana Pacers",
-                "market": "Under 243.5",
-                "odds": 1.96,
-                "edge": 0.3929071798746758,
-                "status": "PENDING",
-                "bb_stats": {
-                    "win_prob": 0.5924662305843318,
-                    "loss_prob": 0.4075337694156682,
-                    "over": 0.10204231507481909,
-                    "under": 0.8979576849251809,
-                    "line": 243.5
-                }
-            },
-            {
-                "match_id": "NBA_Miami Heat_Indiana Pacers",
                 "league": "NBA",
                 "home": "Miami Heat",
                 "away": "Indiana Pacers",
                 "market": "Under 241.5",
                 "odds": 1.95,
                 "edge": 0.3806301612702183,
+                "date": "2026-10-31T00:10:00Z",
                 "status": "PENDING",
                 "bb_stats": {
                     "win_prob": 0.5924662305843318,
@@ -9144,13 +9106,30 @@
                 }
             },
             {
-                "match_id": "NBA_Memphis Grizzlies_Utah Jazz",
+                "league": "NBA",
+                "home": "New Orleans Pelicans",
+                "away": "Indiana Pacers",
+                "market": "Under 242.5",
+                "odds": 1.96,
+                "edge": 0.37960217825751397,
+                "date": "2026-10-22T00:10:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.11534731669198095,
+                    "under": 0.884652683308019,
+                    "line": 242.5
+                }
+            },
+            {
                 "league": "NBA",
                 "home": "Memphis Grizzlies",
                 "away": "Utah Jazz",
                 "market": "Under 241.5",
                 "odds": 1.96,
                 "edge": 0.37015895708173674,
+                "date": "2026-10-22T00:10:00Z",
                 "status": "PENDING",
                 "bb_stats": {
                     "win_prob": 0.5924662305843318,
@@ -9161,13 +9140,13 @@
                 }
             },
             {
-                "match_id": "NBA_Philadelphia 76ers_Miami Heat",
                 "league": "NBA",
                 "home": "Philadelphia 76ers",
                 "away": "Miami Heat",
                 "market": "Under 239.5",
                 "odds": 1.91,
                 "edge": 0.3375124742251687,
+                "date": "2026-11-25T22:10:00Z",
                 "status": "PENDING",
                 "bb_stats": {
                     "win_prob": 0.5924662305843318,
@@ -9175,6 +9154,96 @@
                     "over": 0.16248752577483128,
                     "under": 0.8375124742251687,
                     "line": 239.5
+                }
+            },
+            {
+                "league": "NBA",
+                "home": "Washington Wizards",
+                "away": "Charlotte Hornets",
+                "market": "Under 235.5",
+                "odds": 1.83,
+                "edge": 0.25759004776821226,
+                "model_prob": 0.7575900477682123,
+                "date": "2026-10-30T23:10:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.24240995223178774,
+                    "under": 0.7575900477682123,
+                    "line": 235.5
+                }
+            },
+            {
+                "league": "NBA",
+                "home": "Golden State Warriors",
+                "away": "Los Angeles Lakers",
+                "market": "Under 235.5",
+                "odds": 1.83,
+                "edge": 0.25759004776821226,
+                "model_prob": 0.7575900477682123,
+                "date": "2026-10-31T02:10:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.24240995223178774,
+                    "under": 0.7575900477682123,
+                    "line": 235.5
+                }
+            },
+            {
+                "league": "NBA",
+                "home": "San Antonio Spurs",
+                "away": "Golden State Warriors",
+                "market": "Under 234.5",
+                "odds": 1.83,
+                "edge": 0.23471720180504363,
+                "model_prob": 0.7347172018050436,
+                "date": "2026-11-14T02:40:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.26528279819495637,
+                    "under": 0.7347172018050436,
+                    "line": 234.5
+                }
+            },
+            {
+                "league": "NBA",
+                "home": "Phoenix Suns",
+                "away": "Denver Nuggets",
+                "market": "Under 233.5",
+                "odds": 1.83,
+                "edge": 0.2107969054711959,
+                "model_prob": 0.7107969054711959,
+                "date": "2026-10-31T02:10:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.2892030945288041,
+                    "under": 0.7107969054711959,
+                    "line": 233.5
+                }
+            },
+            {
+                "league": "NBA",
+                "home": "Indiana Pacers",
+                "away": "New York Knicks",
+                "market": "Under 233.5",
+                "odds": 1.83,
+                "edge": 0.2107969054711959,
+                "model_prob": 0.7107969054711959,
+                "date": "2026-11-14T00:10:00Z",
+                "status": "PENDING",
+                "bb_stats": {
+                    "win_prob": 0.5924662305843318,
+                    "loss_prob": 0.4075337694156682,
+                    "over": 0.2892030945288041,
+                    "under": 0.7107969054711959,
+                    "line": 233.5
                 }
             }
         ]
