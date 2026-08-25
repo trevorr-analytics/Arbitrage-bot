@@ -18,7 +18,6 @@ if os.path.exists(css_path):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ----------------- DATA LOADING -----------------
-@st.cache_data(ttl=60)
 def load_data():
     try:
         path = os.path.join(os.path.dirname(__file__), "acca_tracker.json")
@@ -96,7 +95,7 @@ soccer_accas = sorted(soccer_accas, key=lambda x: x.get("combined_edge", x.get("
 nba_accas = sorted(nba_accas, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)
 all_legs = sorted(all_legs, key=lambda x: x.get("edge", 0), reverse=True)
 
-tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["ðŸ”¥ Top Picks", "ðŸŽ¯ Safe Plays", "âš½ Soccer", "ðŸ€ Basketball", "ðŸ“ˆ CLV Learning Log", "ðŸ¤‘ Dreamer Parlay"])
+tab1, tab_safe, tab2, tab3, tab4, tab_dream = st.tabs(["Ã°Å¸â€Â¥ Top Picks", "Ã°Å¸Å½Â¯ Safe Plays", "Ã¢Å¡Â½ Soccer", "Ã°Å¸Ââ‚¬ Basketball", "Ã°Å¸â€œË† CLV Learning Log", "Ã°Å¸Â¤â€˜ Dreamer Parlay"])
 
 def render_leg_details(leg, date_str):
     league = leg.get('league', 'Unknown')
@@ -109,7 +108,7 @@ def render_leg_details(leg, date_str):
     html = f"""
 <div class="leg-row">
 <b>[{league}]</b> {home} vs {away} <i>({date_str})</i><br>
-ðŸŽ¯ {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
+Ã°Å¸Å½Â¯ {market} @ {odds:.2f} <i>(+{edge:.1f}%)</i>
 """
     
     # Render cached MC stats if they exist in the JSON leg dict! (Safe injection for future runs)
@@ -162,12 +161,12 @@ def render_acca(acca, title):
     st.markdown('</div>', unsafe_allow_html=True)
 
 with tab1:
-    st.header("ðŸ”¥ The 3 Best Accumulators")
+    st.header("Ã°Å¸â€Â¥ The 3 Best Accumulators")
     top_3_overall = sorted(data, key=lambda x: x.get("combined_edge", x.get("edge", 0)), reverse=True)[:3]
     for i, acca in enumerate(top_3_overall):
         render_acca(acca, f"Ultimate Acca #{i+1}")
         
-    st.header("ðŸ”¥ The 3 Best +EV Singles")
+    st.header("Ã°Å¸â€Â¥ The 3 Best +EV Singles")
     for i, leg in enumerate(all_legs[:3]):
         st.markdown(f'<div class="acca-card">', unsafe_allow_html=True)
         dt = parse_date(leg.get('date', ''))
@@ -176,7 +175,7 @@ with tab1:
         st.markdown('</div>', unsafe_allow_html=True)
 
 with tab_safe:
-    st.header("ðŸŽ¯ Safe & Steady Plays (>65% Win Probability)")
+    st.header("Ã°Å¸Å½Â¯ Safe & Steady Plays (>65% Win Probability)")
     st.write("These are the mathematically safest single bets across all sports, prioritizing high likelihood of hitting with a positive mathematical edge.")
     
     safe_legs = [leg for leg in all_legs if leg.get('model_prob', 0) >= 0.65 and leg.get('edge', 0) > 0]
@@ -193,17 +192,17 @@ with tab_safe:
             st.markdown('</div>', unsafe_allow_html=True)
 
 with tab2:
-    st.header("âš½ All Soccer Accumulators")
+    st.header("Ã¢Å¡Â½ All Soccer Accumulators")
     for i, acca in enumerate(soccer_accas):
         render_acca(acca, f"Soccer Acca #{i+1}")
 
 with tab3:
-    st.header("ðŸ€ All Basketball Accumulators")
+    st.header("Ã°Å¸Ââ‚¬ All Basketball Accumulators")
     for i, acca in enumerate(nba_accas):
         render_acca(acca, f"Basketball Acca #{i+1}")
 
 with tab4:
-    st.header("ðŸ“ˆ CLV Resolution & Self-Learning Log")
+    st.header("Ã°Å¸â€œË† CLV Resolution & Self-Learning Log")
     st.info("The automated self-learning system resolves matches every Monday morning. The results and CLV deltas are logged here for the AI to analyze.")
     clv_path = os.path.join(os.path.dirname(__file__), "clv_history.csv")
     if os.path.exists(clv_path):
@@ -213,11 +212,12 @@ with tab4:
         st.write("No historical CLV data available yet. Waiting for Monday resolution cycle.")
 
 with tab_dream:
-    st.header("ðŸ¤‘ The Dreamer Parlay (500+ Odds)")
+    st.header("Ã°Å¸Â¤â€˜ The Dreamer Parlay (500+ Odds)")
     st.write("A mathematically optimized mega-parlay purely for fun. High risk, astronomical reward.")
     dreamer_accas = [a for a in data if a.get("is_dreamer")]
     if dreamer_accas:
         render_acca(dreamer_accas[-1], "Mega Dreamer")
     else:
         st.info("Not enough positive-EV legs found this week to build a 500+ odds parlay.")
+
 
