@@ -43,13 +43,13 @@ for leg in sorted_legs:
         if current_odds >= 100.0:
             break
 
-if current_odds >= 100.0:
+if current_odds >= 50.0:
     dreamer_acca = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "status": "PENDING",
         "combined_odds": current_odds,
         "combined_edge": sum(l.get("edge", 0) for l in dreamer_legs) / len(dreamer_legs) if dreamer_legs else 0,
-        "stake": 100.0,
+        "stake": 50.0,
         "is_dreamer": True,
         "legs": dreamer_legs
     }
@@ -59,4 +59,4 @@ if current_odds >= 100.0:
         json.dump(data, f, indent=4)
     print(f"Appended Dreamer Parlay with odds {current_odds:.2f} using {len(dreamer_legs)} legs.")
 else:
-    print(f"Could only reach odds {current_odds:.2f}, not enough legs for 100.")
+    print(f"Could only reach odds {current_odds:.2f}, not enough legs for 50.")

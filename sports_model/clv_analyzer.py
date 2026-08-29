@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 import pandas as pd
 from datetime import datetime
@@ -76,9 +76,26 @@ def main():
     with open(REPORT_FILE, "w") as f:
         f.write(report)
         
-    print(f"CLV Resolution complete. Analyzed {len(resolved_records)} new legs. Report saved to {REPORT_FILE}.")
-    
-    # Don't clear tracker here for demo purposes so the Streamlit dashboard isn't empty
+    # Clear out resolved or analyzed matches from the tracker to keep the system clean for the new week
+    fresh_tracker = []
+    for acca in data:
+        # Keep if it has future matches
+        is_future = False
+        for leg in acca["legs"]:
+            try:
+                if leg.get("date"):
+                    match_time = datetime.fromisoformat(leg["date"].replace("Z", "+00:00"))
+                    if match_time > datetime.now(match_time.tzinfo):
+                        is_future = True
+            except:
+                pass
+        if is_future:
+            fresh_tracker.append(acca)
+            
+    with open(TRACKER_FILE, "w") as f:
+        json.dump(fresh_tracker, f, indent=4)
+        
+    print(f"CLV Resolution complete. Analyzed {len(resolved_records)} new legs. Report saved to {REPORT_FILE}. Tracker cleared.")
 
 if __name__ == "__main__":
     main()
