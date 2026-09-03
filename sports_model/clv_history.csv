@@ -225,3 +225,478 @@ date,league,home,away,market,taken_odds,closing_odds,clv_delta,beat_clv
 2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
 2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
 2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-29T01:29:45.375775,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.375832,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.375850,SerieA,Atalanta BC,Sassuolo,Home Win,1.59,1.51,5.26,True
+2026-08-29T01:29:45.375860,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.375876,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.375885,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.33,1.26,5.26,True
+2026-08-29T01:29:45.375893,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-29T01:29:45.375902,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.375910,SerieA,Atalanta BC,Sassuolo,Home Win,1.59,1.51,5.26,True
+2026-08-29T01:29:45.375919,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.33,1.26,5.26,True
+2026-08-29T01:29:45.375928,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.375939,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.33,1.26,5.26,True
+2026-08-29T01:29:45.375949,Ligue1,Angers,Lille,Away Win,1.76,1.67,5.26,True
+2026-08-29T01:29:45.375958,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.33,1.26,5.26,True
+2026-08-29T01:29:45.375969,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.375983,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-29T01:29:45.375993,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-29T01:29:45.376003,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.33,1.26,5.26,True
+2026-08-29T01:29:45.376013,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376023,NBA,Denver Nuggets,Houston Rockets,Home Win,1.7,1.61,5.26,True
+2026-08-29T01:29:45.376035,SerieA,Atalanta BC,Sassuolo,Home Win,1.59,1.51,5.26,True
+2026-08-29T01:29:45.376044,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376054,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.376064,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376074,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376085,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376096,SerieA,Inter Milan,Monza,Home Win,1.24,1.18,5.26,True
+2026-08-29T01:29:45.376105,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376116,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376126,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-29T01:29:45.376135,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376145,EPL,Hull City,Manchester United,Home Win,10.0,9.5,5.26,True
+2026-08-29T01:29:45.376155,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376165,EPL,Hull City,Manchester United,Home Win,10.0,9.5,5.26,True
+2026-08-29T01:29:45.376175,Ligue1,Troyes,Paris FC,Away Win,2.4,2.28,5.26,True
+2026-08-29T01:29:45.376190,EPL,Hull City,Manchester United,Home Win,10.0,9.5,5.26,True
+2026-08-29T01:29:45.376200,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376208,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376217,EPL,Hull City,Manchester United,Home Win,10.0,9.5,5.26,True
+2026-08-29T01:29:45.376227,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376237,EPL,Hull City,Manchester United,Home Win,10.0,9.5,5.26,True
+2026-08-29T01:29:45.376251,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.376261,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376272,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376281,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376292,SerieA,Atalanta BC,Sassuolo,Over 2.5,2.19,2.08,5.26,True
+2026-08-29T01:29:45.376302,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376325,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376336,EPL,Newcastle United,Liverpool,Over 2.5,2.3,2.18,5.26,True
+2026-08-29T01:29:45.376345,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376354,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376364,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376373,Eredivisie,NEC Nijmegen,Excelsior,Over 2.5,2.17,2.06,5.26,True
+2026-08-29T01:29:45.376382,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376397,SerieA,Atalanta BC,Sassuolo,Over 2.5,2.19,2.08,5.26,True
+2026-08-29T01:29:45.376410,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376425,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376436,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376447,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376456,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376465,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376477,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376487,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376495,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376503,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376516,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376525,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376533,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376542,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376551,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376560,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376568,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376577,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-08-29T01:29:45.376586,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376598,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376608,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376617,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376628,NBA,Los Angeles Lakers,Portland Trail Blazers,Under 238.5,1.91,1.81,5.26,True
+2026-08-29T01:29:45.376637,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376646,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376655,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376663,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.376672,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-08-29T01:29:45.376681,EPL,Hull City,Manchester United,Home Win,9.8,9.31,5.26,True
+2026-08-29T01:29:45.376688,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376697,EPL,Hull City,Manchester United,Home Win,9.8,9.31,5.26,True
+2026-08-29T01:29:45.376706,Ligue1,Troyes,Paris FC,Away Win,2.4,2.28,5.26,True
+2026-08-29T01:29:45.376715,EPL,Hull City,Manchester United,Home Win,9.8,9.31,5.26,True
+2026-08-29T01:29:45.376723,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376732,EPL,Hull City,Manchester United,Home Win,9.8,9.31,5.26,True
+2026-08-29T01:29:45.376744,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.4,1.33,5.26,True
+2026-08-29T01:29:45.376759,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-29T01:29:45.376772,EPL,Hull City,Manchester United,Home Win,9.8,9.31,5.26,True
+2026-08-29T01:29:45.376788,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T01:29:45.376798,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376807,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376816,EPL,Newcastle United,Liverpool,Over 2.5,2.3,2.18,5.26,True
+2026-08-29T01:29:45.376826,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376835,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376850,EPL,Newcastle United,Liverpool,Over 2.5,2.3,2.18,5.26,True
+2026-08-29T01:29:45.376866,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376883,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376899,Eredivisie,NEC Nijmegen,Excelsior,Over 2.5,2.17,2.06,5.26,True
+2026-08-29T01:29:45.376914,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-29T01:29:45.376946,EPL,Newcastle United,Liverpool,Over 2.5,2.3,2.18,5.26,True
+2026-08-29T01:29:45.376961,Ligue1,Troyes,Paris FC,Over 2.5,2.2,2.09,5.26,True
+2026-08-29T01:29:45.376975,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376984,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.376993,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377003,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377013,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377022,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377035,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377055,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377063,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377071,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377078,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377085,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377092,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377099,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377108,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377115,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377122,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-08-29T01:29:45.377130,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377140,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377147,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377155,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377162,NBA,Los Angeles Lakers,Portland Trail Blazers,Under 238.5,1.91,1.81,5.26,True
+2026-08-29T01:29:45.377169,NBA,New Orleans Pelicans,Indiana Pacers,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377178,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377186,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-08-29T01:29:45.377193,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-08-29T01:29:45.377203,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-08-23T15:00:00Z,LaLiga,Atlético Madrid,Villarreal,Over 2.5,1.93,1.83,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.59,1.51,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Over 2.5,1.86,1.77,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.32,1.25,5.26,True
+2026-08-21T19:00:00Z,LaLiga,Real Betis,Real Sociedad,Under 2.5,1.98,1.88,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T13:00:00Z,Ligue1,Angers,Lille,Away Win,1.76,1.67,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,New Orleans Pelicans,Indiana Pacers,Under 242.5,1.96,1.86,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,New Orleans Pelicans,Indiana Pacers,Under 242.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-10-22T00:10:00Z,NBA,New Orleans Pelicans,Indiana Pacers,Under 242.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,New Orleans Pelicans,Indiana Pacers,Under 242.5,1.96,1.86,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,New Orleans Pelicans,Indiana Pacers,Under 242.5,1.96,1.86,5.26,True
+2026-11-25T22:10:00Z,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.95,1.85,5.26,True
+2026-11-25T22:10:00Z,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Under 243.5,1.96,1.86,5.26,True
+2026-10-22T00:10:00Z,NBA,Memphis Grizzlies,Utah Jazz,Under 241.5,1.96,1.86,5.26,True
+2026-11-25T22:10:00Z,NBA,Philadelphia 76ers,Miami Heat,Under 239.5,1.91,1.81,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Home Win,1.8,1.71,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Home Win,1.8,1.71,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-11-07T00:40:00Z,NBA,Cleveland Cavaliers,Philadelphia 76ers,Home Win,1.82,1.73,5.26,True
+2026-11-07T00:40:00Z,NBA,Cleveland Cavaliers,Philadelphia 76ers,Home Win,1.82,1.73,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T23:00:00Z,WNBA,New York Liberty,Indiana Fever,Under 187.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-23T01:00:00Z,WNBA,Los Angeles Sparks,Connecticut Sun,Over 169.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-23T02:00:00Z,WNBA,Phoenix Mercury,Atlanta Dream,Over 176.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-21T23:30:00Z,WNBA,Washington Mystics,Minnesota Lynx,Over 164.5,1.95,1.85,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T02:00:00Z,WNBA,Toronto Tempo,Portland Fire,Under 183.5,1.95,1.85,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-21T23:30:00Z,WNBA,Chicago Sky,Golden State Valkyries,Over 162.5,1.97,1.87,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T23:00:00Z,WNBA,New York Liberty,Indiana Fever,Home Win,2.05,1.95,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.37,1.3,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.31,1.24,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.53,1.45,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.58,1.5,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.53,1.45,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T23:00:00Z,WNBA,New York Liberty,Indiana Fever,Under 187.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-23T01:00:00Z,WNBA,Los Angeles Sparks,Connecticut Sun,Over 169.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-23T02:00:00Z,WNBA,Phoenix Mercury,Atlanta Dream,Over 176.5,1.93,1.83,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-21T23:30:00Z,WNBA,Washington Mystics,Minnesota Lynx,Over 164.5,1.95,1.85,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T02:00:00Z,WNBA,Toronto Tempo,Portland Fire,Under 183.5,1.95,1.85,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-21T23:30:00Z,WNBA,Chicago Sky,Golden State Valkyries,Over 162.5,1.97,1.87,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-08-22T23:00:00Z,WNBA,New York Liberty,Indiana Fever,Home Win,2.05,1.95,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.74,1.65,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.65,1.57,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.77,1.68,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Home Win,1.65,1.57,5.26,True
+2026-08-22T14:00:00Z,EPL,Everton,Crystal Palace,Under 2.5,1.95,1.85,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-24T19:00:00Z,EPL,Fulham,Chelsea,Over 2.5,2.08,1.98,5.26,True
+2026-08-22T16:30:00Z,EPL,Brentford,Tottenham Hotspur,Over 2.5,2.11,2.0,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-22T14:00:00Z,EPL,Nottingham Forest,Leeds United,Over 2.5,2.14,2.03,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-23T13:00:00Z,EPL,Brighton and Hove Albion,Aston Villa,Over 2.5,2.27,2.16,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-28T18:30:00Z,Bundesliga,Bayern Munich,VfB Stuttgart,Over 2.5,2.3,2.18,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-29T16:30:00Z,EPL,Tottenham Hotspur,Newcastle United,Over 2.5,1.7,1.61,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-30T13:00:00Z,EPL,Chelsea,Brighton and Hove Albion,Over 2.5,1.76,1.67,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.52,1.44,5.26,True
+2026-08-31T19:00:00Z,EPL,Aston Villa,Arsenal,Away Win,1.8,1.71,5.26,True
+2026-08-29T16:30:00Z,EPL,Tottenham Hotspur,Newcastle United,Over 2.5,1.7,1.61,5.26,True
+2026-08-30T13:00:00Z,EPL,Chelsea,Brighton and Hove Albion,Over 2.5,1.76,1.67,5.26,True
+2026-08-22T18:00:00Z,Eredivisie,NEC Nijmegen,Excelsior,Home Win,1.49,1.42,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.335,1.27,5.26,True
+2026-08-23T18:45:00Z,SerieA,Atalanta BC,Sassuolo,Home Win,1.51,1.43,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.335,1.27,5.26,True
+2026-08-22T16:30:00Z,SerieA,Inter Milan,Monza,Over 2.5,1.61,1.53,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-08-28T18:30:00Z,Bundesliga,Bayern Munich,VfB Stuttgart,Over 2.5,1.57,1.49,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-08-24T19:00:00Z,EPL,Fulham,Chelsea,Over 2.5,1.62,1.54,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-08-23T13:00:00Z,EPL,Manchester City,Bournemouth,Home Win,1.47,1.4,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.335,1.27,5.26,True
+2026-08-22T16:30:00Z,EPL,Brentford,Tottenham Hotspur,Over 2.5,1.6349999999999998,1.55,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-08-22T15:15:00Z,Ligue1,RC Lens,Auxerre,Home Win,1.56,1.48,5.26,True
+2026-08-23T12:30:00Z,Eredivisie,PSV Eindhoven,Groningen,Home Win,1.335,1.27,5.26,True
+2026-08-24T16:30:00Z,SerieA,Bologna,Lazio,Under 2.5,1.665,1.58,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-08-22T11:30:00Z,EPL,Hull City,Manchester United,Over 2.5,1.67,1.59,5.26,True
+2026-08-23T14:45:00Z,Eredivisie,SC Cambuur,Feyenoord,Away Win,1.255,1.19,5.26,True
+2026-10-21T01:30:00Z,NBA,San Antonio Spurs,Oklahoma City Thunder,Home Win,1.77,1.68,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Home Win,1.775,1.69,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-10-21T23:10:00Z,NBA,Orlando Magic,Atlanta Hawks,Home Win,1.7,1.61,5.26,True
+2026-08-27T19:00:00Z,EuroLeague,Olympiacos Piraeus,Panathinaikos Athens,Home Win,1.7,1.61,5.26,True
+2026-10-20T19:00:00Z,NBA,Detroit Pistons,Boston Celtics,Home Win,1.8,1.71,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-10-21T23:40:00Z,NBA,Miami Heat,Minnesota Timberwolves,Home Win,1.8,1.71,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-11-07T00:40:00Z,NBA,Cleveland Cavaliers,Philadelphia 76ers,Home Win,1.82,1.73,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-10-21T01:30:00Z,NBA,San Antonio Spurs,Oklahoma City Thunder,Home Win,1.77,1.68,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.67,1.59,5.26,True
+2026-10-23T23:10:00Z,NBA,Boston Celtics,New York Knicks,Home Win,1.67,1.59,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Home Win,1.775,1.69,5.26,True
+2026-10-31T02:10:00Z,NBA,Golden State Warriors,Los Angeles Lakers,Home Win,1.845,1.75,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.62,1.54,5.26,True
+2026-12-25T22:00:00Z,NBA,Los Angeles Lakers,Philadelphia 76ers,Home Win,1.855,1.76,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Home Win,1.47,1.4,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T13:30:00Z,Bundesliga,1. FC Köln,TSG Hoffenheim,Over 2.5,1.56,1.48,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-30T18:45:00Z,SerieA,Lazio,Genoa,Under 2.5,1.6,1.52,5.26,True
+2026-08-30T15:30:00Z,Bundesliga,Augsburg,FC Schalke 04,Over 2.5,1.6150000000000002,1.53,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Over 2.5,1.62,1.54,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T16:30:00Z,SerieA,Monza,Udinese,Under 2.5,1.63,1.55,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-30T10:15:00Z,Eredivisie,FC Utrecht,PSV Eindhoven,Away Win,1.635,1.55,5.26,True
+2026-08-30T13:00:00Z,EPL,Chelsea,Brighton and Hove Albion,Over 2.5,1.68,1.6,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Home Win,1.47,1.4,5.26,True
+2026-08-29T13:30:00Z,Bundesliga,1. FC Köln,TSG Hoffenheim,Over 2.5,1.56,1.48,5.26,True
+2026-08-29T16:30:00Z,EPL,Tottenham Hotspur,Newcastle United,Over 2.5,1.69,1.61,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-10-20T19:00:00Z,NBA,Detroit Pistons,Boston Celtics,Home Win,1.8,1.71,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:10:00Z,NBA,Washington Wizards,Charlotte Hornets,Under 235.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:40:00Z,NBA,Boston Celtics,Chicago Bulls,Under 232.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Under 231.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T02:10:00Z,NBA,Phoenix Suns,Denver Nuggets,Under 233.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T02:10:00Z,NBA,Golden State Warriors,Los Angeles Lakers,Under 235.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-14T00:10:00Z,NBA,Indiana Pacers,New York Knicks,Under 233.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-14T02:40:00Z,NBA,San Antonio Spurs,Golden State Warriors,Under 234.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-25T01:10:00Z,NBA,Washington Wizards,Boston Celtics,Under 230.5,1.83,1.74,5.26,True
+2026-08-29T16:30:00Z,EPL,Tottenham Hotspur,Newcastle United,Over 2.5,1.7,1.61,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Over 2.5,1.62,1.54,5.26,True
+2026-08-29T13:30:00Z,Bundesliga,1. FC Köln,TSG Hoffenheim,Over 2.5,1.56,1.48,5.26,True
+2026-08-30T13:00:00Z,EPL,Chelsea,Brighton and Hove Albion,Over 2.5,1.76,1.67,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-30T10:15:00Z,Eredivisie,FC Utrecht,PSV Eindhoven,Away Win,1.635,1.55,5.26,True
+2026-08-28T18:30:00Z,Bundesliga,Bayern Munich,VfB Stuttgart,Over 2.5,2.3,2.18,5.26,True
+2026-08-31T19:00:00Z,EPL,Aston Villa,Arsenal,Away Win,1.8,1.71,5.26,True
+2026-08-30T18:45:00Z,SerieA,Lazio,Genoa,Under 2.5,1.6,1.52,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Home Win,1.47,1.4,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T13:30:00Z,Bundesliga,1. FC Köln,TSG Hoffenheim,Over 2.5,1.56,1.48,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-30T18:45:00Z,SerieA,Lazio,Genoa,Under 2.5,1.6,1.52,5.26,True
+2026-08-30T15:30:00Z,Bundesliga,Augsburg,FC Schalke 04,Over 2.5,1.6150000000000002,1.53,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Over 2.5,1.62,1.54,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T16:30:00Z,SerieA,Monza,Udinese,Under 2.5,1.63,1.55,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-30T10:15:00Z,Eredivisie,FC Utrecht,PSV Eindhoven,Away Win,1.635,1.55,5.26,True
+2026-08-30T13:00:00Z,EPL,Chelsea,Brighton and Hove Albion,Over 2.5,1.68,1.6,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-08-29T11:30:00Z,EPL,Liverpool,Nottingham Forest,Home Win,1.47,1.4,5.26,True
+2026-08-29T13:30:00Z,Bundesliga,1. FC Köln,TSG Hoffenheim,Over 2.5,1.56,1.48,5.26,True
+2026-08-29T16:30:00Z,EPL,Tottenham Hotspur,Newcastle United,Over 2.5,1.69,1.61,5.26,True
+2026-08-28T18:45:00Z,SerieA,AC Milan,Venezia,Home Win,1.36,1.29,5.26,True
+2026-10-20T19:00:00Z,NBA,Detroit Pistons,Boston Celtics,Home Win,1.8,1.71,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:10:00Z,NBA,Washington Wizards,Charlotte Hornets,Under 235.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:40:00Z,NBA,Boston Celtics,Chicago Bulls,Under 232.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-30T23:40:00Z,NBA,Philadelphia 76ers,New York Knicks,Under 231.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T00:10:00Z,NBA,Miami Heat,Indiana Pacers,Under 241.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T02:10:00Z,NBA,Phoenix Suns,Denver Nuggets,Under 233.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-10-31T02:10:00Z,NBA,Golden State Warriors,Los Angeles Lakers,Under 235.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-14T00:10:00Z,NBA,Indiana Pacers,New York Knicks,Under 233.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-14T02:40:00Z,NBA,San Antonio Spurs,Golden State Warriors,Under 234.5,1.83,1.74,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-21T03:10:00Z,NBA,Denver Nuggets,Houston Rockets,Home Win,1.59,1.51,5.26,True
+2026-11-25T01:10:00Z,NBA,Washington Wizards,Boston Celtics,Under 230.5,1.83,1.74,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.71,1.62,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True
+2026-08-25T23:11:00Z,MLB,New York Mets,Milwaukee Brewers,Over 7.5,1.73,1.64,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.71,1.62,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.72,1.63,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.71,1.62,5.26,True
+2026-08-25T23:45:00Z,MLB,St. Louis Cardinals,Baltimore Orioles,Over 8.5,1.72,1.63,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True
+2026-08-25T23:41:00Z,MLB,Chicago White Sox,Texas Rangers,Over 7.5,1.74,1.65,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.71,1.62,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.73,1.64,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.71,1.62,5.26,True
+2026-08-25T23:11:00Z,MLB,New York Mets,Milwaukee Brewers,Over 7.5,1.73,1.64,5.26,True
+2026-08-25T22:40:00Z,MLB,Miami Marlins,Boston Red Sox,Over 7.5,1.75,1.66,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.75,1.66,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True
+2026-08-25T22:41:00Z,MLB,Detroit Tigers,Tampa Bay Rays,Over 7.5,1.75,1.66,5.26,True
+2026-08-25T23:06:00Z,MLB,New York Yankees,Houston Astros,Over 8.5,1.7,1.61,5.26,True

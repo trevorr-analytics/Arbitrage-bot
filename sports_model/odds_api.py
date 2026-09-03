@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 import time
 import requests
@@ -91,7 +91,7 @@ def fetch_live_odds(league: str, api_key: str = None) -> list:
         }
 
         try:
-            response = requests.get(url, params=params)
+            response = requests.get(url, params=params, timeout=15)
             if response.status_code == 200:
                 data = response.json()
                 print(f"OK ({len(data)} matches found)")
